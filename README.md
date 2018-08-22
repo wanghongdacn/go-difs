@@ -1,4 +1,4 @@
-# go-ipfs
+# go-difs
 
 ![banner](https://ipfs.io/ipfs/QmVk7srrwahXLNmcDYvyUEJptyoxpndnRa57YJ11L4jV26/ipfs.go.png)
 
@@ -17,7 +17,9 @@
 
 [**`Weekly Core Dev Calls`**](https://github.com/ipfs/pm/issues/674)
 
-## What is IPFS?
+## What is DIFS?
+
+DIFS is DACC IAM File System based on IPFS.
 
 IPFS is a global, versioned, peer-to-peer filesystem. It combines good ideas from Git, BitTorrent, Kademlia, SFS, and the Web. It is like a single bittorrent swarm, exchanging git objects. IPFS provides an interface as simple as the HTTP web, but with permanence built in. You can also mount the world at /ipfs.
 
