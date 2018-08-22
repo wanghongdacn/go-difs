@@ -11,10 +11,10 @@ import (
 	"os/exec"
 	"strings"
 
-	cmds "github.com/ipfs/go-ipfs/commands"
-	e "github.com/ipfs/go-ipfs/core/commands/e"
-	repo "github.com/ipfs/go-ipfs/repo"
-	fsrepo "github.com/ipfs/go-ipfs/repo/fsrepo"
+	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	repo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo"
+	fsrepo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo/fsrepo"
 
 	"gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"
 	config "gx/ipfs/QmQSG7YCizeUH2bWatzp6uK9Vm3m7LA5jpxGa9QqgpNKw4/go-ipfs-config"

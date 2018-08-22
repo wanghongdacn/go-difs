@@ -12,7 +12,7 @@ import (
 	blockstore "gx/ipfs/QmYBEfMSquSGnuxBthUoBJNs3F6p4VAPPvAgxq6XXGvTPh/go-ipfs-blockstore"
 	pstore "gx/ipfs/QmYLXCWN2myozZpx8Wx4UjrRuQuhY3YtWoMi6SHaXii6aM/go-libp2p-peerstore"
 
-	. "github.com/ipfs/go-ipfs/exchange/reprovide"
+	. "github.com/Harold-the-Axeman/dacc-iam-filesystem/exchange/reprovide"
 )
 
 func TestReprovide(t *testing.T) {

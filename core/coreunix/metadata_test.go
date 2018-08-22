@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	core "github.com/ipfs/go-ipfs/core"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
 	merkledag "gx/ipfs/QmQzSpSjkdGHW6WFBhUG6P3t9K8yv7iucucT1cQaqJ6tgd/go-merkledag"
 	bserv "gx/ipfs/QmTZZrpd9o4vpYr9TEADW2EoJ9fzUtAgpXqjxZHbKR2T15/go-blockservice"
 	ft "gx/ipfs/QmWv8MYwgPK4zXYv1et1snWJ6FWGqaL6xY2y9X1bRSKBxk/go-unixfs"

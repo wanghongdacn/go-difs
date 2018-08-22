@@ -7,9 +7,9 @@ import (
 	"os"
 	"strings"
 
-	core "github.com/ipfs/go-ipfs/core"
-	"github.com/ipfs/go-ipfs/core/coreunix"
-	filestore "github.com/ipfs/go-ipfs/filestore"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreunix"
+	filestore "github.com/Harold-the-Axeman/dacc-iam-filesystem/filestore"
 	dag "gx/ipfs/QmQzSpSjkdGHW6WFBhUG6P3t9K8yv7iucucT1cQaqJ6tgd/go-merkledag"
 	dagtest "gx/ipfs/QmQzSpSjkdGHW6WFBhUG6P3t9K8yv7iucucT1cQaqJ6tgd/go-merkledag/test"
 	blockservice "gx/ipfs/QmTZZrpd9o4vpYr9TEADW2EoJ9fzUtAgpXqjxZHbKR2T15/go-blockservice"

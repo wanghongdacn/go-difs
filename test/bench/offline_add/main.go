@@ -9,8 +9,8 @@ import (
 	"path"
 	"testing"
 
-	"github.com/ipfs/go-ipfs/Godeps/_workspace/src/github.com/jbenet/go-random"
-	"github.com/ipfs/go-ipfs/thirdparty/unit"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/Godeps/_workspace/src/github.com/jbenet/go-random"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/thirdparty/unit"
 
 	config "gx/ipfs/QmQSG7YCizeUH2bWatzp6uK9Vm3m7LA5jpxGa9QqgpNKw4/go-ipfs-config"
 )

@@ -9,10 +9,10 @@ import (
 	"sort"
 	"strings"
 
-	cmds "github.com/ipfs/go-ipfs/commands"
-	e "github.com/ipfs/go-ipfs/core/commands/e"
-	repo "github.com/ipfs/go-ipfs/repo"
-	"github.com/ipfs/go-ipfs/repo/fsrepo"
+	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	repo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/repo/fsrepo"
 
 	iaddr "gx/ipfs/QmNysBQN8FUSE2TKUYRFiMrn7Fiqk5RPeCz33cKaLa6syn/go-ipfs-addr"
 	cmdkit "gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"

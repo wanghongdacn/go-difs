@@ -6,9 +6,9 @@ import (
 	"errors"
 	"time"
 
-	"github.com/ipfs/go-ipfs/core"
-	gc "github.com/ipfs/go-ipfs/pin/gc"
-	repo "github.com/ipfs/go-ipfs/repo"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	gc "github.com/Harold-the-Axeman/dacc-iam-filesystem/pin/gc"
+	repo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo"
 
 	humanize "gx/ipfs/QmPSBJL4momYnE7DcUyk2DVhD6rH488ZmHBGLbxNdhU44K/go-humanize"
 	mfs "gx/ipfs/QmQeLRo7dHKpmREWkAUXRAri4Bro3BqrDVJJHjHHmKSHMc/go-mfs"

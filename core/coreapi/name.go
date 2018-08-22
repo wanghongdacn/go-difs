@@ -7,12 +7,12 @@ import (
 	"strings"
 	"time"
 
-	core "github.com/ipfs/go-ipfs/core"
-	coreiface "github.com/ipfs/go-ipfs/core/coreapi/interface"
-	caopts "github.com/ipfs/go-ipfs/core/coreapi/interface/options"
-	keystore "github.com/ipfs/go-ipfs/keystore"
-	namesys "github.com/ipfs/go-ipfs/namesys"
-	nsopts "github.com/ipfs/go-ipfs/namesys/opts"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	coreiface "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface"
+	caopts "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface/options"
+	keystore "github.com/Harold-the-Axeman/dacc-iam-filesystem/keystore"
+	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
+	nsopts "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/opts"
 	ipath "gx/ipfs/QmWMcvZbNvk5codeqbm7L89C9kqSwka4KaHnDb8HRnxsSL/go-path"
 
 	crypto "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"

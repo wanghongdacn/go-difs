@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	"github.com/ipfs/go-ipfs/core/coreapi/interface/options"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface/options"
 
 	ipld "gx/ipfs/QmaA8GkXUYinkkndvg7T6Tx7gYXemhxjaxLisEPes7Rf1P/go-ipld-format"
 )

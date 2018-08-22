@@ -10,11 +10,11 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	oldcmds "github.com/ipfs/go-ipfs/commands"
-	lgc "github.com/ipfs/go-ipfs/commands/legacy"
-	e "github.com/ipfs/go-ipfs/core/commands/e"
-	coreiface "github.com/ipfs/go-ipfs/core/coreapi/interface"
-	"github.com/ipfs/go-ipfs/core/coreapi/interface/options"
+	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
+	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	coreiface "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface/options"
 
 	cmdkit "gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"
 	dag "gx/ipfs/QmQzSpSjkdGHW6WFBhUG6P3t9K8yv7iucucT1cQaqJ6tgd/go-merkledag"

@@ -5,7 +5,7 @@ Packages underneath core/ provide a (relatively) stable, low-level API
 to carry out most IPFS-related tasks.  For more details on the other
 interfaces and how core/... fits into the bigger IPFS picture, see:
 
-  $ godoc github.com/ipfs/go-ipfs
+  $ godoc github.com/Harold-the-Axeman/dacc-iam-filesystem
 */
 package core
 
@@ -20,15 +20,15 @@ import (
 	"strings"
 	"time"
 
-	version "github.com/ipfs/go-ipfs"
-	rp "github.com/ipfs/go-ipfs/exchange/reprovide"
-	filestore "github.com/ipfs/go-ipfs/filestore"
-	mount "github.com/ipfs/go-ipfs/fuse/mount"
-	namesys "github.com/ipfs/go-ipfs/namesys"
-	ipnsrp "github.com/ipfs/go-ipfs/namesys/republisher"
-	p2p "github.com/ipfs/go-ipfs/p2p"
-	pin "github.com/ipfs/go-ipfs/pin"
-	repo "github.com/ipfs/go-ipfs/repo"
+	version "github.com/Harold-the-Axeman/dacc-iam-filesystem"
+	rp "github.com/Harold-the-Axeman/dacc-iam-filesystem/exchange/reprovide"
+	filestore "github.com/Harold-the-Axeman/dacc-iam-filesystem/filestore"
+	mount "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/mount"
+	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
+	ipnsrp "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/republisher"
+	p2p "github.com/Harold-the-Axeman/dacc-iam-filesystem/p2p"
+	pin "github.com/Harold-the-Axeman/dacc-iam-filesystem/pin"
+	repo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo"
 
 	circuit "gx/ipfs/QmPMRK5yTc2KhnaxQN4R7vRqEfZo5hW1aF5x6W97RKnXZq/go-libp2p-circuit"
 	u "gx/ipfs/QmPdKqUcHGFdeSpvjVoaTRPPstGif9GBZb5Q56RVw9o69A/go-ipfs-util"

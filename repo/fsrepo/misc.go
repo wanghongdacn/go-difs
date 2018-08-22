@@ -3,7 +3,7 @@ package fsrepo
 import (
 	"os"
 
-	homedir "github.com/ipfs/go-ipfs/Godeps/_workspace/src/github.com/mitchellh/go-homedir"
+	homedir "github.com/Harold-the-Axeman/dacc-iam-filesystem/Godeps/_workspace/src/github.com/mitchellh/go-homedir"
 
 	config "gx/ipfs/QmQSG7YCizeUH2bWatzp6uK9Vm3m7LA5jpxGa9QqgpNKw4/go-ipfs-config"
 )
