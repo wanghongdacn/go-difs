@@ -9,11 +9,11 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
-	corerepo "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/corerepo"
-	fsrepo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo/fsrepo"
+	oldcmds "github.com/ipfs/go-ipfs/commands"
+	lgc "github.com/ipfs/go-ipfs/commands/legacy"
+	e "github.com/ipfs/go-ipfs/core/commands/e"
+	corerepo "github.com/ipfs/go-ipfs/core/corerepo"
+	fsrepo "github.com/ipfs/go-ipfs/repo/fsrepo"
 
 	cmdkit "gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"
 	config "gx/ipfs/QmQSG7YCizeUH2bWatzp6uK9Vm3m7LA5jpxGa9QqgpNKw4/go-ipfs-config"

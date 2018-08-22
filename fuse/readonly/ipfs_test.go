@@ -13,9 +13,9 @@ import (
 	"sync"
 	"testing"
 
-	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	coreunix "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreunix"
-	coremock "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/mock"
+	core "github.com/ipfs/go-ipfs/core"
+	coreunix "github.com/ipfs/go-ipfs/core/coreunix"
+	coremock "github.com/ipfs/go-ipfs/core/mock"
 	dag "gx/ipfs/QmQzSpSjkdGHW6WFBhUG6P3t9K8yv7iucucT1cQaqJ6tgd/go-merkledag"
 	importer "gx/ipfs/QmWv8MYwgPK4zXYv1et1snWJ6FWGqaL6xY2y9X1bRSKBxk/go-unixfs/importer"
 	uio "gx/ipfs/QmWv8MYwgPK4zXYv1et1snWJ6FWGqaL6xY2y9X1bRSKBxk/go-unixfs/io"

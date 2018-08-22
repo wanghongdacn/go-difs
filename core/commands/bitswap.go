@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 
-	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	oldcmds "github.com/ipfs/go-ipfs/commands"
+	lgc "github.com/ipfs/go-ipfs/commands/legacy"
+	e "github.com/ipfs/go-ipfs/core/commands/e"
 	bitswap "gx/ipfs/QmQk1Rqy5XSBzXykMSsgiXfnhivCSnFpykx4M2j6DD1nBH/go-bitswap"
 	decision "gx/ipfs/QmQk1Rqy5XSBzXykMSsgiXfnhivCSnFpykx4M2j6DD1nBH/go-bitswap/decision"
 

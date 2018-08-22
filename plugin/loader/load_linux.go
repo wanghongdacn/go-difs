@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"plugin"
 
-	iplugin "github.com/Harold-the-Axeman/dacc-iam-filesystem/plugin"
+	iplugin "github.com/ipfs/go-ipfs/plugin"
 )
 
 func init() {

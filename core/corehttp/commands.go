@@ -9,10 +9,10 @@ import (
 	"strconv"
 	"strings"
 
-	version "github.com/Harold-the-Axeman/dacc-iam-filesystem"
-	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	corecommands "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands"
+	version "github.com/ipfs/go-ipfs"
+	oldcmds "github.com/ipfs/go-ipfs/commands"
+	"github.com/ipfs/go-ipfs/core"
+	corecommands "github.com/ipfs/go-ipfs/core/commands"
 
 	config "gx/ipfs/QmQSG7YCizeUH2bWatzp6uK9Vm3m7LA5jpxGa9QqgpNKw4/go-ipfs-config"
 	cmds "gx/ipfs/QmUQb3xtNzkQCgTj2NjaqcJZNv2nfSSub2QAdy9DtQMRBT/go-ipfs-cmds"

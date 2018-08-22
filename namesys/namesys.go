@@ -5,7 +5,7 @@ import (
 	"strings"
 	"time"
 
-	opts "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/opts"
+	opts "github.com/ipfs/go-ipfs/namesys/opts"
 	path "gx/ipfs/QmWMcvZbNvk5codeqbm7L89C9kqSwka4KaHnDb8HRnxsSL/go-path"
 
 	mh "gx/ipfs/QmPnFwZ2JXKnXgMw8CdBPxn7FWh6LLdjUjxV1fKHuJnkr8/go-multihash"

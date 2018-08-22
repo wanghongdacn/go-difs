@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	opt "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface/options"
+	opt "github.com/ipfs/go-ipfs/core/coreapi/interface/options"
 )
 
 func TestPinAdd(t *testing.T) {

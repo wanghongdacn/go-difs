@@ -6,10 +6,10 @@ import (
 	"runtime"
 	"strings"
 
-	version "github.com/Harold-the-Axeman/dacc-iam-filesystem"
-	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
-	fsrepo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo/fsrepo"
+	version "github.com/ipfs/go-ipfs"
+	cmds "github.com/ipfs/go-ipfs/commands"
+	e "github.com/ipfs/go-ipfs/core/commands/e"
+	fsrepo "github.com/ipfs/go-ipfs/repo/fsrepo"
 
 	"gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"
 )

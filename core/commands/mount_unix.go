@@ -7,9 +7,9 @@ import (
 	"io"
 	"strings"
 
-	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
-	nodeMount "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/node"
+	cmds "github.com/ipfs/go-ipfs/commands"
+	e "github.com/ipfs/go-ipfs/core/commands/e"
+	nodeMount "github.com/ipfs/go-ipfs/fuse/node"
 
 	"gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"
 	config "gx/ipfs/QmQSG7YCizeUH2bWatzp6uK9Vm3m7LA5jpxGa9QqgpNKw4/go-ipfs-config"

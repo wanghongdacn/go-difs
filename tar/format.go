@@ -8,7 +8,7 @@ import (
 	"io"
 	"strings"
 
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/dagutils"
+	"github.com/ipfs/go-ipfs/dagutils"
 	dag "gx/ipfs/QmQzSpSjkdGHW6WFBhUG6P3t9K8yv7iucucT1cQaqJ6tgd/go-merkledag"
 	path "gx/ipfs/QmWMcvZbNvk5codeqbm7L89C9kqSwka4KaHnDb8HRnxsSL/go-path"
 	importer "gx/ipfs/QmWv8MYwgPK4zXYv1et1snWJ6FWGqaL6xY2y9X1bRSKBxk/go-unixfs/importer"

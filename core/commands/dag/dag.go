@@ -7,10 +7,10 @@ import (
 	"math"
 	"strings"
 
-	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
-	coredag "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coredag"
-	pin "github.com/Harold-the-Axeman/dacc-iam-filesystem/pin"
+	cmds "github.com/ipfs/go-ipfs/commands"
+	e "github.com/ipfs/go-ipfs/core/commands/e"
+	coredag "github.com/ipfs/go-ipfs/core/coredag"
+	pin "github.com/ipfs/go-ipfs/pin"
 	path "gx/ipfs/QmWMcvZbNvk5codeqbm7L89C9kqSwka4KaHnDb8HRnxsSL/go-path"
 
 	cmdkit "gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"

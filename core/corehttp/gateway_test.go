@@ -11,12 +11,12 @@ import (
 	"testing"
 	"time"
 
-	version "github.com/Harold-the-Axeman/dacc-iam-filesystem"
-	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	coreunix "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreunix"
-	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
-	nsopts "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/opts"
-	repo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo"
+	version "github.com/ipfs/go-ipfs"
+	core "github.com/ipfs/go-ipfs/core"
+	coreunix "github.com/ipfs/go-ipfs/core/coreunix"
+	namesys "github.com/ipfs/go-ipfs/namesys"
+	nsopts "github.com/ipfs/go-ipfs/namesys/opts"
+	repo "github.com/ipfs/go-ipfs/repo"
 
 	ci "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"
 	config "gx/ipfs/QmQSG7YCizeUH2bWatzp6uK9Vm3m7LA5jpxGa9QqgpNKw4/go-ipfs-config"

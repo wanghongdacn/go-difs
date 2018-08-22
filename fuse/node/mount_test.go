@@ -11,10 +11,10 @@ import (
 
 	"context"
 
-	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	ipns "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/ipns"
-	mount "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/mount"
-	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
+	core "github.com/ipfs/go-ipfs/core"
+	ipns "github.com/ipfs/go-ipfs/fuse/ipns"
+	mount "github.com/ipfs/go-ipfs/fuse/mount"
+	namesys "github.com/ipfs/go-ipfs/namesys"
 
 	offroute "gx/ipfs/QmRr8DpNhQMzsoqAitUrw43D82pyPXZkyUqarhSAfkrdaQ/go-ipfs-routing/offline"
 	ci "gx/ipfs/QmXG74iiKQnDstVQq9fPFQEB6JTNSWBbAWE1qsq6L4E5sR/go-testutil/ci"

@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	opts "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/opts"
+	opts "github.com/ipfs/go-ipfs/namesys/opts"
 	path "gx/ipfs/QmWMcvZbNvk5codeqbm7L89C9kqSwka4KaHnDb8HRnxsSL/go-path"
 	"gx/ipfs/QmWv8MYwgPK4zXYv1et1snWJ6FWGqaL6xY2y9X1bRSKBxk/go-unixfs"
 

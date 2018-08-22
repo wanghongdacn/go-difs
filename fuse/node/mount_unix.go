@@ -8,10 +8,10 @@ import (
 	"strings"
 	"sync"
 
-	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	ipns "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/ipns"
-	mount "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/mount"
-	rofs "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/readonly"
+	core "github.com/ipfs/go-ipfs/core"
+	ipns "github.com/ipfs/go-ipfs/fuse/ipns"
+	mount "github.com/ipfs/go-ipfs/fuse/mount"
+	rofs "github.com/ipfs/go-ipfs/fuse/readonly"
 
 	logging "gx/ipfs/QmRREK2CAZ5Re2Bd9zZFG6FeYDppUWt5cMgsoUEp3ktgSr/go-log"
 )

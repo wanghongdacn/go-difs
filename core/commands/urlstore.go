@@ -5,7 +5,7 @@ import (
 	"io"
 	"net/http"
 
-	filestore "github.com/Harold-the-Axeman/dacc-iam-filesystem/filestore"
+	filestore "github.com/ipfs/go-ipfs/filestore"
 	balanced "gx/ipfs/QmWv8MYwgPK4zXYv1et1snWJ6FWGqaL6xY2y9X1bRSKBxk/go-unixfs/importer/balanced"
 	ihelper "gx/ipfs/QmWv8MYwgPK4zXYv1et1snWJ6FWGqaL6xY2y9X1bRSKBxk/go-unixfs/importer/helpers"
 	trickle "gx/ipfs/QmWv8MYwgPK4zXYv1et1snWJ6FWGqaL6xY2y9X1bRSKBxk/go-unixfs/importer/trickle"

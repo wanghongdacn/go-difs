@@ -4,12 +4,12 @@ import (
 	"io"
 	"strings"
 
-	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
-	dag "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/dag"
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
-	ocmd "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/object"
-	unixfs "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/unixfs"
+	oldcmds "github.com/ipfs/go-ipfs/commands"
+	lgc "github.com/ipfs/go-ipfs/commands/legacy"
+	dag "github.com/ipfs/go-ipfs/core/commands/dag"
+	e "github.com/ipfs/go-ipfs/core/commands/e"
+	ocmd "github.com/ipfs/go-ipfs/core/commands/object"
+	unixfs "github.com/ipfs/go-ipfs/core/commands/unixfs"
 
 	"gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"
 	logging "gx/ipfs/QmRREK2CAZ5Re2Bd9zZFG6FeYDppUWt5cMgsoUEp3ktgSr/go-log"

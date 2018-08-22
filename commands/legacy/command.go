@@ -5,7 +5,7 @@ import (
 
 	"gx/ipfs/QmUQb3xtNzkQCgTj2NjaqcJZNv2nfSSub2QAdy9DtQMRBT/go-ipfs-cmds"
 
-	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	oldcmds "github.com/ipfs/go-ipfs/commands"
 	logging "gx/ipfs/QmRREK2CAZ5Re2Bd9zZFG6FeYDppUWt5cMgsoUEp3ktgSr/go-log"
 )
 

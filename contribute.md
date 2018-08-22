@@ -3,11 +3,11 @@
 go-ipfs is MIT licensed open source software. We welcome contributions big and
 small! Take a look at the [community contributing notes](https://github.com/ipfs/community/blob/master/contributing.md). 
 
-Please make sure to check out the [issues](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues). Search the closed ones before reporting things, and (if you can!) help us with open ones.
+Please make sure to check out the [issues](https://github.com/ipfs/go-ipfs/issues). Search the closed ones before reporting things, and (if you can!) help us with open ones.
 
-Please note that the go-ipfs issues are only for bug reports and directly actionable features. Check [the IPFS Community guide on reporting issues](https://github.com/ipfs/community/blob/master/contributing.md#reporting-issues) if your question doesn't fit as a bug report or an actionable feature, and our [guide on opening issues](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/github-issue-guide.md) if you are not sure how to make an issue here.
+Please note that the go-ipfs issues are only for bug reports and directly actionable features. Check [the IPFS Community guide on reporting issues](https://github.com/ipfs/community/blob/master/contributing.md#reporting-issues) if your question doesn't fit as a bug report or an actionable feature, and our [guide on opening issues](https://github.com/ipfs/go-ipfs/blob/master/docs/github-issue-guide.md) if you are not sure how to make an issue here.
 
-If you're looking to help out, head to the [captain's log](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues/2247) and
+If you're looking to help out, head to the [captain's log](https://github.com/ipfs/go-ipfs/issues/2247) and
 try picking up an issue from there.
 
 ## Go Guidelines:
@@ -19,7 +19,7 @@ Please look and conform to our [Go Contribution Guidelines](https://github.com/i
 - See the [dev pseudo-roadmap](dev.md).
 - Please adhere to the protocol described in [the main ipfs repo](https://github.com/ipfs/ipfs) and [specs](https://github.com/ipfs/specs) (WIP).
 - Please make branches and pull-request, even if working on the main repository.
-- Ask questions or talk about things in [Issues](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues) or #ipfs on freenode.
+- Ask questions or talk about things in [Issues](https://github.com/ipfs/go-ipfs/issues) or #ipfs on freenode.
 - Ensure you are able to contribute (no legal issues please-- we'll probably setup a CLA).
 - Have fun!
 

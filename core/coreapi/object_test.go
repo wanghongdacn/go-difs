@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface"
-	opt "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface/options"
+	"github.com/ipfs/go-ipfs/core/coreapi/interface"
+	opt "github.com/ipfs/go-ipfs/core/coreapi/interface/options"
 )
 
 func TestNew(t *testing.T) {

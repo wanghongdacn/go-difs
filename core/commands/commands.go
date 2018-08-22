@@ -1,6 +1,6 @@
 // Package commands implements the ipfs command interface
 //
-// Using github.com/Harold-the-Axeman/dacc-iam-filesystem/commands to define the command line and HTTP
+// Using github.com/ipfs/go-ipfs/commands to define the command line and HTTP
 // APIs.  This is the interface available to folks using IPFS from outside of
 // the Go language.
 package commands
@@ -11,7 +11,7 @@ import (
 	"sort"
 	"strings"
 
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	e "github.com/ipfs/go-ipfs/core/commands/e"
 
 	"gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"
 	cmds "gx/ipfs/QmUQb3xtNzkQCgTj2NjaqcJZNv2nfSSub2QAdy9DtQMRBT/go-ipfs-cmds"

@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"text/tabwriter"
 
-	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	cmds "github.com/ipfs/go-ipfs/commands"
+	core "github.com/ipfs/go-ipfs/core"
 
 	"gx/ipfs/QmPVqQHEfLpqK7JLCsUkyam7rhuV3MAeZ9gueQQCrBwCta/go-ipfs-cmdkit"
 	ma "gx/ipfs/QmYmsdtJ3HsodkePE3eU3TsCaP2YvPZJ4LoXnNkDE5Tpt7/go-multiaddr"

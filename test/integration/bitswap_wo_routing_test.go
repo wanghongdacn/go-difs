@@ -5,8 +5,8 @@ import (
 	"context"
 	"testing"
 
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/mock"
+	"github.com/ipfs/go-ipfs/core"
+	"github.com/ipfs/go-ipfs/core/mock"
 	"gx/ipfs/QmR54CzE4UcdFAZDehj6HFyy3eSHhVsJUpjfnhCmscuStS/go-block-format"
 
 	mocknet "gx/ipfs/QmUDzeFgYrRmHL2hUB6NZmqcBVQtUzETwmFRUc9onfSSHr/go-libp2p/p2p/net/mock"

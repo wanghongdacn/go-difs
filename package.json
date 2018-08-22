@@ -1,9 +1,9 @@
 {
   "bugs": {
-    "url": "https://github.com/Harold-the-Axeman/dacc-iam-filesystem"
+    "url": "https://github.com/ipfs/go-ipfs"
   },
   "gx": {
-    "dvcsimport": "github.com/Harold-the-Axeman/dacc-iam-filesystem",
+    "dvcsimport": "github.com/ipfs/go-ipfs",
     "goversion": "1.10"
   },
   "gxDependencies": [
