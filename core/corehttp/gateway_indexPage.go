@@ -6,7 +6,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/ipfs/go-ipfs/assets"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/assets"
 )
 
 // structs for directory listing

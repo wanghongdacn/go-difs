@@ -6,7 +6,7 @@
 [![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://ipfs.io/)
 [![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![GoDoc](https://godoc.org/github.com/ipfs/go-ipfs?status.svg)](https://godoc.org/github.com/ipfs/go-ipfs)
+[![GoDoc](https://godoc.org/github.com/Harold-the-Axeman/dacc-iam-filesystem?status.svg)](https://godoc.org/github.com/Harold-the-Axeman/dacc-iam-filesystem)
 [![Build Status](https://travis-ci.org/ipfs/go-ipfs.svg?branch=master)](https://travis-ci.org/ipfs/go-ipfs)
 
 > IPFS implementation in Go
@@ -25,7 +25,7 @@ For more info see: https://github.com/ipfs/ipfs.
 
 Please put all issues regarding:
   - IPFS _design_ in the [ipfs repo issues](https://github.com/ipfs/ipfs/issues).
-  - Go IPFS _implementation_ in [this repo](https://github.com/ipfs/go-ipfs/issues).
+  - Go IPFS _implementation_ in [this repo](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues).
 
 ## Table of Contents
 
@@ -128,9 +128,9 @@ export PATH=$PATH:$GOPATH/bin
 #### Download and Compile IPFS
 
 ```
-$ go get -u -d github.com/ipfs/go-ipfs
+$ go get -u -d github.com/Harold-the-Axeman/dacc-iam-filesystem
 
-$ cd $GOPATH/src/github.com/ipfs/go-ipfs
+$ cd $GOPATH/src/github.com/Harold-the-Axeman/dacc-iam-filesystem
 $ make install
 ```
 
@@ -162,7 +162,7 @@ mismatched APIs.
 dependencies as well.
 * *WARNING: Older versions of OSX FUSE (for Mac OS X) can cause kernel panics when mounting!*
   We strongly recommend you use the [latest version of OSX FUSE](http://osxfuse.github.io/).
-  (See https://github.com/ipfs/go-ipfs/issues/177)
+  (See https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues/177)
 * For more details on setting up FUSE (so that you can mount the filesystem), see the docs folder.
 * Shell command completion is available in `misc/completion/ipfs-completion.bash`. Read [docs/command-completion.md](docs/command-completion.md) to learn how to install it.
 * See the [init examples](https://github.com/ipfs/website/tree/master/static/docs/examples/init) for how to connect IPFS to systemd or whatever init system your distro uses.
@@ -326,7 +326,7 @@ datastore of any bad entries.
 Please direct general questions and help requests to our
 [forum](https://discuss.ipfs.io) or our IRC channel (freenode #ipfs).
 
-If you believe you've found a bug, check the [issues list](https://github.com/ipfs/go-ipfs/issues)
+If you believe you've found a bug, check the [issues list](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues)
 and, if you don't see your problem there, either come talk to us on IRC (freenode #ipfs) or
 file an issue of your own!
 
@@ -344,9 +344,9 @@ This repository falls under the IPFS [Code of Conduct](https://github.com/ipfs/c
 
 Some places to get you started. (WIP)
 
-Main file: [cmd/ipfs/main.go](https://github.com/ipfs/go-ipfs/blob/master/cmd/ipfs/main.go) <br>
-CLI Commands: [core/commands/](https://github.com/ipfs/go-ipfs/tree/master/core/commands) <br>
-Bitswap (the data trading engine): [exchange/bitswap/](https://github.com/ipfs/go-ipfs/tree/master/exchange/bitswap)
+Main file: [cmd/ipfs/main.go](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/cmd/ipfs/main.go) <br>
+CLI Commands: [core/commands/](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/tree/master/core/commands) <br>
+Bitswap (the data trading engine): [exchange/bitswap/](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/tree/master/exchange/bitswap)
 
 DHT: https://github.com/libp2p/go-libp2p-kad-dht <br>
 PubSub: https://github.com/libp2p/go-floodsub <br>

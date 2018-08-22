@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	coreiface "github.com/ipfs/go-ipfs/core/coreapi/interface"
-	caopts "github.com/ipfs/go-ipfs/core/coreapi/interface/options"
-	corerepo "github.com/ipfs/go-ipfs/core/corerepo"
+	coreiface "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface"
+	caopts "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface/options"
+	corerepo "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/corerepo"
 	merkledag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
 	bserv "gx/ipfs/QmbSB9Uh3wVgmiCb1fAb8zuC3qAE6un4kd1jvatUurfAmB/go-blockservice"
 

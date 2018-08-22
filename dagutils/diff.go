@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"path"
 
-	coreiface "github.com/ipfs/go-ipfs/core/coreapi/interface"
+	coreiface "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface"
 
 	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
 	ipld "gx/ipfs/QmX5CsuHyVZeTLxgRSYkgLSDQKb9UjE8xnhQzCEJWWWFsC/go-ipld-format"

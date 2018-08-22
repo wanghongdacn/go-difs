@@ -6,9 +6,9 @@ import (
 	"io"
 	"text/tabwriter"
 
-	cmds "github.com/ipfs/go-ipfs/commands"
-	core "github.com/ipfs/go-ipfs/core"
-	e "github.com/ipfs/go-ipfs/core/commands/e"
+	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
 	unixfs "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs"
 	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"
 	unixfspb "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/pb"

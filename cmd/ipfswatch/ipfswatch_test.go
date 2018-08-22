@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/ipfs/go-ipfs/thirdparty/assert"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/thirdparty/assert"
 )
 
 func TestIsHidden(t *testing.T) {

@@ -7,11 +7,11 @@ import (
 	"io"
 	"time"
 
-	cmds "github.com/ipfs/go-ipfs/commands"
-	core "github.com/ipfs/go-ipfs/core"
-	e "github.com/ipfs/go-ipfs/core/commands/e"
-	corerepo "github.com/ipfs/go-ipfs/core/corerepo"
-	pin "github.com/ipfs/go-ipfs/pin"
+	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	corerepo "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/corerepo"
+	pin "github.com/Harold-the-Axeman/dacc-iam-filesystem/pin"
 	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"
 
 	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"

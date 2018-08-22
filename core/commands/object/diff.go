@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"io"
 
-	cmds "github.com/ipfs/go-ipfs/commands"
-	e "github.com/ipfs/go-ipfs/core/commands/e"
-	coreiface "github.com/ipfs/go-ipfs/core/coreapi/interface"
-	"github.com/ipfs/go-ipfs/dagutils"
+	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	coreiface "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/dagutils"
 
 	cmdkit "gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 )

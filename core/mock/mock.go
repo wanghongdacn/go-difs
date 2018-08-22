@@ -3,9 +3,9 @@ package coremock
 import (
 	"context"
 
-	commands "github.com/ipfs/go-ipfs/commands"
-	core "github.com/ipfs/go-ipfs/core"
-	"github.com/ipfs/go-ipfs/repo"
+	commands "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/repo"
 
 	libp2p "gx/ipfs/QmQiaskfWpdRJ4x2spEQjPFTUkEB87KDYu91qnNYBqvvcX/go-libp2p"
 	mocknet "gx/ipfs/QmQiaskfWpdRJ4x2spEQjPFTUkEB87KDYu91qnNYBqvvcX/go-libp2p/p2p/net/mock"

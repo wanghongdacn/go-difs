@@ -4,10 +4,10 @@ import (
 	"io"
 	"strings"
 
-	cmds "github.com/ipfs/go-ipfs/commands"
-	e "github.com/ipfs/go-ipfs/core/commands/e"
-	namesys "github.com/ipfs/go-ipfs/namesys"
-	nsopts "github.com/ipfs/go-ipfs/namesys/opts"
+	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
+	nsopts "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/opts"
 
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 )

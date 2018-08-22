@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	cmds "github.com/ipfs/go-ipfs/commands"
-	core "github.com/ipfs/go-ipfs/core"
-	e "github.com/ipfs/go-ipfs/core/commands/e"
-	keystore "github.com/ipfs/go-ipfs/keystore"
+	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	keystore "github.com/Harold-the-Axeman/dacc-iam-filesystem/keystore"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 
 	crypto "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"

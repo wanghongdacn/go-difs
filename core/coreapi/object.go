@@ -11,10 +11,10 @@ import (
 	"io"
 	"io/ioutil"
 
-	coreiface "github.com/ipfs/go-ipfs/core/coreapi/interface"
-	caopts "github.com/ipfs/go-ipfs/core/coreapi/interface/options"
-	"github.com/ipfs/go-ipfs/dagutils"
-	"github.com/ipfs/go-ipfs/pin"
+	coreiface "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface"
+	caopts "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface/options"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/dagutils"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/pin"
 
 	ft "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs"
 	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"

@@ -5,8 +5,8 @@ import (
 	"path"
 	"runtime"
 
-	version "github.com/ipfs/go-ipfs"
-	cmds "github.com/ipfs/go-ipfs/commands"
+	version "github.com/Harold-the-Axeman/dacc-iam-filesystem"
+	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
 
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 	manet "gx/ipfs/QmV6FjemM1K8oXjrvuq3wuVWWoU2TLDPmNnKrxHzY3v6Ai/go-multiaddr-net"

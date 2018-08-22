@@ -3,7 +3,7 @@ package reprovide
 import (
 	"context"
 
-	pin "github.com/ipfs/go-ipfs/pin"
+	pin "github.com/Harold-the-Axeman/dacc-iam-filesystem/pin"
 
 	merkledag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
 	ipld "gx/ipfs/QmX5CsuHyVZeTLxgRSYkgLSDQKb9UjE8xnhQzCEJWWWFsC/go-ipld-format"

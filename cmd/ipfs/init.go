@@ -10,11 +10,11 @@ import (
 	"path"
 	"strings"
 
-	assets "github.com/ipfs/go-ipfs/assets"
-	oldcmds "github.com/ipfs/go-ipfs/commands"
-	core "github.com/ipfs/go-ipfs/core"
-	namesys "github.com/ipfs/go-ipfs/namesys"
-	fsrepo "github.com/ipfs/go-ipfs/repo/fsrepo"
+	assets "github.com/Harold-the-Axeman/dacc-iam-filesystem/assets"
+	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
+	fsrepo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo/fsrepo"
 
 	"gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"

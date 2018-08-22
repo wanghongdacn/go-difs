@@ -5,9 +5,9 @@ import (
 	fmt "fmt"
 	gopath "path"
 
-	core "github.com/ipfs/go-ipfs/core"
-	coreiface "github.com/ipfs/go-ipfs/core/coreapi/interface"
-	namesys "github.com/ipfs/go-ipfs/namesys"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	coreiface "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface"
+	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
 	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"
 	ipfspath "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 	resolver "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path/resolver"

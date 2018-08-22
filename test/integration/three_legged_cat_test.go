@@ -9,10 +9,10 @@ import (
 	"testing"
 	"time"
 
-	core "github.com/ipfs/go-ipfs/core"
-	coreunix "github.com/ipfs/go-ipfs/core/coreunix"
-	mock "github.com/ipfs/go-ipfs/core/mock"
-	"github.com/ipfs/go-ipfs/thirdparty/unit"
+	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	coreunix "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreunix"
+	mock "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/mock"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/thirdparty/unit"
 
 	mocknet "gx/ipfs/QmQiaskfWpdRJ4x2spEQjPFTUkEB87KDYu91qnNYBqvvcX/go-libp2p/p2p/net/mock"
 	testutil "gx/ipfs/QmRNhSdqzMcuRxX9A1egBeQ3BhDTguDV5HPwi8wRykkPU8/go-testutil"
