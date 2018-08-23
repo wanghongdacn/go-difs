@@ -1,9 +1,10 @@
-syntax = "proto3";
+syntax = "proto2";
+package iam.pb;
 
 enum MessageType {
-    MessageType_Initialize = 0 [(wire_in) = true];
-    MessageType_MessageCSR = 1[(wire_in) = true];
-    MessageType_MessageCOT = 4 [(wire_in) = true];  
+    MessageType_Initialize = 0 ;
+    MessageType_MessageCSR = 1;
+    MessageType_MessageCOT = 2 ;  
 }
 
 // Request CSR
