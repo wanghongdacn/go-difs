@@ -65,7 +65,6 @@ var unwantCmd = &oldcmds.Command{
 				res.SetError(err, cmdkit.ErrNormal)
 				return
 			}
-
 			ks = append(ks, c)
 		}
 
