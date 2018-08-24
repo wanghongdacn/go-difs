@@ -1,0 +1,23 @@
+syntax = "proto2";
+package iam.pb;
+
+enum MessageType {
+    MessageType_Initialize = 0 ;
+    MessageType_MessageCSR = 1;
+    MessageType_MessageCOT = 2 ;  
+}
+
+// Request CSR
+message MessageCSR {
+	required string peer_id = 1;	// peer id
+	required string cid = 2;        // cid
+    required string op = 3; // operation : store 
+}
+
+message SignedMessage {
+	required string peer_id = 1;						
+	required bytes message = 2;						
+    required bytes signature = 3 ;
+    required string public_key = 4 ;
+}
+
