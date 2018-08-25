@@ -2,20 +2,16 @@ package iam
 
 import (
 	"fmt"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
 	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
 	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
 	b58 "github.com/mr-tron/base58/base58"
 	"gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	"gx/ipfs/QmPdKqUcHGFdeSpvjVoaTRPPstGif9GBZb5Q56RVw9o69A/go-ipfs-util"
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
+	ds "gx/ipfs/QmVG5gxteQNEMhrS8prJSmU2C9rebtFuTd3SYZ5kE3YZ5k/go-datastore"
 )
-
-type IAMOutput struct {
-	Key     string
-	KeyHash string
-	Ih      string
-	Iv      string
-}
 
 var IamCmd = &cmds.Command{
 	Helptext: cmdkit.HelpText{
@@ -23,14 +19,25 @@ var IamCmd = &cmds.Command{
 		ShortDescription: "",
 	},
 	Subcommands: map[string]*cmds.Command{
-		"info": lgc.NewCommand(IamInfoCmd),
-		"new":  IamInfoNewCmd,
-		"csr":  lgc.NewCommand(IamInfoCmd),
-		"cot":  lgc.NewCommand(IamInfoCmd),
-		"crt":  lgc.NewCommand(IamInfoCmd),
-		"cat":  lgc.NewCommand(IamInfoCmd),
-		"get":  lgc.NewCommand(IamInfoCmd),
+		"info":    lgc.NewCommand(IamInfoCmd),
+		"content": IamContentCmd,
+		"csr":     lgc.NewCommand(IamInfoCmd),
+		"cot":     lgc.NewCommand(IamInfoCmd),
+		"crt":     lgc.NewCommand(IamInfoCmd),
+		"cat":     lgc.NewCommand(IamInfoCmd),
+		"get":     lgc.NewCommand(IamInfoCmd),
 	},
+}
+
+type IAMOutput struct {
+	Content     string
+	ContentHash string
+	Key         string
+}
+
+type ContentOutput struct {
+	Key     string
+	Content string
 }
 
 var IamInfoCmd = &oldcmds.Command{
@@ -39,58 +46,144 @@ var IamInfoCmd = &oldcmds.Command{
 		ShortDescription: "iam quick start",
 	},
 	Arguments: []cmdkit.Argument{
-		cmdkit.StringArg("key", true, true, "The path to the IPFS object(s) to be outputted."),
+		cmdkit.StringArg("info", true, true, "The info key"),
 	},
 	Options: []cmdkit.Option{
-		cmdkit.StringOption("ih", "Byte offset to begin reading from."),
-		cmdkit.StringOption("iv", "Maximum number of bytes to read."),
+		cmdkit.StringOption("key", "TODO"),
 	},
 	Run: func(req oldcmds.Request, res oldcmds.Response) {
 
 		fmt.Printf("load info ...\n")
-		req.InvocContext().GetNode()
+		//nd, err := req.InvocContext().GetNode()
+		//if err != nil {
+		//	res.SetError(err, cmdkit.ErrNormal)
+		//	return
+		//}
 		iam := &IAMOutput{}
 		if len(req.Arguments()) > 0 {
-			key := req.Arguments()[0]
-			iam.Key = key
-			iam.KeyHash = b58.Encode(util.Hash([]byte(key)))
+			content := req.Arguments()[0]
+			iam.Content = content
+			iam.ContentHash = b58.Encode(util.Hash([]byte(content)))
 		}
 
-		iam.Ih, _, _ = req.Option("ih").String()
-		iam.Iv, _, _ = req.Option("iv").String()
+		iam.Key, _, _ = req.Option("key").String()
 
-		res.SetOutput(iam)
+		res.SetOutput(iam.ContentHash)
+	},
+}
+
+var IamContentCmd = &cmds.Command{
+	Helptext: cmdkit.HelpText{
+		Tagline:          "IAM content CMD",
+		ShortDescription: "",
+	},
+	Subcommands: map[string]*cmds.Command{
+		"put": IamContentPutCmd,
+		"get": IamContentGetCmd,
+	},
+}
+
+var IamContentPutCmd = &cmds.Command{
+	Helptext: cmdkit.HelpText{
+		Tagline:          "IAM put content local",
+		ShortDescription: "",
+	},
+	Arguments: []cmdkit.Argument{
+		cmdkit.StringArg("content", true, true, "The content to be added."),
+	},
+	Options: []cmdkit.Option{
+		cmdkit.StringOption("key", "The key of content,default _"),
+	},
+	Run: func(req *cmds.Request, res cmds.ResponseEmitter, env cmds.Environment) {
+
+		n, _ := GetNode(env)
+
+		fmt.Printf("%s\n", n.Identity)
+
+		iam := &IAMOutput{}
+
+		iam.Key, _ = req.Options["key"].(string)
+
+		if len(req.Arguments) > 0 && len(req.Arguments[0]) > 0 {
+			content := req.Arguments[0]
+			iam.Content = content
+			iam.ContentHash = b58.Encode(util.Hash([]byte(content)))
+			key := iam.Key
+			if len(key) <= 0 {
+				key = "_"
+				iam.Key = key
+			}
+			putIamDatastore(n, key, []byte(content))
+		}
+
+		cmds.EmitOnce(res, &iam)
 	},
 	Type: IAMOutput{},
 }
 
-var IamInfoNewCmd = &cmds.Command{
+var IamContentGetCmd = &cmds.Command{
 	Helptext: cmdkit.HelpText{
-		Tagline:          "IAM CMD",
-		ShortDescription: "iam use new command",
+		Tagline:          "IAM get local content",
+		ShortDescription: "",
 	},
 	Arguments: []cmdkit.Argument{
-		cmdkit.StringArg("key", true, true, "The path to the IPFS object(s) to be outputted."),
-	},
-	Options: []cmdkit.Option{
-		cmdkit.StringOption("ih", "Byte offset to begin reading from."),
-		cmdkit.StringOption("iv", "Maximum number of bytes to read."),
+		cmdkit.StringArg("key", true, true, "The key of content."),
 	},
 	Run: func(req *cmds.Request, res cmds.ResponseEmitter, env cmds.Environment) {
-		fmt.Printf("load info ...\n")
 
-		ctx, _ := env.(*oldcmds.Context)
-		ctx.GetNode()
+		n, _ := GetNode(env)
 
-		iam := &IAMOutput{}
-		if len(req.Arguments) > 0 {
+		fmt.Printf("%s\n", n.Identity)
+
+		v := &ContentOutput{}
+		v.Key = ""
+		if len(req.Arguments) > 0 && len(req.Arguments[0]) > 0 {
 			key := req.Arguments[0]
-			iam.Key = key
-			iam.KeyHash = b58.Encode(util.Hash([]byte(key)))
+			v.Key = key
+			v.Content = getIamDatastore(n, key)
 		}
-		iam.Ih, _ = req.Options["ih"].(string)
-		iam.Iv, _ = req.Options["iv"].(string)
-		cmds.EmitOnce(res, &iam)
+		cmds.EmitOnce(res, &v)
 	},
-	Type: IAMOutput{},
+	Type: ContentOutput{},
+}
+
+/**
+	pug value and key into iamdatastore
+	add iam datastore first
+	1,add new datastore config into /path/to/repo/config
+		{
+          "child": {
+            "compression": "none",
+            "path": "iamdatastore",
+            "type": "levelds"
+          },
+          "mountpoint": "/iam",
+          "prefix": "iam.leveldb.datastore",
+          "type": "measure"
+        }
+	2,change file /path/to/repo/datastore_spec
+	{"mounts":[{"mountpoint":"/iam","path":"iamdatastore","type":"levelds"},{"mountpoint":"/blocks","path":"blocks","shardFunc":"/repo/flatfs/shard/v1/next-to-last/2","type":"flatfs"},{"mountpoint":"/","path":"datastore","type":"levelds"}],"type":"mount"}
+*/
+func putIamDatastore(node *core.IpfsNode, key string, value []byte) {
+	k := fmt.Sprintf("/iam/%s", key)
+	gk := ds.NewKey(k)
+	node.Repo.Datastore().Put(gk, []byte(value))
+}
+
+//get value by key from iamdatastore
+func getIamDatastore(node *core.IpfsNode, key string) string {
+	k := fmt.Sprintf("/iam/%s", key)
+	gk := ds.NewKey(k)
+	v, _ := node.Repo.Datastore().Get(gk)
+	s := string(v)
+	return s
+}
+
+// GetNode extracts the node from the environment.
+func GetNode(env interface{}) (*core.IpfsNode, error) {
+	ctx, ok := env.(*commands.Context)
+	if !ok {
+		return nil, fmt.Errorf("expected env to be of type %T, got %T", ctx, env)
+	}
+	return ctx.GetNode()
 }
