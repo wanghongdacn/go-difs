@@ -1,25 +1,129 @@
 package iam
 
 import (
-	ds "gx/ipfs/QmVG5gxteQNEMhrS8prJSmU2C9rebtFuTd3SYZ5kE3YZ5k/go-datastore"
+    "context"
+    host "gx/ipfs/QmRRCrNRs4qxotXx7WJT6SpCvSNEhXvyBcVjXY2K71pcjE/go-libp2p-host"
+    ds "gx/ipfs/QmVG5gxteQNEMhrS8prJSmU2C9rebtFuTd3SYZ5kE3YZ5k/go-datastore"
+    "log"
 
-	"github.com/libp2p/go-libp2p-crypto"
-	"github.com/libp2p/go-libp2p-peer"
+    crypto "github.com/libp2p/go-libp2p-crypto"
+
+    inet "gx/ipfs/QmX5J1q63BrrDTbpcHifrFbxH3cMZsvaNajy6u3zCpzBXs/go-libp2p-net"
+
+
+    //csr "github.com/Harold-the-Axeman/dacc-iam-filesystem/iam/pb"
+    "github.com/gogo/protobuf/proto"
+    "github.com/jbenet/goprocess"
+    peer "github.com/libp2p/go-libp2p-peer"
+    protocol "gx/ipfs/QmZNkThpqfVXs9GNbexPrfBbXSLNYeKrE7jwFM2oqHbyqN/go-libp2p-protocol"
+    
 )
 
-// Message ..
-type Message struct {
-	ID        peer.ID
-	Payload   []byte
-	Signature []byte
-	PubKey    crypto.PubKey
-}
+
+// ProtocolCSRRequest pattern: /protocol-name/request-or-response-message/version
+var ProtocolCSRRequest protocol.ID = "/difs/csrreq/0.0.1"
+
+// ProtocolCSRResponse pattern: /protocol-name/request-or-response-message/version
+var ProtocolCSRResponse protocol.ID = "/difs/csrresp/0.0.1"
+
 
 // IAM ...
 type IAM struct {
+	host      host.Host
 	datastore ds.Datastore // Local data
+
+	ctx  context.Context
+	proc goprocess.Process
+
+	protocols []protocol.ID // IAM protocols
 }
 
+func newIAMService(ctx context.Context, h host.Host, ds ds.Datastore) *IAM {
+	iam := &IAM{
+		host:      h,
+		datastore: ds,
+		ctx:       ctx,
+	}
+
+	// register for network notifs.
+	/*
+		iam.host.Network().Notify((*netNotifiee)(iam))
+
+		iam.proc = goprocessctx.WithContextAndTeardown(ctx, func() error {
+			// remove ourselves from network notifs.
+			iam.host.Network().StopNotify((*netNotifiee)(iam))
+			return nil
+		})*/
+
+	h.SetStreamHandler(ProtocolCSRRequest, onCSRRequest)   // 以后可以拆出来到 iam_net里面
+	h.SetStreamHandler(ProtocolCSRResponse, onCSRResponse) // 以后可以拆出来到 iam_net里面
+
+	return iam
+}
+
+// remote peer requests handler
+func onCSRRequest(s inet.Stream) {
+}
+
+//
+func onCSRResponse(s inet.Stream) {
+
+}
+
+// copy from node.go
+// Verify incoming p2p message data integrity
+// data: data to verify
+// signature: author signature provided in the message payload
+// peerId: author peer id from the message payload
+// pubKeyData: author public key from the message payload
+func (i *IAM) verifyData(data []byte, signature []byte, peerID peer.ID, pubKeyData []byte) bool {
+	key, err := crypto.UnmarshalPublicKey(pubKeyData)
+	if err != nil {
+		log.Println(err, "Failed to extract key from message key data")
+		return false
+	}
+
+	// extract node id from the provided public key
+	idFromKey, err := peer.IDFromPublicKey(key)
+
+	if err != nil {
+		log.Println(err, "Failed to extract peer id from public key")
+		return false
+	}
+
+	// verify that message author node id matches the provided node public key
+	if idFromKey != peerID {
+		log.Println(err, "Node id and provided public key mismatch")
+		return false
+	}
+
+	res, err := key.Verify(data, signature)
+	if err != nil {
+		log.Println(err, "Error authenticating data")
+		return false
+	}
+
+	return res
+}
+
+// copy from node.go , sign an outgoing p2p message payload
+func (i *IAM) signProtoMessage(message proto.Message) ([]byte, error) {
+	data, err := proto.Marshal(message)
+	if err != nil {
+		return nil, err
+	}
+	return i.signData(data)
+}
+
+// copy from node.go. sign binary data using the local node's private key
+func (i *IAM) signData(data []byte) ([]byte, error) {
+	key := i.host.Peerstore().PrivKey(i.host.ID())
+	res, err := key.Sign(data)
+	return res, err
+}
+
+/*
+// Verify ...
 func (msg *Message) Verify() (bool, error) {
 	// TODO: 1.check multiHash(PubKey) === ID
 
@@ -27,7 +131,9 @@ func (msg *Message) Verify() (bool, error) {
 	return msg.PubKey.Verify(msg.Payload, msg.Signature)
 }
 
+// Sign ....
 func (msg *Message) Sign(privKey crypto.PrivKey) ([]byte, error) {
 	//TODO: add ID in the Payload
 	return privKey.Sign(msg.Payload)
 }
+*/

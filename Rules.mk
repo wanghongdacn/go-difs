@@ -53,6 +53,9 @@ include $(dir)/Rules.mk
 dir := filestore/pb
 include $(dir)/Rules.mk
 
+#dir := iam/pb
+#include $(dir)/Rules.mk
+
 
 # -------------------- #
 #   universal rules    #

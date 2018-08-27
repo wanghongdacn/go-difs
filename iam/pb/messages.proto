@@ -1,6 +1,7 @@
 syntax = "proto2";
 package iam.pb;
 
+// MessageType ...
 enum MessageType {
     MessageType_Initialize = 0 ;
     MessageType_MessageCSR = 1;
@@ -14,10 +15,13 @@ message MessageCSR {
     required string op = 3; // operation : store 
 }
 
+// SignedMessage ... 
 message SignedMessage {
 	required string peer_id = 1;						
 	required bytes message = 2;						
     required bytes signature = 3 ;
     required string public_key = 4 ;
 }
+
+
 
