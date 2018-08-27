@@ -1,8 +1,7 @@
-package iam
+package commands
 
 import (
 	"fmt"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
 	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
 	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
 	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
@@ -21,6 +20,7 @@ var IamCmd = &cmds.Command{
 	Subcommands: map[string]*cmds.Command{
 		"info":    lgc.NewCommand(IamInfoCmd),
 		"content": IamContentCmd,
+		"test":    IamTestCmd,
 		"csr":     lgc.NewCommand(IamInfoCmd),
 		"cot":     lgc.NewCommand(IamInfoCmd),
 		"crt":     lgc.NewCommand(IamInfoCmd),
@@ -179,11 +179,11 @@ func getIamDatastore(node *core.IpfsNode, key string) string {
 	return s
 }
 
-// GetNode extracts the node from the environment.
-func GetNode(env interface{}) (*core.IpfsNode, error) {
-	ctx, ok := env.(*commands.Context)
-	if !ok {
-		return nil, fmt.Errorf("expected env to be of type %T, got %T", ctx, env)
-	}
-	return ctx.GetNode()
-}
+//// GetNode extracts the node from the environment.
+//func GetNode(env interface{}) (*core.IpfsNode, error) {
+//	ctx, ok := env.(*commands.Context)
+//	if !ok {
+//		return nil, fmt.Errorf("expected env to be of type %T, got %T", ctx, env)
+//	}
+//	return ctx.GetNode()
+//}

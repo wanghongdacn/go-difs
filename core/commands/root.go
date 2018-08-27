@@ -7,11 +7,10 @@ import (
 	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
 	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
 	dag "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/dag"
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
 	ocmd "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/object"
-	unixfs "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/unixfs"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/unixfs"
 
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/iam"
 	"gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	logging "gx/ipfs/QmRREK2CAZ5Re2Bd9zZFG6FeYDppUWt5cMgsoUEp3ktgSr/go-log"
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
@@ -140,7 +139,7 @@ var rootSubcommands = map[string]*cmds.Command{
 	"urlstore":  urlStoreCmd,
 	"version":   lgc.NewCommand(VersionCmd),
 	"shutdown":  daemonShutdownCmd,
-	"iam":       iam.IamCmd,
+	"iam":       IamCmd,
 }
 
 // RootRO is the readonly version of Root
