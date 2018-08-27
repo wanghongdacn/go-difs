@@ -20,10 +20,14 @@ type IAM struct {
 	datastore ds.Datastore // Local data
 }
 
-func (msg *Message) Verify() {
+func (msg *Message) Verify() (bool, error) {
+	// TODO: 1.check multiHash(PubKey) === ID
 
+	// TODO: 2. include ID
+	return msg.PubKey.Verify(msg.Payload, msg.Signature)
 }
 
-func (msg *Message) Sign(privKey crypto.PrivKey) {
-
+func (msg *Message) Sign(privKey crypto.PrivKey) ([]byte, error) {
+	//TODO: add ID in the Payload
+	return privKey.Sign(msg.Payload)
 }
