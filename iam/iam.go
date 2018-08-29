@@ -1,31 +1,28 @@
 package iam
 
 import (
-    "context"
-    host "gx/ipfs/QmRRCrNRs4qxotXx7WJT6SpCvSNEhXvyBcVjXY2K71pcjE/go-libp2p-host"
-    ds "gx/ipfs/QmVG5gxteQNEMhrS8prJSmU2C9rebtFuTd3SYZ5kE3YZ5k/go-datastore"
-    "log"
+	"context"
+	host "gx/ipfs/QmRRCrNRs4qxotXx7WJT6SpCvSNEhXvyBcVjXY2K71pcjE/go-libp2p-host"
+	ds "gx/ipfs/QmVG5gxteQNEMhrS8prJSmU2C9rebtFuTd3SYZ5kE3YZ5k/go-datastore"
+	"log"
 
-    crypto "github.com/libp2p/go-libp2p-crypto"
+	crypto "github.com/libp2p/go-libp2p-crypto"
 
-    inet "gx/ipfs/QmX5J1q63BrrDTbpcHifrFbxH3cMZsvaNajy6u3zCpzBXs/go-libp2p-net"
+	inet "gx/ipfs/QmX5J1q63BrrDTbpcHifrFbxH3cMZsvaNajy6u3zCpzBXs/go-libp2p-net"
 
+	//csr "github.com/Harold-the-Axeman/dacc-iam-filesystem/iam/pb"
+	protocol "gx/ipfs/QmZNkThpqfVXs9GNbexPrfBbXSLNYeKrE7jwFM2oqHbyqN/go-libp2p-protocol"
 
-    //csr "github.com/Harold-the-Axeman/dacc-iam-filesystem/iam/pb"
-    "github.com/gogo/protobuf/proto"
-    "github.com/jbenet/goprocess"
-    peer "github.com/libp2p/go-libp2p-peer"
-    protocol "gx/ipfs/QmZNkThpqfVXs9GNbexPrfBbXSLNYeKrE7jwFM2oqHbyqN/go-libp2p-protocol"
-    
+	"github.com/gogo/protobuf/proto"
+	"github.com/jbenet/goprocess"
+	peer "github.com/libp2p/go-libp2p-peer"
 )
-
 
 // ProtocolCSRRequest pattern: /protocol-name/request-or-response-message/version
 var ProtocolCSRRequest protocol.ID = "/difs/csrreq/0.0.1"
 
 // ProtocolCSRResponse pattern: /protocol-name/request-or-response-message/version
 var ProtocolCSRResponse protocol.ID = "/difs/csrresp/0.0.1"
-
 
 // IAM ...
 type IAM struct {
@@ -38,7 +35,8 @@ type IAM struct {
 	protocols []protocol.ID // IAM protocols
 }
 
-func newIAMService(ctx context.Context, h host.Host, ds ds.Datastore) *IAM {
+// NewIAMService ...
+func NewIAMService(ctx context.Context, h host.Host, ds ds.Datastore) *IAM {
 	iam := &IAM{
 		host:      h,
 		datastore: ds,

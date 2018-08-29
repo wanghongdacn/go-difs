@@ -5,19 +5,21 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"errors"
+	"fmt"
 	"os"
 	"syscall"
 	"time"
+
+	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"
+	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
+	bserv "gx/ipfs/QmbSB9Uh3wVgmiCb1fAb8zuC3qAE6un4kd1jvatUurfAmB/go-blockservice"
+	resolver "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path/resolver"
 
 	filestore "github.com/Harold-the-Axeman/dacc-iam-filesystem/filestore"
 	pin "github.com/Harold-the-Axeman/dacc-iam-filesystem/pin"
 	repo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo"
 	cidv0v1 "github.com/Harold-the-Axeman/dacc-iam-filesystem/thirdparty/cidv0v1"
 	"github.com/Harold-the-Axeman/dacc-iam-filesystem/thirdparty/verifbs"
-	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"
-	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
-	bserv "gx/ipfs/QmbSB9Uh3wVgmiCb1fAb8zuC3qAE6un4kd1jvatUurfAmB/go-blockservice"
-	resolver "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path/resolver"
 
 	ipns "gx/ipfs/QmNqBhXpBKa5jcjoUZHfxDgAFxtqK3rDA5jtW811GBvVob/go-ipns"
 	ci "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"
@@ -57,6 +59,7 @@ type BuildCfg struct {
 	Routing RoutingOption
 	Host    HostOption
 	Repo    repo.Repo
+	IAM     IAMOption
 }
 
 func (cfg *BuildCfg) getOpt(key string) bool {
@@ -127,6 +130,7 @@ func defaultRepo(dstore repo.Datastore) (repo.Repo, error) {
 
 // NewNode constructs and returns an IpfsNode using the given cfg.
 func NewNode(ctx context.Context, cfg *BuildCfg) (*IpfsNode, error) {
+	fmt.Println("New Node")
 	if cfg == nil {
 		cfg = new(BuildCfg)
 	}
@@ -246,7 +250,7 @@ func setupNode(ctx context.Context, n *IpfsNode, cfg *BuildCfg) error {
 
 	if cfg.Online {
 		do := setupDiscoveryOption(rcfg.Discovery)
-		if err := n.startOnlineServices(ctx, cfg.Routing, hostOption, do, cfg.getOpt("pubsub"), cfg.getOpt("ipnsps"), cfg.getOpt("mplex")); err != nil {
+		if err := n.startOnlineServices(ctx, cfg.Routing, hostOption, do, cfg.getOpt("pubsub"), cfg.getOpt("ipnsps"), cfg.getOpt("mplex"), cfg.IAM); err != nil {
 			return err
 		}
 	} else {

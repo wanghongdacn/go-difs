@@ -2,16 +2,18 @@ package commands
 
 import (
 	"fmt"
-	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	b58 "github.com/mr-tron/base58/base58"
 	"gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	"gx/ipfs/QmPdKqUcHGFdeSpvjVoaTRPPstGif9GBZb5Q56RVw9o69A/go-ipfs-util"
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 	ds "gx/ipfs/QmVG5gxteQNEMhrS8prJSmU2C9rebtFuTd3SYZ5kE3YZ5k/go-datastore"
+
+	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
+	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
+	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
+	b58 "github.com/mr-tron/base58/base58"
 )
 
+// IamCmd ...
 var IamCmd = &cmds.Command{
 	Helptext: cmdkit.HelpText{
 		Tagline:          "IAM CMD",
@@ -25,21 +27,40 @@ var IamCmd = &cmds.Command{
 		"cot":     lgc.NewCommand(IamInfoCmd),
 		"crt":     lgc.NewCommand(IamInfoCmd),
 		"cat":     lgc.NewCommand(IamInfoCmd),
-		"get":     lgc.NewCommand(IamInfoCmd),
+		"get":     IamGetCmd,
 	},
 }
 
+// IAMOutput ...
 type IAMOutput struct {
 	Content     string
 	ContentHash string
 	Key         string
 }
 
+// ContentOutput ...
 type ContentOutput struct {
 	Key     string
 	Content string
 }
 
+// IamGetCmd ...
+var IamGetCmd = &cmds.Command{
+	Helptext: cmdkit.HelpText{
+		Tagline:          "IAM Get CMD",
+		ShortDescription: "",
+	},
+	Arguments: []cmdkit.Argument{
+		cmdkit.StringArg("cid", true, true, "The cid key"),
+	},
+	Run: func(req *cmds.Request, res cmds.ResponseEmitter, env cmds.Environment) {
+		n, _ := GetNode(env)
+		fmt.Println(n.IAM)	
+		cmds.EmitOnce(res, n.IAM)
+	},
+}
+
+// IamInfoCmd ...
 var IamInfoCmd = &oldcmds.Command{
 	Helptext: cmdkit.HelpText{
 		Tagline:          "IAM CMD",
@@ -67,7 +88,6 @@ var IamInfoCmd = &oldcmds.Command{
 		}
 
 		iam.Key, _, _ = req.Option("key").String()
-
 		res.SetOutput(iam.ContentHash)
 	},
 }
@@ -121,7 +141,9 @@ var IamContentPutCmd = &cmds.Command{
 	Type: IAMOutput{},
 }
 
+// IamContentGetCmd
 var IamContentGetCmd = &cmds.Command{
+
 	Helptext: cmdkit.HelpText{
 		Tagline:          "IAM get local content",
 		ShortDescription: "",
@@ -133,6 +155,8 @@ var IamContentGetCmd = &cmds.Command{
 
 		n, _ := GetNode(env)
 
+		fmt.Printf("%s\n", n.Identity)
+		fmt.Println("%s", n.IAM)
 		fmt.Printf("%s\n", n.Identity)
 
 		v := &ContentOutput{}

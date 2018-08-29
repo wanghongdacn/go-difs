@@ -24,6 +24,7 @@ import (
 	rp "github.com/Harold-the-Axeman/dacc-iam-filesystem/exchange/reprovide"
 	filestore "github.com/Harold-the-Axeman/dacc-iam-filesystem/filestore"
 	mount "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/mount"
+	iam "github.com/Harold-the-Axeman/dacc-iam-filesystem/iam"
 	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
 	ipnsrp "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/republisher"
 	p2p "github.com/Harold-the-Axeman/dacc-iam-filesystem/p2p"
@@ -139,6 +140,7 @@ type IpfsNode struct {
 	Floodsub *floodsub.PubSub
 	PSRouter *psrouter.PubsubValueStore
 	DHT      *dht.IpfsDHT
+	IAM      *iam.IAM
 	P2P      *p2p.P2P
 
 	proc goprocess.Process
@@ -156,7 +158,7 @@ type Mounts struct {
 	Ipns mount.Mount
 }
 
-func (n *IpfsNode) startOnlineServices(ctx context.Context, routingOption RoutingOption, hostOption HostOption, do DiscoveryOption, pubsub, ipnsps, mplex bool) error {
+func (n *IpfsNode) startOnlineServices(ctx context.Context, routingOption RoutingOption, hostOption HostOption, do DiscoveryOption, pubsub, ipnsps, mplex bool, iamOption IAMOption) error {
 	if n.PeerHost != nil { // already online.
 		return errors.New("node already online")
 	}
@@ -254,7 +256,7 @@ func (n *IpfsNode) startOnlineServices(ctx context.Context, routingOption Routin
 		return err
 	}
 
-	if err := n.startOnlineServicesWithHost(ctx, peerhost, routingOption, pubsub, ipnsps); err != nil {
+	if err := n.startOnlineServicesWithHost(ctx, peerhost, routingOption, pubsub, ipnsps, iamOption); err != nil {
 		return err
 	}
 
@@ -448,7 +450,7 @@ func (n *IpfsNode) HandlePeerFound(p pstore.PeerInfo) {
 
 // startOnlineServicesWithHost  is the set of services which need to be
 // initialized with the host and _before_ we start listening.
-func (n *IpfsNode) startOnlineServicesWithHost(ctx context.Context, host p2phost.Host, routingOption RoutingOption, pubsub bool, ipnsps bool) error {
+func (n *IpfsNode) startOnlineServicesWithHost(ctx context.Context, host p2phost.Host, routingOption RoutingOption, pubsub bool, ipnsps bool, iamOption IAMOption) error {
 	// setup diagnostics service
 	n.Ping = ping.NewPingService(host)
 
@@ -503,6 +505,13 @@ func (n *IpfsNode) startOnlineServicesWithHost(ctx context.Context, host p2phost
 		n.DHT = dht
 	}
 
+	i, err := IamOption(ctx, host , n.Repo.Datastore()) 
+	if (err != nil) {
+		return err
+	}
+
+	n.IAM =i 
+	
 	if ipnsps {
 		n.PSRouter = psrouter.NewPubsubValueStore(
 			ctx,
@@ -525,6 +534,13 @@ func (n *IpfsNode) startOnlineServicesWithHost(ctx context.Context, host p2phost
 
 	// Wrap standard peer host with routing system to allow unknown peer lookups
 	n.PeerHost = rhost.Wrap(host, n.Routing)
+
+	// set iam service
+	//iam, err = iamOption(ctx, host, n.Repo.Datastore())
+	//if err != nil {
+	//	return err
+	//}
+	//n.IAM = iam
 
 	// setup exchange service
 	bitswapNetwork := bsnet.NewFromIpfsHost(n.PeerHost, n.Routing)
@@ -976,10 +992,19 @@ func constructClientDHTRouting(ctx context.Context, host p2phost.Host, dstore ds
 	)
 }
 
+func constructIAM(ctx context.Context, host p2phost.Host, ds ds.Batching) (*iam.IAM, error) {
+	fmt.Println("construct IAM")
+	return iam.NewIAMService(ctx, host, ds), nil
+}
+
 type RoutingOption func(context.Context, p2phost.Host, ds.Batching, record.Validator) (routing.IpfsRouting, error)
 
 type DiscoveryOption func(context.Context, p2phost.Host) (discovery.Service, error)
 
+type IAMOption func(context.Context, p2phost.Host, ds.Batching) (*iam.IAM, error)
+
 var DHTOption RoutingOption = constructDHTRouting
 var DHTClientOption RoutingOption = constructClientDHTRouting
 var NilRouterOption RoutingOption = nilrouting.ConstructNilRouting
+
+var IamOption IAMOption = constructIAM
