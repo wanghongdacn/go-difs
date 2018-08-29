@@ -1,6 +1,6 @@
 # go-difs
 
-![banner](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/difs.png)
+![banner](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/difs.png)
 
 [![](https://img.shields.io/badge/made%20by-DACC-yellowgreen.svg)](http://dacc.co)
 [![Build Status](https://img.shields.io/badge/build-passing-green.svg)]()
@@ -9,6 +9,8 @@
 > DIPS implementation in Go
 
 ## What is DIFS?
+
+![banner](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/difs.png)
 
 DIFS is DACC IAM File System based on [IPFS](https://github.com/ipfs/ipfs) with IAM(Identity and Access Management) system.it is the most fundamental infrastructure and innovation of DACC architecture. It includes file sharing system, permission maps, migration engine from centralized storage to decentralized storage. More importantly, the whole system is modular and independent from the rest of DACC architecture, so any other public chain that needs modern decentralized storage with IAM capabilities can easily implement DACC file system.
 
