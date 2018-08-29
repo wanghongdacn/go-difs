@@ -6,7 +6,7 @@
 [![Build Status](https://img.shields.io/badge/build-passing-green.svg)]()
 [![Golang](https://img.shields.io/badge/Golang-1.10%2B-blue.svg)](https://golang.org/)
 
-> DIPS implementation in Go
+> DIFS implementation in Go
 
 ## What is DIFS?
 
@@ -32,7 +32,7 @@ Please put all issues regarding:
   - [Development Dependencies](#development-dependencies)
 - [Usage](#usage)
 - [Getting Started](#getting-started)
-  - Coming soon
+  - Coming soon (WIP)
 - [Contributing](#contributing)
   - [Want to read our code?](#want-to-read-our-code)
 - [License](#license)
@@ -95,7 +95,7 @@ mismatched APIs.
 
 #### Troubleshooting
 
-Being collected
+Being collected (WIP)
 
 ### Development Dependencies
 
@@ -155,7 +155,7 @@ SUBCOMMANDS
 
 ## Getting Started
 
-Coming soon
+Coming soon (WIP)
 
 ## Contributing
 
