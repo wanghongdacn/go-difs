@@ -1,21 +1,12 @@
 # go-difs
 
-![banner](https://ipfs.io/ipfs/QmVk7srrwahXLNmcDYvyUEJptyoxpndnRa57YJ11L4jV26/ipfs.go.png)
+![banner](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/difs.png)
 
-[![](https://img.shields.io/badge/made%20by-Protocol%20Labs-blue.svg?style=flat-square)](http://ipn.io)
-[![](https://img.shields.io/badge/project-IPFS-blue.svg?style=flat-square)](http://ipfs.io/)
-[![](https://img.shields.io/badge/freenode-%23ipfs-blue.svg?style=flat-square)](http://webchat.freenode.net/?channels=%23ipfs)
-[![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
-[![GoDoc](https://godoc.org/github.com/Harold-the-Axeman/dacc-iam-filesystem?status.svg)](https://godoc.org/github.com/Harold-the-Axeman/dacc-iam-filesystem)
-[![Build Status](https://travis-ci.org/ipfs/go-ipfs.svg?branch=master)](https://travis-ci.org/ipfs/go-ipfs)
+[![](https://img.shields.io/badge/made%20by-DACC-yellowgreen.svg)](http://dacc.co)
+[![Build Status](https://img.shields.io/badge/build-passing-green.svg)]()
+[![Python](https://img.shields.io/badge/Golang-1.10.3-blue.svg)](https://golang.org/)
 
-> IPFS implementation in Go
-
-## Project Status
-
-[![Throughput Graph](https://graphs.waffle.io/ipfs/go-ipfs/throughput.svg)](https://waffle.io/ipfs/go-ipfs/metrics/throughput)
-
-[**`Weekly Core Dev Calls`**](https://github.com/ipfs/pm/issues/674)
+> DIPS implementation in Go
 
 ## What is DIFS?
 
