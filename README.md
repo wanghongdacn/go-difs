@@ -10,15 +10,13 @@
 
 ## What is DIFS?
 
-DIFS is DACC IAM File System based on IPFS.
+DIFS is DACC IAM File System based on [IPFS](https://github.com/ipfs/ipfs) with IAM(Identity and Access Management) system.it is the most fundamental infrastructure and innovation of DACC architecture. It includes file sharing system, permission maps, migration engine from centralized storage to decentralized storage. More importantly, the whole system is modular and independent from the rest of DACC architecture, so any other public chain that needs modern decentralized storage with IAM capabilities can easily implement DACC file system.
 
-IPFS is a global, versioned, peer-to-peer filesystem. It combines good ideas from Git, BitTorrent, Kademlia, SFS, and the Web. It is like a single bittorrent swarm, exchanging git objects. IPFS provides an interface as simple as the HTTP web, but with permanence built in. You can also mount the world at /ipfs.
-
-For more info see: https://github.com/ipfs/ipfs.
+For more information see -> http://dacc.co/whitepaper/Dacc.pdf
 
 Please put all issues regarding:
-  - IPFS _design_ in the [ipfs repo issues](https://github.com/ipfs/ipfs/issues).
-  - Go IPFS _implementation_ in [this repo](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues).
+  - DIFS _design_ in the [DIFS protocol repo issues](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues).
+  - Go DIFS _implementation_ in [this repo](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues).
 
 ## Table of Contents
 
@@ -26,7 +24,6 @@ Please put all issues regarding:
 - [Install](#install)
   - [System Requirements](#system-requirements)
   - [Install prebuilt packages](#install-prebuilt-packages)
-  - [From Linux package managers](#from-linux-package-managers)
   - [Build from Source](#build-from-source)
     - [Install Go](#install-go)
     - [Download and Compile IPFS](#download-and-compile-ipfs)
@@ -35,25 +32,21 @@ Please put all issues regarding:
   - [Updating](#updating)
 - [Usage](#usage)
 - [Getting Started](#getting-started)
-  - [Some things to try](#some-things-to-try)
-  - [Docker usage](#docker-usage)
-  - [Troubleshooting](#troubleshooting-1)
+  - coming soon
 - [Contributing](#contributing)
-  - [Want to hack on IPFS?](#want-to-hack-on-ipfs)
+  - [Want to hack on DIFS?](#want-to-hack-on-difs)
   - [Want to read our code?](#want-to-read-our-code)
 - [License](#license)
 
 ## Security Issues
 
-The IPFS protocol and its implementations are still in heavy development. This means that there may be problems in our protocols, or there may be mistakes in our implementations. And -- though IPFS is not production-ready yet -- many people are already running nodes in their machines. So we take security vulnerabilities very seriously. If you discover a security issue, please bring it to our attention right away!
+The DIFS protocol and its implementations are still in preliminary stage. This means that there may be problems in our protocols, or there may be mistakes in our implementations. And DIFS is not production-ready yet. If you discover a security issue, please bring it to our attention! thx
 
-If you find a vulnerability that may affect live deployments -- for example, by exposing a remote execution exploit -- please send your report privately to security@ipfs.io. Please DO NOT file a public issue. The GPG key for security@ipfs.io is [4B9665FB 92636D17 7C7A86D3 50AAE8A9 59B13AF3](https://pgp.mit.edu/pks/lookup?op=get&search=0x50AAE8A959B13AF3).
-
-If the issue is a protocol weakness that cannot be immediately exploited or something not yet deployed, just discuss it openly.
+If you find a vulnerability or bug, please submit the issue or send your report to security@dacc.co
 
 ## Install
 
-The canonical download instructions for IPFS are over at: http://ipfs.io/docs/install/. It is **highly suggested** you follow those instructions if you are not interested in working on IPFS development.
+The canonical download instructions for DIFS are over at: http://dacc.co/difs/docs/install/. It is **highly suggested** you follow those instructions if you are not interested in working on DIFS development.
 
 ### System Requirements
 
@@ -325,11 +318,9 @@ file an issue of your own!
 
 ## Contributing
 
-We ❤️ all [our contributors](docs/AUTHORS); this project wouldn’t be what it is without you! If you want to help out, please see [Contribute.md](contribute.md).
+Patches are welcome! If you would like to contribute, but don't know what to work on, check the issues list.
 
-This repository falls under the IPFS [Code of Conduct](https://github.com/ipfs/community/blob/master/code-of-conduct.md).
-
-### Want to hack on IPFS?
+### Want to hack on DIFS?
 
 [![](https://cdn.rawgit.com/jbenet/contribute-ipfs-gif/master/img/contribute.gif)](https://github.com/ipfs/community/blob/master/contributing.md)
 
