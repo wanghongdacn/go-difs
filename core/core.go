@@ -505,13 +505,13 @@ func (n *IpfsNode) startOnlineServicesWithHost(ctx context.Context, host p2phost
 		n.DHT = dht
 	}
 
-	i, err := IamOption(ctx, host , n.Repo.Datastore()) 
-	if (err != nil) {
+	i, err := IamOption(ctx, host, n.Repo.Datastore())
+	if err != nil {
 		return err
 	}
 
-	n.IAM =i 
-	
+	n.IAM = i
+
 	if ipnsps {
 		n.PSRouter = psrouter.NewPubsubValueStore(
 			ctx,

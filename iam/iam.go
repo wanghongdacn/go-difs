@@ -6,7 +6,7 @@ import (
 	ds "gx/ipfs/QmVG5gxteQNEMhrS8prJSmU2C9rebtFuTd3SYZ5kE3YZ5k/go-datastore"
 	"log"
 
-	crypto "github.com/libp2p/go-libp2p-crypto"
+	crypto "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"
 
 	inet "gx/ipfs/QmX5J1q63BrrDTbpcHifrFbxH3cMZsvaNajy6u3zCpzBXs/go-libp2p-net"
 
@@ -15,7 +15,7 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 	"github.com/jbenet/goprocess"
-	peer "github.com/libp2p/go-libp2p-peer"
+	peer "gx/ipfs/QmcZSzKEM5yDfpZbeEEZaVmaZ1zXm6JWTbrQZSB8hCVPzk/go-libp2p-peer"
 )
 
 // ProtocolCSRRequest pattern: /protocol-name/request-or-response-message/version
