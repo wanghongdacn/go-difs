@@ -8,12 +8,42 @@ enum MessageType {
     MessageType_MessageCOT = 2 ;  
 }
 
-// Request CSR
+// Request CSR , owner send to storage  
 message MessageCSR {
-	required string peer_id = 1;	// peer id
+	required string o_id = 1;	// owner id
 	required string cid = 2;        // cid
-    required string op = 3; // operation : store 
 }
+
+// CSR Response COT , storage response to owner and signed by storage  
+message MessageCOT {
+    required string s_id = 1 ; 
+    required string o_id = 2 ;
+    required string cid = 3 ;
+}
+
+// CRT Request Token , request send request to owner ask authorization  
+message MessageCRT {
+    required string r_id = 1 ;
+    required string o_id = 2 ;
+    required string cid = 3 ;
+
+}
+
+// CRT Response CAT , owner response to requester   
+message MessageCAT {
+    required string o_id =1 ;
+    required string r_id =2 ;
+    required string cid =3 ;
+    
+}
+
+// 
+message MessageRT {
+    required string r_id =1 ;
+    required string cid =2 ;
+    required MessageCAT cat =3; 
+}
+
 
 // SignedMessage ... 
 message SignedMessage {
@@ -22,6 +52,4 @@ message SignedMessage {
     required bytes signature = 3 ;
     required string public_key = 4 ;
 }
-
-
 

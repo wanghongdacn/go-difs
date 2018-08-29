@@ -10,6 +10,10 @@ It is generated from these files:
 
 It has these top-level messages:
 	MessageCSR
+	MessageCOT
+	MessageCRT
+	MessageCAT
+	MessageRT
 	SignedMessage
 */
 package iam_pb
@@ -58,11 +62,10 @@ func (x *MessageType) UnmarshalJSON(data []byte) error {
 	return nil
 }
 
-// Request CSR
+// Request CSR , owner send to storage
 type MessageCSR struct {
-	PeerId           *string `protobuf:"bytes,1,req,name=peer_id" json:"peer_id,omitempty"`
+	OId              *string `protobuf:"bytes,1,req,name=o_id" json:"o_id,omitempty"`
 	Cid              *string `protobuf:"bytes,2,req,name=cid" json:"cid,omitempty"`
-	Op               *string `protobuf:"bytes,3,req,name=op" json:"op,omitempty"`
 	XXX_unrecognized []byte  `json:"-"`
 }
 
@@ -70,9 +73,9 @@ func (m *MessageCSR) Reset()         { *m = MessageCSR{} }
 func (m *MessageCSR) String() string { return proto.CompactTextString(m) }
 func (*MessageCSR) ProtoMessage()    {}
 
-func (m *MessageCSR) GetPeerId() string {
-	if m != nil && m.PeerId != nil {
-		return *m.PeerId
+func (m *MessageCSR) GetOId() string {
+	if m != nil && m.OId != nil {
+		return *m.OId
 	}
 	return ""
 }
@@ -84,11 +87,136 @@ func (m *MessageCSR) GetCid() string {
 	return ""
 }
 
-func (m *MessageCSR) GetOp() string {
-	if m != nil && m.Op != nil {
-		return *m.Op
+// CSR Response COT , storage response to owner and signed by storage
+type MessageCOT struct {
+	SId              *string `protobuf:"bytes,1,req,name=s_id" json:"s_id,omitempty"`
+	OId              *string `protobuf:"bytes,2,req,name=o_id" json:"o_id,omitempty"`
+	Cid              *string `protobuf:"bytes,3,req,name=cid" json:"cid,omitempty"`
+	XXX_unrecognized []byte  `json:"-"`
+}
+
+func (m *MessageCOT) Reset()         { *m = MessageCOT{} }
+func (m *MessageCOT) String() string { return proto.CompactTextString(m) }
+func (*MessageCOT) ProtoMessage()    {}
+
+func (m *MessageCOT) GetSId() string {
+	if m != nil && m.SId != nil {
+		return *m.SId
 	}
 	return ""
+}
+
+func (m *MessageCOT) GetOId() string {
+	if m != nil && m.OId != nil {
+		return *m.OId
+	}
+	return ""
+}
+
+func (m *MessageCOT) GetCid() string {
+	if m != nil && m.Cid != nil {
+		return *m.Cid
+	}
+	return ""
+}
+
+// CRT Request Token , request send request to owner ask authorization
+type MessageCRT struct {
+	RId              *string `protobuf:"bytes,1,req,name=r_id" json:"r_id,omitempty"`
+	OId              *string `protobuf:"bytes,2,req,name=o_id" json:"o_id,omitempty"`
+	Cid              *string `protobuf:"bytes,3,req,name=cid" json:"cid,omitempty"`
+	XXX_unrecognized []byte  `json:"-"`
+}
+
+func (m *MessageCRT) Reset()         { *m = MessageCRT{} }
+func (m *MessageCRT) String() string { return proto.CompactTextString(m) }
+func (*MessageCRT) ProtoMessage()    {}
+
+func (m *MessageCRT) GetRId() string {
+	if m != nil && m.RId != nil {
+		return *m.RId
+	}
+	return ""
+}
+
+func (m *MessageCRT) GetOId() string {
+	if m != nil && m.OId != nil {
+		return *m.OId
+	}
+	return ""
+}
+
+func (m *MessageCRT) GetCid() string {
+	if m != nil && m.Cid != nil {
+		return *m.Cid
+	}
+	return ""
+}
+
+// CRT Response CAT , owner response to requester
+type MessageCAT struct {
+	OId              *string `protobuf:"bytes,1,req,name=o_id" json:"o_id,omitempty"`
+	RId              *string `protobuf:"bytes,2,req,name=r_id" json:"r_id,omitempty"`
+	Cid              *string `protobuf:"bytes,3,req,name=cid" json:"cid,omitempty"`
+	XXX_unrecognized []byte  `json:"-"`
+}
+
+func (m *MessageCAT) Reset()         { *m = MessageCAT{} }
+func (m *MessageCAT) String() string { return proto.CompactTextString(m) }
+func (*MessageCAT) ProtoMessage()    {}
+
+func (m *MessageCAT) GetOId() string {
+	if m != nil && m.OId != nil {
+		return *m.OId
+	}
+	return ""
+}
+
+func (m *MessageCAT) GetRId() string {
+	if m != nil && m.RId != nil {
+		return *m.RId
+	}
+	return ""
+}
+
+func (m *MessageCAT) GetCid() string {
+	if m != nil && m.Cid != nil {
+		return *m.Cid
+	}
+	return ""
+}
+
+//
+type MessageRT struct {
+	RId              *string     `protobuf:"bytes,1,req,name=r_id" json:"r_id,omitempty"`
+	Cid              *string     `protobuf:"bytes,2,req,name=cid" json:"cid,omitempty"`
+	Cat              *MessageCAT `protobuf:"bytes,3,req,name=cat" json:"cat,omitempty"`
+	XXX_unrecognized []byte      `json:"-"`
+}
+
+func (m *MessageRT) Reset()         { *m = MessageRT{} }
+func (m *MessageRT) String() string { return proto.CompactTextString(m) }
+func (*MessageRT) ProtoMessage()    {}
+
+func (m *MessageRT) GetRId() string {
+	if m != nil && m.RId != nil {
+		return *m.RId
+	}
+	return ""
+}
+
+func (m *MessageRT) GetCid() string {
+	if m != nil && m.Cid != nil {
+		return *m.Cid
+	}
+	return ""
+}
+
+func (m *MessageRT) GetCat() *MessageCAT {
+	if m != nil {
+		return m.Cat
+	}
+	return nil
 }
 
 // SignedMessage ...
