@@ -74,7 +74,7 @@ func onCSRResponse(s inet.Stream) {
 // signature: author signature provided in the message payload
 // peerId: author peer id from the message payload
 // pubKeyData: author public key from the message payload
-func (i *IAM) verifyData(data []byte, signature []byte, peerID peer.ID, pubKeyData []byte) bool {
+func (i *IAM) VerifyData(data []byte, signature []byte, peerID peer.ID, pubKeyData []byte) bool {
 	key, err := crypto.UnmarshalPublicKey(pubKeyData)
 	if err != nil {
 		log.Println(err, "Failed to extract key from message key data")
@@ -105,16 +105,16 @@ func (i *IAM) verifyData(data []byte, signature []byte, peerID peer.ID, pubKeyDa
 }
 
 // copy from node.go , sign an outgoing p2p message payload
-func (i *IAM) signProtoMessage(message proto.Message) ([]byte, error) {
+func (i *IAM) SignProtoMessage(message proto.Message) ([]byte, error) {
 	data, err := proto.Marshal(message)
 	if err != nil {
 		return nil, err
 	}
-	return i.signData(data)
+	return i.SignData(data)
 }
 
 // copy from node.go. sign binary data using the local node's private key
-func (i *IAM) signData(data []byte) ([]byte, error) {
+func (i *IAM) SignData(data []byte) ([]byte, error) {
 	key := i.host.Peerstore().PrivKey(i.host.ID())
 	res, err := key.Sign(data)
 	return res, err
