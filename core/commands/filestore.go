@@ -6,11 +6,11 @@ import (
 	"io"
 	"os"
 
-	oldCmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/filestore"
+	oldCmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
+	lgc "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands/legacy"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/filestore"
 
 	cmds "gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"

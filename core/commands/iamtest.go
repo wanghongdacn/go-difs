@@ -2,10 +2,10 @@ package commands
 
 import (
 	"fmt"
-	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/iam/pb"
+	oldcmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
+	lgc "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands/legacy"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/iam/pb"
 	b58 "github.com/mr-tron/base58/base58"
 	"gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	"gx/ipfs/QmPdKqUcHGFdeSpvjVoaTRPPstGif9GBZb5Q56RVw9o69A/go-ipfs-util"

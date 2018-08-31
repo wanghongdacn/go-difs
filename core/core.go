@@ -5,7 +5,7 @@ Packages underneath core/ provide a (relatively) stable, low-level API
 to carry out most IPFS-related tasks.  For more details on the other
 interfaces and how core/... fits into the bigger IPFS picture, see:
 
-  $ godoc github.com/Harold-the-Axeman/dacc-iam-filesystem
+  $ godoc github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem
 */
 package core
 
@@ -20,16 +20,16 @@ import (
 	"strings"
 	"time"
 
-	version "github.com/Harold-the-Axeman/dacc-iam-filesystem"
-	rp "github.com/Harold-the-Axeman/dacc-iam-filesystem/exchange/reprovide"
-	filestore "github.com/Harold-the-Axeman/dacc-iam-filesystem/filestore"
-	mount "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/mount"
-	iam "github.com/Harold-the-Axeman/dacc-iam-filesystem/iam"
-	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
-	ipnsrp "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/republisher"
-	p2p "github.com/Harold-the-Axeman/dacc-iam-filesystem/p2p"
-	pin "github.com/Harold-the-Axeman/dacc-iam-filesystem/pin"
-	repo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo"
+	version "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem"
+	rp "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/exchange/reprovide"
+	filestore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/filestore"
+	mount "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/fuse/mount"
+	iam "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/iam"
+	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
+	ipnsrp "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/republisher"
+	p2p "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/p2p"
+	pin "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pin"
+	repo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo"
 
 	u "gx/ipfs/QmPdKqUcHGFdeSpvjVoaTRPPstGif9GBZb5Q56RVw9o69A/go-ipfs-util"
 	psrouter "gx/ipfs/QmPksYjuFjt2M63ufuDYEFdwVAmFcDGJgoED8T8dwfcwED/go-libp2p-pubsub-router"

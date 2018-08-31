@@ -3,7 +3,7 @@ package main
 import (
 	"testing"
 
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/thirdparty/assert"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/thirdparty/assert"
 )
 
 func TestIsHidden(t *testing.T) {

@@ -3,8 +3,8 @@ package core_test
 import (
 	"testing"
 
-	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	coremock "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/mock"
+	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	coremock "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/mock"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 )
 

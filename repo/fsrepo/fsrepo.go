@@ -11,14 +11,14 @@ import (
 	"strings"
 	"sync"
 
-	filestore "github.com/Harold-the-Axeman/dacc-iam-filesystem/filestore"
-	keystore "github.com/Harold-the-Axeman/dacc-iam-filesystem/keystore"
-	repo "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/repo/common"
-	mfsr "github.com/Harold-the-Axeman/dacc-iam-filesystem/repo/fsrepo/migrations"
-	dir "github.com/Harold-the-Axeman/dacc-iam-filesystem/thirdparty/dir"
+	filestore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/filestore"
+	keystore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/keystore"
+	repo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo/common"
+	mfsr "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo/fsrepo/migrations"
+	dir "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/thirdparty/dir"
 
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/Godeps/_workspace/src/github.com/mitchellh/go-homedir"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/Godeps/_workspace/src/github.com/mitchellh/go-homedir"
 
 	util "gx/ipfs/QmPdKqUcHGFdeSpvjVoaTRPPstGif9GBZb5Q56RVw9o69A/go-ipfs-util"
 	logging "gx/ipfs/QmRREK2CAZ5Re2Bd9zZFG6FeYDppUWt5cMgsoUEp3ktgSr/go-log"
@@ -404,7 +404,7 @@ func (r *FSRepo) openDatastore() error {
 		return fmt.Errorf("required Datastore.Spec entry missing from config file")
 	}
 	if r.config.Datastore.NoSync {
-		log.Warning("NoSync is now deprecated in favor of datastore specific settings. If you want to disable fsync on flatfs set 'sync' to false. See https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/datastores.md#flatfs.")
+		log.Warning("NoSync is now deprecated in favor of datastore specific settings. If you want to disable fsync on flatfs set 'sync' to false. See https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/docs/datastores.md#flatfs.")
 	}
 
 	dsc, err := AnyDatastoreConfig(r.config.Datastore.Spec)

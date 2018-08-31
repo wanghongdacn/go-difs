@@ -8,8 +8,8 @@ import (
 	"text/tabwriter"
 	"time"
 
-	cmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	e "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
+	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
+	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
 
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 )

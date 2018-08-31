@@ -12,8 +12,8 @@ import (
 	"sync"
 	"testing"
 
-	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
+	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
 
 	u "gx/ipfs/QmPdKqUcHGFdeSpvjVoaTRPPstGif9GBZb5Q56RVw9o69A/go-ipfs-util"
 	ci "gx/ipfs/QmRNhSdqzMcuRxX9A1egBeQ3BhDTguDV5HPwi8wRykkPU8/go-testutil/ci"

@@ -4,12 +4,12 @@ import (
 	"io"
 	"strings"
 
-	oldcmds "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands"
-	lgc "github.com/Harold-the-Axeman/dacc-iam-filesystem/commands/legacy"
-	dag "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/dag"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/e"
-	ocmd "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/object"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/commands/unixfs"
+	oldcmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
+	lgc "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands/legacy"
+	dag "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/dag"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
+	ocmd "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/object"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/unixfs"
 
 	"gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	logging "gx/ipfs/QmRREK2CAZ5Re2Bd9zZFG6FeYDppUWt5cMgsoUEp3ktgSr/go-log"

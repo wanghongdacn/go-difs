@@ -1,6 +1,6 @@
 # go-difs
 
-![banner](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/difs.png)
+![banner](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/docs/difs.png)
 
 [![](https://img.shields.io/badge/made%20by-DACC-yellowgreen.svg)](http://dacc.co)
 [![Build Status](https://img.shields.io/badge/build-passing-green.svg)]()
@@ -10,15 +10,15 @@
 
 ## What is DIFS?
 
-![banner](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/difs-blueprint.png)
+![banner](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/docs/difs-blueprint.png)
 
 DIFS is DACC IAM File System based on [ipfs](https://github.com/ipfs/ipfs) with IAM(Identity and Access Management) system.it is the most fundamental infrastructure and innovation of DACC architecture. It includes file sharing system, permission maps, migration engine from centralized storage to decentralized storage. More importantly, the whole system is modular and independent from the rest of DACC architecture, so any other public chain that needs modern decentralized storage with IAM capabilities can easily implement DACC file system.
 
 For more information see -> http://dacc.co/whitepaper/Dacc.pdf
 
 Please put all issues regarding:
-  - DIFS _design_ in the [DIFS protocol repo issues](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues).
-  - Go DIFS _implementation_ in [this repo](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues).
+  - DIFS _design_ in the [DIFS protocol repo issues](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/issues).
+  - Go DIFS _implementation_ in [this repo](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/issues).
 
 ## Table of Contents
 
@@ -70,9 +70,9 @@ export PATH=$PATH:$GOPATH/bin
 #### Download and Compile DIFS
 
 ```
-$ go get -u -d github.com/Harold-the-Axeman/dacc-iam-filesystem
+$ go get -u -d github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem
 
-$ cd $GOPATH/src/github.com/Harold-the-Axeman/dacc-iam-filesystem
+$ cd $GOPATH/src/github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem
 $ make install
 ```
 
@@ -165,9 +165,9 @@ Patches are welcome! If you would like to contribute, but don't know what to wor
 
 Some places to get you started. (WIP)
 
-Main file: [cmd/difs/main.go](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/cmd/difs/main.go) <br>
-CLI Commands: [core/commands/](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/tree/master/core/commands) <br>
-Bitswap (the data trading engine): [exchange/bitswap/](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/tree/master/exchange/bitswap)
+Main file: [cmd/difs/main.go](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/cmd/difs/main.go) <br>
+CLI Commands: [core/commands/](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/tree/master/core/commands) <br>
+Bitswap (the data trading engine): [exchange/bitswap/](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/tree/master/exchange/bitswap)
 
 DHT: https://github.com/libp2p/go-libp2p-kad-dht <br>
 PubSub: https://github.com/libp2p/go-floodsub <br>

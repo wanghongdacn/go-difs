@@ -10,7 +10,7 @@ cat <<EOL
 package loader
 
 import (
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/plugin"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/plugin"
 EOL
 
 to_preload | while read -r name path num; do

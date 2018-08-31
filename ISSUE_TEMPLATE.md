@@ -7,7 +7,7 @@ The go-ipfs issues are only for bug reports and directly actionable feature requ
 
 If you have a *SUPPORT QUESTION*, please direct it to our forum at https://discuss.ipfs.io.
 
-Read https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/github-issue-guide.md if you are not sure how to fill in this issue.
+Read https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/docs/github-issue-guide.md if you are not sure how to fill in this issue.
 -->
 
 #### Version information:

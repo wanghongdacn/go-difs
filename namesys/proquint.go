@@ -6,7 +6,7 @@ import (
 
 	context "context"
 
-	opts "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/opts"
+	opts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/opts"
 	proquint "gx/ipfs/QmYnf27kzqR2cxt6LFZdrAFJuQd6785fTkBvMuEj9EeRxM/proquint"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 )

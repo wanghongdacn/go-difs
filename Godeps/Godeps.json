@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/Harold-the-Axeman/dacc-iam-filesystem",
+	"ImportPath": "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem",
 	"GoVersion": "go1.5.2",
 	"Packages": [
 		"./..."

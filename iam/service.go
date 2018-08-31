@@ -1,7 +1,7 @@
 package iam
 
 import (
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/iam/pb"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/iam/pb"
 
 	"fmt"
 	"github.com/gogo/protobuf/proto"

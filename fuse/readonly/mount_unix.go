@@ -4,8 +4,8 @@
 package readonly
 
 import (
-	core "github.com/Harold-the-Axeman/dacc-iam-filesystem/core"
-	mount "github.com/Harold-the-Axeman/dacc-iam-filesystem/fuse/mount"
+	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	mount "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/fuse/mount"
 )
 
 // Mount mounts IPFS at a given location, and returns a mount.Mount instance.

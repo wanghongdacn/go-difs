@@ -14,45 +14,45 @@ Additionally, we've added support for extracting inline blocks from CIDs (blocks
 inlined into CIDs using the identity hash function). However, go-ipfs won't yet
 *create* such CIDs so you're unlikely to see any in the wild.
 
-[urlstore]: https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/experimental-features.md#ipfs-urlstore
+[urlstore]: https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/docs/experimental-features.md#ipfs-urlstore
 
 Features:
 
-* URLStore ([ipfs/go-ipfs#4896](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4896))
-* Add trickle-dag support to the urlstore ([ipfs/go-ipfs#5245](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5245)).
-* Allow specifying how the data field in the `object get` is encoded ([ipfs/go-ipfs#5139](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5139))
-* Add a `-U` flag to `files ls` to disable sorting ([ipfs/go-ipfs#5219](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5219))
-* Add an efficient `--size-only` flag to the `repo stat` ([ipfs/go-ipfs#5010](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5010))
-* Inline blocks in CIDs ([ipfs/go-ipfs#5117](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5117))
+* URLStore ([ipfs/go-ipfs#4896](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4896))
+* Add trickle-dag support to the urlstore ([ipfs/go-ipfs#5245](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5245)).
+* Allow specifying how the data field in the `object get` is encoded ([ipfs/go-ipfs#5139](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5139))
+* Add a `-U` flag to `files ls` to disable sorting ([ipfs/go-ipfs#5219](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5219))
+* Add an efficient `--size-only` flag to the `repo stat` ([ipfs/go-ipfs#5010](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5010))
+* Inline blocks in CIDs ([ipfs/go-ipfs#5117](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5117))
 
 Changes/Fixes:
 
-* Make `ipfs files ls -l` correctly report the hash and size of files ([ipfs/go-ipfs#5045](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5045))
-* Fix sorting of `files ls` ([ipfs/go-ipfs#5219](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5219))
-* Improve prefetching in `ipfs cat` and related commands ([ipfs/go-ipfs#5162](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5162))
-* Better error message when `ipfs cp` fails ([ipfs/go-ipfs#5218](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5218))
-* Don't wait for the peer to close it's end of a bitswap stream before considering the block "sent" ([ipfs/go-ipfs#5258](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5258))
-* Fix resolving links in sharded directories via the gateway ([ipfs/go-ipfs#5271](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5271))
-* Fix building when there's a space in the current directory ([ipfs/go-ipfs#5261](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5261))
+* Make `ipfs files ls -l` correctly report the hash and size of files ([ipfs/go-ipfs#5045](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5045))
+* Fix sorting of `files ls` ([ipfs/go-ipfs#5219](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5219))
+* Improve prefetching in `ipfs cat` and related commands ([ipfs/go-ipfs#5162](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5162))
+* Better error message when `ipfs cp` fails ([ipfs/go-ipfs#5218](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5218))
+* Don't wait for the peer to close it's end of a bitswap stream before considering the block "sent" ([ipfs/go-ipfs#5258](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5258))
+* Fix resolving links in sharded directories via the gateway ([ipfs/go-ipfs#5271](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5271))
+* Fix building when there's a space in the current directory ([ipfs/go-ipfs#5261](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5261))
 
 Documentation:
 
-* Improve documentation about the bloomfilter config options ([ipfs/go-ipfs#4924](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4924))
+* Improve documentation about the bloomfilter config options ([ipfs/go-ipfs#4924](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4924))
 
 General refactorings and internal bug fixes:
 
-* Remove the `Offset()` method from the DAGReader ([ipfs/go-ipfs#5190](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5190))
-* Fix TestLargeWriteChunks seek behavior ([ipfs/go-ipfs#5276](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5276))
-* Add a build tag to disable dynamic plugins ([ipfs/go-ipfs#5274](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5274))
-* Use FSNode instead of the Protobuf structure in PBDagReader ([ipfs/go-ipfs#5189](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5189))
-* Remove support for non-directory MFS roots ([ipfs/go-ipfs#5170](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5170))
-* Remove `UnixfsNode` from the balanced builder ([ipfs/go-ipfs#5118](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5118))
-* Fix truncating files (internal) when already at the correct size ([ipfs/go-ipfs#5253](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5253))
-* Fix `dagTruncate` (internal) to preserve the node type ([ipfs/go-ipfs#5216](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5216))
-* Add an internal interface for unixfs directories ([ipfs/go-ipfs#5160](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5160))
-* Refactor the CoreAPI path types and interfaces ([ipfs/go-ipfs#4672](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4672))
-* Refactor `precalcNextBuf` in the dag reader ([ipfs/go-ipfs#5237](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5237))
-* Update a bunch of dependencies that haven't been updated for a while ([ipfs/go-ipfs#5268](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5268))
+* Remove the `Offset()` method from the DAGReader ([ipfs/go-ipfs#5190](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5190))
+* Fix TestLargeWriteChunks seek behavior ([ipfs/go-ipfs#5276](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5276))
+* Add a build tag to disable dynamic plugins ([ipfs/go-ipfs#5274](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5274))
+* Use FSNode instead of the Protobuf structure in PBDagReader ([ipfs/go-ipfs#5189](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5189))
+* Remove support for non-directory MFS roots ([ipfs/go-ipfs#5170](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5170))
+* Remove `UnixfsNode` from the balanced builder ([ipfs/go-ipfs#5118](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5118))
+* Fix truncating files (internal) when already at the correct size ([ipfs/go-ipfs#5253](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5253))
+* Fix `dagTruncate` (internal) to preserve the node type ([ipfs/go-ipfs#5216](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5216))
+* Add an internal interface for unixfs directories ([ipfs/go-ipfs#5160](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5160))
+* Refactor the CoreAPI path types and interfaces ([ipfs/go-ipfs#4672](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4672))
+* Refactor `precalcNextBuf` in the dag reader ([ipfs/go-ipfs#5237](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5237))
+* Update a bunch of dependencies that haven't been updated for a while ([ipfs/go-ipfs#5268](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5268))
 
 ## 0.4.16 2018-07-13
 
@@ -159,72 +159,72 @@ below.
 
 ## 0.4.16-rc3 2018-07-09
 - Bugfixes
-  - Fix dht commands when ipns over pubsub is enabled ([ipfs/go-ipfs#5200](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5200))
-  - Fix content routing when ipns over pubsub is enabled ([ipfs/go-ipfs#5200](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5200))
-  - Correctly handle multi-hop dnslink resolution ([ipfs/go-ipfs#5202](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5202))
+  - Fix dht commands when ipns over pubsub is enabled ([ipfs/go-ipfs#5200](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5200))
+  - Fix content routing when ipns over pubsub is enabled ([ipfs/go-ipfs#5200](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5200))
+  - Correctly handle multi-hop dnslink resolution ([ipfs/go-ipfs#5202](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5202))
 
 ## 0.4.16-rc2 2018-07-05
 - Bugfixes
-  - Fix usage of file name vs path name in adder ([ipfs/go-ipfs#5167](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5167))
-  - Fix `ipfs update` working with migrations ([ipfs/go-ipfs#5194](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5194))
+  - Fix usage of file name vs path name in adder ([ipfs/go-ipfs#5167](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5167))
+  - Fix `ipfs update` working with migrations ([ipfs/go-ipfs#5194](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5194))
 - Documentation
-  - Grammar fix in fuse docs ([ipfs/go-ipfs#5164](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5164))
+  - Grammar fix in fuse docs ([ipfs/go-ipfs#5164](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5164))
 
 ## 0.4.16-rc1 2018-06-27
 - Features
-  - Embed public keys inside ipns records, use for validation ([ipfs/go-ipfs#5079](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5079))
-  - Preload git plugin by default ([ipfs/go-ipfs#4991](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4991))
+  - Embed public keys inside ipns records, use for validation ([ipfs/go-ipfs#5079](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5079))
+  - Preload git plugin by default ([ipfs/go-ipfs#4991](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4991))
 - Improvements
-  - Only resolve dnslinks once in the gateway ([ipfs/go-ipfs#4977](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4977))
-  - Libp2p transport refactor update ([ipfs/go-ipfs#4817](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4817))
-  - Improve swarm connect/disconnect commands ([ipfs/go-ipfs#5107](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5107))
+  - Only resolve dnslinks once in the gateway ([ipfs/go-ipfs#4977](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4977))
+  - Libp2p transport refactor update ([ipfs/go-ipfs#4817](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4817))
+  - Improve swarm connect/disconnect commands ([ipfs/go-ipfs#5107](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5107))
 - Documentation
-  - Fix typo of sudo install command ([ipfs/go-ipfs#5001](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5001))
-  - Fix experimental features Table of Contents ([ipfs/go-ipfs#4976](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4976))
-  - Fix link to systemd init scripts in the README ([ipfs/go-ipfs#4968](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4968))
-  - Add package overview comments to coreapi ([ipfs/go-ipfs#5108](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5108))
-  - Add README to docs folder ([ipfs/go-ipfs#5095](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5095))
-  - Add system requirements to README ([ipfs/go-ipfs#5137](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5137))
+  - Fix typo of sudo install command ([ipfs/go-ipfs#5001](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5001))
+  - Fix experimental features Table of Contents ([ipfs/go-ipfs#4976](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4976))
+  - Fix link to systemd init scripts in the README ([ipfs/go-ipfs#4968](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4968))
+  - Add package overview comments to coreapi ([ipfs/go-ipfs#5108](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5108))
+  - Add README to docs folder ([ipfs/go-ipfs#5095](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5095))
+  - Add system requirements to README ([ipfs/go-ipfs#5137](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5137))
 - Bugfixes
-  - Fix goroutine leak in pin verify ([ipfs/go-ipfs#5011](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5011))
-  - Fix commit string in version ([ipfs/go-ipfs#4982](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4982))
-  - Fix `key rename` command output error ([ipfs/go-ipfs#4962](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4962))
-  - Report error source when failing to construct private network ([ipfs/go-ipfs#4952](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4952))
-  - Fix build on DragonFlyBSD ([ipfs/go-ipfs#5031](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5031))
-  - Fix goroutine leak in dag put ([ipfs/go-ipfs#5016](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5016))
-  - Fix goroutine leaks in refs.go ([ipfs/go-ipfs#5018](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5018))
-  - Fix panic, Don't handle errors with fallthrough ([ipfs/go-ipfs#5072](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5072))
-  - Fix how filestore is hooked up with caching ([ipfs/go-ipfs#5122](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5122))
-  - Add record validation to offline routing ([ipfs/go-ipfs#5116](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5116))
-  - Fix `ipfs update` working with migrations ([ipfs/go-ipfs#5194](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5194))
+  - Fix goroutine leak in pin verify ([ipfs/go-ipfs#5011](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5011))
+  - Fix commit string in version ([ipfs/go-ipfs#4982](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4982))
+  - Fix `key rename` command output error ([ipfs/go-ipfs#4962](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4962))
+  - Report error source when failing to construct private network ([ipfs/go-ipfs#4952](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4952))
+  - Fix build on DragonFlyBSD ([ipfs/go-ipfs#5031](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5031))
+  - Fix goroutine leak in dag put ([ipfs/go-ipfs#5016](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5016))
+  - Fix goroutine leaks in refs.go ([ipfs/go-ipfs#5018](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5018))
+  - Fix panic, Don't handle errors with fallthrough ([ipfs/go-ipfs#5072](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5072))
+  - Fix how filestore is hooked up with caching ([ipfs/go-ipfs#5122](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5122))
+  - Add record validation to offline routing ([ipfs/go-ipfs#5116](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5116))
+  - Fix `ipfs update` working with migrations ([ipfs/go-ipfs#5194](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5194))
 - General Changes and Refactorings
-  - Remove leftover bits of dead code ([ipfs/go-ipfs#5022](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5022))
-  - Remove fuse platform build constraints ([ipfs/go-ipfs#5033](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5033))
-  - Warning when legacy NoSync setting is set ([ipfs/go-ipfs#5036](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5036))
-  - Clean up and refactor namesys module ([ipfs/go-ipfs#5007](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5007))
-  - When raw-leaves are used for empty files use 'Raw' nodes ([ipfs/go-ipfs#4693](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4693))
-  - Update dist_root in build scripts ([ipfs/go-ipfs#5093](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5093))
-  - Integrate `pb.Data` into `FSNode` to avoid duplicating fields ([ipfs/go-ipfs#5098](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5098))
-  - Reduce log level when we can't republish ([ipfs/go-ipfs#5091](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5091))
-  - Extract ipns record logic to go-ipns ([ipfs/go-ipfs#5124](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5124))
+  - Remove leftover bits of dead code ([ipfs/go-ipfs#5022](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5022))
+  - Remove fuse platform build constraints ([ipfs/go-ipfs#5033](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5033))
+  - Warning when legacy NoSync setting is set ([ipfs/go-ipfs#5036](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5036))
+  - Clean up and refactor namesys module ([ipfs/go-ipfs#5007](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5007))
+  - When raw-leaves are used for empty files use 'Raw' nodes ([ipfs/go-ipfs#4693](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4693))
+  - Update dist_root in build scripts ([ipfs/go-ipfs#5093](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5093))
+  - Integrate `pb.Data` into `FSNode` to avoid duplicating fields ([ipfs/go-ipfs#5098](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5098))
+  - Reduce log level when we can't republish ([ipfs/go-ipfs#5091](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5091))
+  - Extract ipns record logic to go-ipns ([ipfs/go-ipfs#5124](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5124))
 - Testing
-  - Collect test times for sharness ([ipfs/go-ipfs#4959](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4959))
-  - Fix sharness iptb connect timeout ([ipfs/go-ipfs#4966](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4966))
-  - Add more timeouts to the jenkins pipeline ([ipfs/go-ipfs#4958](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4958))
-  - Use go 1.10 on jenkins ([ipfs/go-ipfs#5009](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5009))
-  - Speed up multinode sharness test ([ipfs/go-ipfs#4967](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4967))
-  - Print out iptb logs on iptb test failure (for debugging CI) ([ipfs/go-ipfs#5069](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5069))
-  - Disable the MacOS tests in jenkins ([ipfs/go-ipfs#5119](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5119))
-  - Make republisher test robust against timing issues ([ipfs/go-ipfs#5125](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5125))
-  - Archive sharness trash dirs in jenkins ([ipfs/go-ipfs#5071](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5071))
-  - Fixup DHT sharness tests ([ipfs/go-ipfs#5114](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5114))
+  - Collect test times for sharness ([ipfs/go-ipfs#4959](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4959))
+  - Fix sharness iptb connect timeout ([ipfs/go-ipfs#4966](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4966))
+  - Add more timeouts to the jenkins pipeline ([ipfs/go-ipfs#4958](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4958))
+  - Use go 1.10 on jenkins ([ipfs/go-ipfs#5009](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5009))
+  - Speed up multinode sharness test ([ipfs/go-ipfs#4967](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4967))
+  - Print out iptb logs on iptb test failure (for debugging CI) ([ipfs/go-ipfs#5069](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5069))
+  - Disable the MacOS tests in jenkins ([ipfs/go-ipfs#5119](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5119))
+  - Make republisher test robust against timing issues ([ipfs/go-ipfs#5125](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5125))
+  - Archive sharness trash dirs in jenkins ([ipfs/go-ipfs#5071](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5071))
+  - Fixup DHT sharness tests ([ipfs/go-ipfs#5114](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5114))
 - Dependencies
-  - Update go-ipld-git to fix mergetag resolving ([ipfs/go-ipfs#4988](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4988))
-  - Fix duplicate /x/sys imports ([ipfs/go-ipfs#5068](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5068))
-  - Update stream multiplexers ([ipfs/go-ipfs#5075](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5075))
-  - Update dependencies: go-log, sys, go-crypto ([ipfs/go-ipfs#5100](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5100))
-  - Explicitly import go-multiaddr-dns in config/bootstrap_peers ([ipfs/go-ipfs#5144](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5144))
-  - Gx update with dht and dialing improvements ([ipfs/go-ipfs#5158](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/5158))
+  - Update go-ipld-git to fix mergetag resolving ([ipfs/go-ipfs#4988](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4988))
+  - Fix duplicate /x/sys imports ([ipfs/go-ipfs#5068](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5068))
+  - Update stream multiplexers ([ipfs/go-ipfs#5075](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5075))
+  - Update dependencies: go-log, sys, go-crypto ([ipfs/go-ipfs#5100](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5100))
+  - Explicitly import go-multiaddr-dns in config/bootstrap_peers ([ipfs/go-ipfs#5144](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5144))
+  - Gx update with dht and dialing improvements ([ipfs/go-ipfs#5158](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/5158))
 
 ## 0.4.15 2018-05-09
 
@@ -259,79 +259,79 @@ for both packagers and those living in countries with harmonized internet
 access.
 
 - Features
-  - Add options for record count and timeout for resolving DHT paths ([ipfs/go-ipfs#4733](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4733))
-  - Add low power init profile ([ipfs/go-ipfs#4154](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4154))
-  - Add Opentracing plugin support ([ipfs/go-ipfs#4506](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4506))
-  - Add make target to build source tarballs ([ipfs/go-ipfs#4920](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4920))
+  - Add options for record count and timeout for resolving DHT paths ([ipfs/go-ipfs#4733](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4733))
+  - Add low power init profile ([ipfs/go-ipfs#4154](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4154))
+  - Add Opentracing plugin support ([ipfs/go-ipfs#4506](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4506))
+  - Add make target to build source tarballs ([ipfs/go-ipfs#4920](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4920))
 
 - Improvements
-  - Add BlockedFetched/Added/Removed events to Blockservice ([ipfs/go-ipfs#4649](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4649))
-  - Improve performance of HAMT code ([ipfs/go-ipfs#4889](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4889))
-  - Avoid unnecessarily resolving child nodes when listing a sharded directory ([ipfs/go-ipfs#4884](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4884))
-  - Tar writer now supports sharded ipfs directories ([ipfs/go-ipfs#4873](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4873))
-  - Infer type from CID when possible in `ipfs ls` ([ipfs/go-ipfs#4890](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4890))
-  - Deduplicate keys in GetMany ([ipfs/go-ipfs#4888](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4888))
+  - Add BlockedFetched/Added/Removed events to Blockservice ([ipfs/go-ipfs#4649](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4649))
+  - Improve performance of HAMT code ([ipfs/go-ipfs#4889](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4889))
+  - Avoid unnecessarily resolving child nodes when listing a sharded directory ([ipfs/go-ipfs#4884](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4884))
+  - Tar writer now supports sharded ipfs directories ([ipfs/go-ipfs#4873](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4873))
+  - Infer type from CID when possible in `ipfs ls` ([ipfs/go-ipfs#4890](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4890))
+  - Deduplicate keys in GetMany ([ipfs/go-ipfs#4888](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4888))
 
 - Documentation
-  - Fix spelling of retrieval ([ipfs/go-ipfs#4819](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4819))
-  - Update broken links ([ipfs/go-ipfs#4798](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4798))
-  - Remove roadmap.md ([ipfs/go-ipfs#4834](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4834))
-  - Remove link to IPFS paper in contribute.md ([ipfs/go-ipfs#4812](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4812))
-  - Fix broken todo link in readme.md ([ipfs/go-ipfs#4865](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4865))
-  - Document ipns pubsub ([ipfs/go-ipfs#4903](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4903))
-  - Fix missing profile docs ([ipfs/go-ipfs#4846](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4846))
-  - Fix a few typos ([ipfs/go-ipfs#4835](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4835))
-  - Fix typo in fsrepo error message ([ipfs/go-ipfs#4933](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4933))
-  - Remove go-ipfs version from issue template ([ipfs/go-ipfs#4943](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4943))
-  - Add docs for --profile=lowpower ([ipfs/go-ipfs#4970](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4970))
-  - Improve Windows build documentation ([ipfs/go-ipfs#4691](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4691))
+  - Fix spelling of retrieval ([ipfs/go-ipfs#4819](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4819))
+  - Update broken links ([ipfs/go-ipfs#4798](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4798))
+  - Remove roadmap.md ([ipfs/go-ipfs#4834](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4834))
+  - Remove link to IPFS paper in contribute.md ([ipfs/go-ipfs#4812](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4812))
+  - Fix broken todo link in readme.md ([ipfs/go-ipfs#4865](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4865))
+  - Document ipns pubsub ([ipfs/go-ipfs#4903](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4903))
+  - Fix missing profile docs ([ipfs/go-ipfs#4846](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4846))
+  - Fix a few typos ([ipfs/go-ipfs#4835](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4835))
+  - Fix typo in fsrepo error message ([ipfs/go-ipfs#4933](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4933))
+  - Remove go-ipfs version from issue template ([ipfs/go-ipfs#4943](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4943))
+  - Add docs for --profile=lowpower ([ipfs/go-ipfs#4970](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4970))
+  - Improve Windows build documentation ([ipfs/go-ipfs#4691](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4691))
 
 - Bugfixes
-  - Check CIDs in base case when diffing nodes ([ipfs/go-ipfs#4767](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4767))
-  - Support for CIDv1 with custom mhtype in `ipfs block put` ([ipfs/go-ipfs#4563](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4563))
-  - Clean path in DagArchive ([ipfs/go-ipfs#4743](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4743))
-  - Set the prefix for MFS root in `ipfs add --hash-only` ([ipfs/go-ipfs#4755](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4755))
-  - Fix get output path ([ipfs/go-ipfs#4809](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4809))
-  - Fix incorrect Read calls ([ipfs/go-ipfs#4792](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4792))
-  - Use prefix in bootstrapWritePeers ([ipfs/go-ipfs#4832](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4832))
-  - Fix mfs Directory.Path not working ([ipfs/go-ipfs#4844](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4844))
-  - Remove header in `ipfs stats bw` if not polling ([ipfs/go-ipfs#4856](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4856))
-  - Match Go's GOPATH defaults behaviour in build scripts ([ipfs/go-ipfs#4678](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4678))
-  - Fix default-net profile not reverting bootstrap config ([ipfs/go-ipfs#4845](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4845))
-  - Fix excess goroutines in bitswap caused by insecure CIDs ([ipfs/go-ipfs#4946](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4946))
+  - Check CIDs in base case when diffing nodes ([ipfs/go-ipfs#4767](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4767))
+  - Support for CIDv1 with custom mhtype in `ipfs block put` ([ipfs/go-ipfs#4563](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4563))
+  - Clean path in DagArchive ([ipfs/go-ipfs#4743](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4743))
+  - Set the prefix for MFS root in `ipfs add --hash-only` ([ipfs/go-ipfs#4755](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4755))
+  - Fix get output path ([ipfs/go-ipfs#4809](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4809))
+  - Fix incorrect Read calls ([ipfs/go-ipfs#4792](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4792))
+  - Use prefix in bootstrapWritePeers ([ipfs/go-ipfs#4832](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4832))
+  - Fix mfs Directory.Path not working ([ipfs/go-ipfs#4844](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4844))
+  - Remove header in `ipfs stats bw` if not polling ([ipfs/go-ipfs#4856](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4856))
+  - Match Go's GOPATH defaults behaviour in build scripts ([ipfs/go-ipfs#4678](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4678))
+  - Fix default-net profile not reverting bootstrap config ([ipfs/go-ipfs#4845](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4845))
+  - Fix excess goroutines in bitswap caused by insecure CIDs ([ipfs/go-ipfs#4946](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4946))
 
 - General Changes and Refactorings
-  - Refactor trickle DAG builder ([ipfs/go-ipfs#4730](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4730))
-  - Split the coreapi interface into multiple files ([ipfs/go-ipfs#4802](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4802))
-  - Make `ipfs init` command use new cmds lib ([ipfs/go-ipfs#4732](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4732))
-  - Extract thirdparty/tar package ([ipfs/go-ipfs#4857](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4857))
-  - Reduce log level when for disconnected peers to info ([ipfs/go-ipfs#4811](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4811))
-  - Only visit nodes in EnumerateChildrenAsync when asked ([ipfs/go-ipfs#4885](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4885))
-  - Refactor coreapi options ([ipfs/go-ipfs#4807](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4807))
-  - Fix error style for most errors ([ipfs/go-ipfs#4829](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4829))
-  - Ensure `--help` always works, even with /dev/null stdin ([ipfs/go-ipfs#4849](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4849))
-  - Deduplicate AddNodeLinkClean into AddNodeLink ([ipfs/go-ipfs#4940](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4940))
-  - Remove some dead code ([ipfs/go-ipfs#4833](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4833))
-  - Remove unused imports ([ipfs/go-ipfs#4955](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4955))
-  - Fix go vet warnings ([ipfs/go-ipfs#4859](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4859))
+  - Refactor trickle DAG builder ([ipfs/go-ipfs#4730](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4730))
+  - Split the coreapi interface into multiple files ([ipfs/go-ipfs#4802](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4802))
+  - Make `ipfs init` command use new cmds lib ([ipfs/go-ipfs#4732](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4732))
+  - Extract thirdparty/tar package ([ipfs/go-ipfs#4857](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4857))
+  - Reduce log level when for disconnected peers to info ([ipfs/go-ipfs#4811](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4811))
+  - Only visit nodes in EnumerateChildrenAsync when asked ([ipfs/go-ipfs#4885](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4885))
+  - Refactor coreapi options ([ipfs/go-ipfs#4807](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4807))
+  - Fix error style for most errors ([ipfs/go-ipfs#4829](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4829))
+  - Ensure `--help` always works, even with /dev/null stdin ([ipfs/go-ipfs#4849](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4849))
+  - Deduplicate AddNodeLinkClean into AddNodeLink ([ipfs/go-ipfs#4940](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4940))
+  - Remove some dead code ([ipfs/go-ipfs#4833](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4833))
+  - Remove unused imports ([ipfs/go-ipfs#4955](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4955))
+  - Fix go vet warnings ([ipfs/go-ipfs#4859](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4859))
 
 - Testing
-  - Generate JUnit test reports for sharness tests ([ipfs/go-ipfs#4530](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4530))
-  - Fix t0063-daemon-init.sh by adding test profile to daemon ([ipfs/go-ipfs#4816](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4816))
-  - Remove circular dependencies in merkledag package tests ([ipfs/go-ipfs#4704](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4704))
-  - Check that all the commands fail when passed a bad flag ([ipfs/go-ipfs#4848](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4848))
-  - Allow for some small margin of code coverage dropping on commit ([ipfs/go-ipfs#4867](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4867))
-  - Add confirmation to archive-branches script ([ipfs/go-ipfs#4797](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4797))
+  - Generate JUnit test reports for sharness tests ([ipfs/go-ipfs#4530](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4530))
+  - Fix t0063-daemon-init.sh by adding test profile to daemon ([ipfs/go-ipfs#4816](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4816))
+  - Remove circular dependencies in merkledag package tests ([ipfs/go-ipfs#4704](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4704))
+  - Check that all the commands fail when passed a bad flag ([ipfs/go-ipfs#4848](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4848))
+  - Allow for some small margin of code coverage dropping on commit ([ipfs/go-ipfs#4867](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4867))
+  - Add confirmation to archive-branches script ([ipfs/go-ipfs#4797](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4797))
 
 - Dependencies
-  - Update lock package ([ipfs/go-ipfs#4855](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4855))
-  - Update to latest go-datastore. Remove thirdparty/datastore2 ([ipfs/go-ipfs#4742](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4742))
-  - Extract fs lock into go-fs-lock ([ipfs/go-ipfs#4631](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4631))
-  - Extract: exchange/interface.go, blocks/blocksutil, exchange/offline ([ipfs/go-ipfs#4912](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4912))
-  - Remove unused lock dep ([ipfs/go-ipfs#4971](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4971))
-  - Update iptb ([ipfs/go-ipfs#4965](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4965))
-  - Update go-ipfs-cmds to fix stdin on windows ([ipfs/go-ipfs#4975](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4975))
-  - Update go-ds-flatfs to fix windows corruption issue ([ipfs/go-ipfs#4872](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4872))
+  - Update lock package ([ipfs/go-ipfs#4855](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4855))
+  - Update to latest go-datastore. Remove thirdparty/datastore2 ([ipfs/go-ipfs#4742](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4742))
+  - Extract fs lock into go-fs-lock ([ipfs/go-ipfs#4631](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4631))
+  - Extract: exchange/interface.go, blocks/blocksutil, exchange/offline ([ipfs/go-ipfs#4912](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4912))
+  - Remove unused lock dep ([ipfs/go-ipfs#4971](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4971))
+  - Update iptb ([ipfs/go-ipfs#4965](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4965))
+  - Update go-ipfs-cmds to fix stdin on windows ([ipfs/go-ipfs#4975](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4975))
+  - Update go-ds-flatfs to fix windows corruption issue ([ipfs/go-ipfs#4872](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4872))
 
 ## 0.4.14 2018-03-22
 
@@ -341,7 +341,7 @@ months. The release took longer than expected due to our refactoring and
 extracting of our commands library. This refactor had two stages.  The first
 round of the refactor disentangled the commands code from core ipfs code,
 allowing us to move it out into a [separate
-repository](https://github.com/Harold-the-Axeman/dacc-iam-filesystem-cmds).  The code was previously
+repository](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem-cmds).  The code was previously
 very entangled with the go-ipfs codebase and not usable for other projects.
 The second round of the refactor had the goal of fixing several major issues
 around streaming outputs, progress bars, and error handling. It also paved the
@@ -388,114 +388,114 @@ currently have objects using insecure hashes in your local ipfs repo, please
 remove them before updating.
 
 #### Changes from rc2 to rc3
-- Fix bug in stdin argument parsing ([ipfs/go-ipfs#4827](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4827))
-- Revert commands back to sending a single response ([ipfs/go-ipfs#4822](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4822))
+- Fix bug in stdin argument parsing ([ipfs/go-ipfs#4827](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4827))
+- Revert commands back to sending a single response ([ipfs/go-ipfs#4822](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4822))
 
 #### Changes from rc1 to rc2
-- Fix issue in ipfs get caused by go1.10 changes ([ipfs/go-ipfs#4790](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4790))
+- Fix issue in ipfs get caused by go1.10 changes ([ipfs/go-ipfs#4790](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4790))
 
 - Features
-  - Pubsub IPNS Publisher and Resolver (experimental) ([ipfs/go-ipfs#4047](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4047))
-  - Implement coreapi Dag interface ([ipfs/go-ipfs#4471](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4471))
-  - Add --offset flag to ipfs cat ([ipfs/go-ipfs#4538](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4538))
-  - Command to apply config profile after init ([ipfs/go-ipfs#4195](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4195))
-  - Implement coreapi Name and Key interfaces ([ipfs/go-ipfs#4477](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4477))
-  - Add --length flag to ipfs cat ([ipfs/go-ipfs#4553](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4553))
-  - Implement coreapi Object interface ([ipfs/go-ipfs#4492](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4492))
-  - Implement coreapi Block interface ([ipfs/go-ipfs#4548](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4548))
-  - Implement coreapi Pin interface ([ipfs/go-ipfs#4575](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4575))
-  - Add a --with-local flag to ipfs files stat ([ipfs/go-ipfs#4638](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4638))
-  - Disallow usage of blocks with insecure hashes ([ipfs/go-ipfs#4751](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4751))
+  - Pubsub IPNS Publisher and Resolver (experimental) ([ipfs/go-ipfs#4047](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4047))
+  - Implement coreapi Dag interface ([ipfs/go-ipfs#4471](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4471))
+  - Add --offset flag to ipfs cat ([ipfs/go-ipfs#4538](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4538))
+  - Command to apply config profile after init ([ipfs/go-ipfs#4195](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4195))
+  - Implement coreapi Name and Key interfaces ([ipfs/go-ipfs#4477](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4477))
+  - Add --length flag to ipfs cat ([ipfs/go-ipfs#4553](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4553))
+  - Implement coreapi Object interface ([ipfs/go-ipfs#4492](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4492))
+  - Implement coreapi Block interface ([ipfs/go-ipfs#4548](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4548))
+  - Implement coreapi Pin interface ([ipfs/go-ipfs#4575](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4575))
+  - Add a --with-local flag to ipfs files stat ([ipfs/go-ipfs#4638](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4638))
+  - Disallow usage of blocks with insecure hashes ([ipfs/go-ipfs#4751](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4751))
 - Improvements
-  - Add uuid to event logs ([ipfs/go-ipfs#4392](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4392))
-  - Add --quiet flag to object put ([ipfs/go-ipfs#4411](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4411))
-  - Pinning memory improvements and fixes ([ipfs/go-ipfs#4451](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4451))
-  - Update WebUI version ([ipfs/go-ipfs#4449](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4449))
-  - Check strong and weak ETag validator ([ipfs/go-ipfs#3983](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3983))
-  - Improve and refactor FD limit handling ([ipfs/go-ipfs#3801](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3801))
-  - Support linking to non-dagpb objects in ipfs object patch ([ipfs/go-ipfs#4460](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4460))
-  - Improve allocation patterns of slices in bitswap ([ipfs/go-ipfs#4458](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4458))
+  - Add uuid to event logs ([ipfs/go-ipfs#4392](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4392))
+  - Add --quiet flag to object put ([ipfs/go-ipfs#4411](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4411))
+  - Pinning memory improvements and fixes ([ipfs/go-ipfs#4451](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4451))
+  - Update WebUI version ([ipfs/go-ipfs#4449](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4449))
+  - Check strong and weak ETag validator ([ipfs/go-ipfs#3983](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3983))
+  - Improve and refactor FD limit handling ([ipfs/go-ipfs#3801](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3801))
+  - Support linking to non-dagpb objects in ipfs object patch ([ipfs/go-ipfs#4460](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4460))
+  - Improve allocation patterns of slices in bitswap ([ipfs/go-ipfs#4458](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4458))
   - Secio handshake now happens synchronously ([libp2p/go-libp2p-secio#25](https://github.com/libp2p/go-libp2p-secio/pull/25))
   - Don't block closing connections on pending writes ([libp2p/go-msgio#7](https://github.com/libp2p/go-msgio/pull/7))
   - Improve memory usage of multiaddr parsing ([multiformats/go-multiaddr#56](https://github.com/multiformats/go-multiaddr/pull/56))
-  - Don't lock up 256KiB buffers when adding small files ([ipfs/go-ipfs#4508](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4508))
-  - Clear out memory after reads from the dagreader ([ipfs/go-ipfs#4525](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4525))
-  - Improve error handling in ipfs ping ([ipfs/go-ipfs#4546](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4546))
-  - Allow install.sh to be run without being the script dir ([ipfs/go-ipfs#4547](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4547))
+  - Don't lock up 256KiB buffers when adding small files ([ipfs/go-ipfs#4508](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4508))
+  - Clear out memory after reads from the dagreader ([ipfs/go-ipfs#4525](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4525))
+  - Improve error handling in ipfs ping ([ipfs/go-ipfs#4546](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4546))
+  - Allow install.sh to be run without being the script dir ([ipfs/go-ipfs#4547](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4547))
   - Much faster base58 encoding ([libp2p/go-libp2p-peer#24](https://github.com/libp2p/go-libp2p-peer/pull/24))
   - Use faster sha256 and blake2b libs ([multiformats/go-multihash#63](https://github.com/multiformats/go-multihash/pull/63))
   - Greatly improve peerstore memory usage ([libp2p/go-libp2p-peerstore#22](https://github.com/libp2p/go-libp2p-peerstore/pull/22))
   - Improve dht memory usage and peer tracking ([libp2p/go-libp2p-kad-dht#111](https://github.com/libp2p/go-libp2p-kad-dht/pull/111))
   - New libp2p metrics lib with lower overhead ([libp2p/go-libp2p-metrics#8](https://github.com/libp2p/go-libp2p-metrics/pull/8))
   - Fix memory leak that occurred when dialing many peers ([libp2p/go-libp2p-swarm#51](https://github.com/libp2p/go-libp2p-swarm/pull/51))
-  - Wire up new dag interfaces to make sessions easier ([ipfs/go-ipfs#4641](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4641))
+  - Wire up new dag interfaces to make sessions easier ([ipfs/go-ipfs#4641](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4641))
 - Documentation
-  - Correct StorageMax config description ([ipfs/go-ipfs#4388](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4388))
-  - Add how to download IPFS with IPFS doc ([ipfs/go-ipfs#4390](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4390))
-  - Document gx release checklist item ([ipfs/go-ipfs#4480](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4480))
-  - Add some documentation to CoreAPI ([ipfs/go-ipfs#4493](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4493))
-  - Add interop tests to the release checklist ([ipfs/go-ipfs#4501](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4501))
-  - Add badgerds to experimental-features ToC ([ipfs/go-ipfs#4537](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4537))
-  - Fix typos and inconsistencies in commands documentation ([ipfs/go-ipfs#4552](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4552))
-  - Add a document to help troubleshoot data transfers ([ipfs/go-ipfs#4332](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4332))
-  - Add a bunch of documentation on public interfaces ([ipfs/go-ipfs#4599](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4599))
-  - Expand the issue template and remove the severity field ([ipfs/go-ipfs#4624](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4624))
-  - Add godocs for importers module ([ipfs/go-ipfs#4640](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4640))
-  - Document make targets ([ipfs/go-ipfs#4653](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4653))
-  - Add godocs for merkledag module ([ipfs/go-ipfs#4665](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4665))
-  - Add godocs for unixfs module ([ipfs/go-ipfs#4664](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4664))
-  - Add sharding to experimental features list ([ipfs/go-ipfs#4569](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4569))
-  - Add godocs for routing module ([ipfs/go-ipfs#4676](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4676))
-  - Add godocs for path module ([ipfs/go-ipfs#4689](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4689))
-  - Add godocs for pin module ([ipfs/go-ipfs#4696](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4696))
-  - Update link to filestore experimental status ([ipfs/go-ipfs#4557](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4557))
+  - Correct StorageMax config description ([ipfs/go-ipfs#4388](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4388))
+  - Add how to download IPFS with IPFS doc ([ipfs/go-ipfs#4390](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4390))
+  - Document gx release checklist item ([ipfs/go-ipfs#4480](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4480))
+  - Add some documentation to CoreAPI ([ipfs/go-ipfs#4493](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4493))
+  - Add interop tests to the release checklist ([ipfs/go-ipfs#4501](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4501))
+  - Add badgerds to experimental-features ToC ([ipfs/go-ipfs#4537](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4537))
+  - Fix typos and inconsistencies in commands documentation ([ipfs/go-ipfs#4552](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4552))
+  - Add a document to help troubleshoot data transfers ([ipfs/go-ipfs#4332](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4332))
+  - Add a bunch of documentation on public interfaces ([ipfs/go-ipfs#4599](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4599))
+  - Expand the issue template and remove the severity field ([ipfs/go-ipfs#4624](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4624))
+  - Add godocs for importers module ([ipfs/go-ipfs#4640](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4640))
+  - Document make targets ([ipfs/go-ipfs#4653](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4653))
+  - Add godocs for merkledag module ([ipfs/go-ipfs#4665](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4665))
+  - Add godocs for unixfs module ([ipfs/go-ipfs#4664](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4664))
+  - Add sharding to experimental features list ([ipfs/go-ipfs#4569](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4569))
+  - Add godocs for routing module ([ipfs/go-ipfs#4676](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4676))
+  - Add godocs for path module ([ipfs/go-ipfs#4689](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4689))
+  - Add godocs for pin module ([ipfs/go-ipfs#4696](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4696))
+  - Update link to filestore experimental status ([ipfs/go-ipfs#4557](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4557))
 - Bugfixes
-  - Remove trailing slash in ipfs get paths, fixes #3729 ([ipfs/go-ipfs#4365](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4365))
-  - fix deadlock in bitswap sessions ([ipfs/go-ipfs#4407](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4407))
-  - Fix two race conditions (and possibly go routine leaks) in commands ([ipfs/go-ipfs#4406](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4406))
-  - Fix output delay in ipfs pubsub sub ([ipfs/go-ipfs#4402](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4402))
-  - Use correct context in AddWithContext ([ipfs/go-ipfs#4433](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4433))
-  - Fix various IPNS republisher issues ([ipfs/go-ipfs#4440](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4440))
-  - Fix error handling in commands add and get ([ipfs/go-ipfs#4454](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4454))
-  - Fix hamt (sharding) delete issue ([ipfs/go-ipfs#4398](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4398))
+  - Remove trailing slash in ipfs get paths, fixes #3729 ([ipfs/go-ipfs#4365](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4365))
+  - fix deadlock in bitswap sessions ([ipfs/go-ipfs#4407](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4407))
+  - Fix two race conditions (and possibly go routine leaks) in commands ([ipfs/go-ipfs#4406](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4406))
+  - Fix output delay in ipfs pubsub sub ([ipfs/go-ipfs#4402](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4402))
+  - Use correct context in AddWithContext ([ipfs/go-ipfs#4433](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4433))
+  - Fix various IPNS republisher issues ([ipfs/go-ipfs#4440](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4440))
+  - Fix error handling in commands add and get ([ipfs/go-ipfs#4454](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4454))
+  - Fix hamt (sharding) delete issue ([ipfs/go-ipfs#4398](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4398))
   - More correctly check for reuseport support ([libp2p/go-reuseport#40](https://github.com/libp2p/go-reuseport/pull/40))
   - Fix goroutine leak in websockets transport ([libp2p/go-ws-transport#21](https://github.com/libp2p/go-ws-transport/pull/21))
-  - Update badgerds to fix i386 windows build ([ipfs/go-ipfs#4464](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4464))
-  - Only construct bitswap event loggable if necessary ([ipfs/go-ipfs#4533](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4533))
-  - Ensure that flush on the mfs root flushes its directory ([ipfs/go-ipfs#4509](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4509))
-  - Fix deferred unlock of pin lock in AddR ([ipfs/go-ipfs#4562](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4562))
-  - Fix iOS builds ([ipfs/go-ipfs#4610](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4610))
-  - Calling repo gc now frees up space with badgerds ([ipfs/go-ipfs#4578](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4578))
-  - Fix leak in bitswap sessions shutdown ([ipfs/go-ipfs#4658](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4658))
-  - Fix make on windows ([ipfs/go-ipfs#4682](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4682))
-  - Ignore invalid key files in keystore directory ([ipfs/go-ipfs#4700](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4700))
+  - Update badgerds to fix i386 windows build ([ipfs/go-ipfs#4464](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4464))
+  - Only construct bitswap event loggable if necessary ([ipfs/go-ipfs#4533](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4533))
+  - Ensure that flush on the mfs root flushes its directory ([ipfs/go-ipfs#4509](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4509))
+  - Fix deferred unlock of pin lock in AddR ([ipfs/go-ipfs#4562](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4562))
+  - Fix iOS builds ([ipfs/go-ipfs#4610](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4610))
+  - Calling repo gc now frees up space with badgerds ([ipfs/go-ipfs#4578](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4578))
+  - Fix leak in bitswap sessions shutdown ([ipfs/go-ipfs#4658](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4658))
+  - Fix make on windows ([ipfs/go-ipfs#4682](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4682))
+  - Ignore invalid key files in keystore directory ([ipfs/go-ipfs#4700](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4700))
 - General Changes and Refactorings
-  - Extract and refactor commands library ([ipfs/go-ipfs#3856](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3856))
-  - Remove all instances of `Default(false)` ([ipfs/go-ipfs#4042](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4042))
-  - Build for all supported platforms when testing ([ipfs/go-ipfs#4445](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4445))
-  - Refine gateway and namesys logging ([ipfs/go-ipfs#4428](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4428))
-  - Demote bitswap error to an info ([ipfs/go-ipfs#4472](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4472))
-  - Extract posinfo package to github.com/Harold-the-Axeman/dacc-iam-filesystem-posinfo ([ipfs/go-ipfs#4669](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4669))
-  - Move signature verification to ipns validator ([ipfs/go-ipfs#4628](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4628))
-  - Extract importers/chunk module as go-ipfs-chunker ([ipfs/go-ipfs#4661](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4661))
-  - Extract go-detect-race from Godeps ([ipfs/go-ipfs#4686](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4686))
-  - Extract flags, delay, ds-help ([ipfs/go-ipfs#4685](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4685))
-  - Extract routing package to go-ipfs-routing ([ipfs/go-ipfs#4703](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4703))
-  - Extract blocks/blockstore package to go-ipfs-blockstore ([ipfs/go-ipfs#4707](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4707))
-  - Add exchange.SessionExchange interface for exchanges that support sessions ([ipfs/go-ipfs#4709](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4709))
-  - Extract thirdparty/pq to go-ipfs-pq ([ipfs/go-ipfs#4711](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4711))
-  - Separate "path" from "path/resolver" ([ipfs/go-ipfs#4713](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4713))
+  - Extract and refactor commands library ([ipfs/go-ipfs#3856](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3856))
+  - Remove all instances of `Default(false)` ([ipfs/go-ipfs#4042](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4042))
+  - Build for all supported platforms when testing ([ipfs/go-ipfs#4445](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4445))
+  - Refine gateway and namesys logging ([ipfs/go-ipfs#4428](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4428))
+  - Demote bitswap error to an info ([ipfs/go-ipfs#4472](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4472))
+  - Extract posinfo package to github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem-posinfo ([ipfs/go-ipfs#4669](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4669))
+  - Move signature verification to ipns validator ([ipfs/go-ipfs#4628](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4628))
+  - Extract importers/chunk module as go-ipfs-chunker ([ipfs/go-ipfs#4661](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4661))
+  - Extract go-detect-race from Godeps ([ipfs/go-ipfs#4686](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4686))
+  - Extract flags, delay, ds-help ([ipfs/go-ipfs#4685](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4685))
+  - Extract routing package to go-ipfs-routing ([ipfs/go-ipfs#4703](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4703))
+  - Extract blocks/blockstore package to go-ipfs-blockstore ([ipfs/go-ipfs#4707](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4707))
+  - Add exchange.SessionExchange interface for exchanges that support sessions ([ipfs/go-ipfs#4709](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4709))
+  - Extract thirdparty/pq to go-ipfs-pq ([ipfs/go-ipfs#4711](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4711))
+  - Separate "path" from "path/resolver" ([ipfs/go-ipfs#4713](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4713))
 - Testing
-  - Increase verbosity of t0088-repo-stat-symlink.sh test ([ipfs/go-ipfs#4434](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4434))
-  - Make repo size test pass deterministically ([ipfs/go-ipfs#4443](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4443))
-  - Always set IPFS_PATH in test-lib.sh ([ipfs/go-ipfs#4469](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4469))
-  - Fix sharness docker ([ipfs/go-ipfs#4489](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4489))
-  - Fix loops in sharness tests to fail the test if the inner command fails ([ipfs/go-ipfs#4482](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4482))
-  - Improve bitswap tests, fix race conditions ([ipfs/go-ipfs#4499](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4499))
-  - Fix circleci cache directory list ([ipfs/go-ipfs#4564](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4564))
-  - Only run the build test on test_go_expensive ([ipfs/go-ipfs#4645](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4645))
-  - Fix go test on Windows ([ipfs/go-ipfs#4632](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4632))
-  - Fix some tests on FreeBSD ([ipfs/go-ipfs#4662](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4662))
+  - Increase verbosity of t0088-repo-stat-symlink.sh test ([ipfs/go-ipfs#4434](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4434))
+  - Make repo size test pass deterministically ([ipfs/go-ipfs#4443](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4443))
+  - Always set IPFS_PATH in test-lib.sh ([ipfs/go-ipfs#4469](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4469))
+  - Fix sharness docker ([ipfs/go-ipfs#4489](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4489))
+  - Fix loops in sharness tests to fail the test if the inner command fails ([ipfs/go-ipfs#4482](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4482))
+  - Improve bitswap tests, fix race conditions ([ipfs/go-ipfs#4499](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4499))
+  - Fix circleci cache directory list ([ipfs/go-ipfs#4564](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4564))
+  - Only run the build test on test_go_expensive ([ipfs/go-ipfs#4645](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4645))
+  - Fix go test on Windows ([ipfs/go-ipfs#4632](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4632))
+  - Fix some tests on FreeBSD ([ipfs/go-ipfs#4662](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4662))
 
 ## 0.4.13 2017-11-16
 
@@ -503,8 +503,8 @@ Ipfs 0.4.13 is a patch release that fixes two high priority issues that were
 discovered in the 0.4.12 release.
 
 Bugfixes:
-  - Fix periodic bitswap deadlock ([ipfs/go-ipfs#4386](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4386))
-  - Fix badgerds crash on startup ([ipfs/go-ipfs#4384](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4384))
+  - Fix periodic bitswap deadlock ([ipfs/go-ipfs#4386](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4386))
+  - Fix badgerds crash on startup ([ipfs/go-ipfs#4384](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4384))
 
 
 ## 0.4.12 2017-11-09
@@ -531,7 +531,7 @@ Because of this, we selected 600 as a 'LowWater' number, and 900 as a
 'HighWater' number to avoid having to clear out connections too frequently.
 You can configure different numbers as you see fit via the `Swarm.ConnMgr`
 field in your ipfs config file. See
-[here](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/config.md#connmgr) for
+[here](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/docs/config.md#connmgr) for
 more details.
 
 Disk utilization during `ipfs add` has been optimized for large files by doing
@@ -551,38 +551,38 @@ And finally, thank you to everyone who filed bugs, tested out the release candid
 filed pull requests, and contributed in any other way to this release!
 
 - Features
-  - Implement Connection Manager ([ipfs/go-ipfs#4288](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4288))
-  - Support multiple files in dag put ([ipfs/go-ipfs#4254](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4254))
-  - Add 'raw' support to the dag put command ([ipfs/go-ipfs#4285](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4285))
+  - Implement Connection Manager ([ipfs/go-ipfs#4288](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4288))
+  - Support multiple files in dag put ([ipfs/go-ipfs#4254](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4254))
+  - Add 'raw' support to the dag put command ([ipfs/go-ipfs#4285](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4285))
 - Improvements
-  - Parallelize dag batch flushing ([ipfs/go-ipfs#4296](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4296))
-  - Update go-peerstream to improve CPU usage ([ipfs/go-ipfs#4323](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4323))
-  - Add full support for CidV1 in Files API and Dag Modifier ([ipfs/go-ipfs#4026](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4026))
-  - Lower yamux accept buffer size ([ipfs/go-ipfs#4326](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4326))
-  - Optimise `ipfs pin update` command ([ipfs/go-ipfs#4348](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4348))
+  - Parallelize dag batch flushing ([ipfs/go-ipfs#4296](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4296))
+  - Update go-peerstream to improve CPU usage ([ipfs/go-ipfs#4323](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4323))
+  - Add full support for CidV1 in Files API and Dag Modifier ([ipfs/go-ipfs#4026](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4026))
+  - Lower yamux accept buffer size ([ipfs/go-ipfs#4326](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4326))
+  - Optimise `ipfs pin update` command ([ipfs/go-ipfs#4348](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4348))
 - Documentation
-  - Add some docs on plugins ([ipfs/go-ipfs#4255](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4255))
-  - Add more info about private network bootstrap ([ipfs/go-ipfs#4270](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4270))
-  - Add more info about `ipfs add` chunker option ([ipfs/go-ipfs#4306](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4306))
-  - Remove cruft in readme and mention discourse forum ([ipfs/go-ipfs#4345](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4345))
-  - Add note about updating before reporting issues ([ipfs/go-ipfs#4361](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4361))
+  - Add some docs on plugins ([ipfs/go-ipfs#4255](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4255))
+  - Add more info about private network bootstrap ([ipfs/go-ipfs#4270](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4270))
+  - Add more info about `ipfs add` chunker option ([ipfs/go-ipfs#4306](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4306))
+  - Remove cruft in readme and mention discourse forum ([ipfs/go-ipfs#4345](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4345))
+  - Add note about updating before reporting issues ([ipfs/go-ipfs#4361](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4361))
 - Bugfixes
-  - Fix FreeBSD build issues ([ipfs/go-ipfs#4275](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4275))
-  - Don't crash when Datastore.StorageMax is not defined ([ipfs/go-ipfs#4246](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4246))
-  - Do not call 'Connect' on NewStream in bitswap ([ipfs/go-ipfs#4317](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4317))
-  - Filter out "" from active peers in bitswap sessions ([ipfs/go-ipfs#4316](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4316))
-  - Fix "seeker can't seek" on specific files ([ipfs/go-ipfs#4320](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4320))
-  - Do not set "gecos" field in Dockerfile ([ipfs/go-ipfs#4331](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4331))
-  - Handle sym links in when calculating repo size ([ipfs/go-ipfs#4305](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4305))
+  - Fix FreeBSD build issues ([ipfs/go-ipfs#4275](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4275))
+  - Don't crash when Datastore.StorageMax is not defined ([ipfs/go-ipfs#4246](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4246))
+  - Do not call 'Connect' on NewStream in bitswap ([ipfs/go-ipfs#4317](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4317))
+  - Filter out "" from active peers in bitswap sessions ([ipfs/go-ipfs#4316](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4316))
+  - Fix "seeker can't seek" on specific files ([ipfs/go-ipfs#4320](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4320))
+  - Do not set "gecos" field in Dockerfile ([ipfs/go-ipfs#4331](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4331))
+  - Handle sym links in when calculating repo size ([ipfs/go-ipfs#4305](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4305))
 - General Changes and Refactorings
-  - Fix indent in sharness tests ([ipfs/go-ipfs#4212](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4212))
-  - Remove supernode routing ([ipfs/go-ipfs#4302](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4302))
-  - Extract go-ipfs-addr ([ipfs/go-ipfs#4340](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4340))
-  - Remove dead code and config files ([ipfs/go-ipfs#4357](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4357))
-  - Update badgerds to 1.0 ([ipfs/go-ipfs#4327](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4327))
-  - Wrap help descriptions under 80 chars ([ipfs/go-ipfs#4121](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4121))
+  - Fix indent in sharness tests ([ipfs/go-ipfs#4212](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4212))
+  - Remove supernode routing ([ipfs/go-ipfs#4302](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4302))
+  - Extract go-ipfs-addr ([ipfs/go-ipfs#4340](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4340))
+  - Remove dead code and config files ([ipfs/go-ipfs#4357](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4357))
+  - Update badgerds to 1.0 ([ipfs/go-ipfs#4327](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4327))
+  - Wrap help descriptions under 80 chars ([ipfs/go-ipfs#4121](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4121))
 - Testing
-  - Make sharness t0180-p2p less racy ([ipfs/go-ipfs#4310](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4310))
+  - Make sharness t0180-p2p less racy ([ipfs/go-ipfs#4310](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4310))
 
 
 ### 0.4.11 2017-09-14
@@ -601,7 +601,7 @@ for datastores to be a modular way of specifying exactly how you want the
 datastore to be structured. You will now be able to configure ipfs to use
 flatfs, leveldb, badger, an in-memory datastore, and more to suit your needs.
 See the new [datastore
-documentation](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/datastores.md)
+documentation](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/docs/datastores.md)
 for more information.
 
 Bitswap received some much needed attention during this release cycle. The
@@ -643,7 +643,7 @@ is automatic relaying, and research for this is currently in progress. We
 expect that when it lands, it will improve the perceived performance of ipfs by
 spending less time attempting connections to hard to reach nodes. A short guide
 on using the circuit relay feature can be found
-[here](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/docs/experimental-features.md#circuit-relay).
+[here](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/docs/experimental-features.md#circuit-relay).
 
 The last feature we want to highlight (but by no means the last feature in this
 release) is our new plugin system. There are many different workflows and
@@ -655,7 +655,7 @@ needs to be maintained and updated independently, which would cause significant
 churn in the codebase. To address this, we have come up with a system that
 allows users to install plugins to the vanilla ipfs daemon that augment its
 capabilities. The first of these plugins are a [git
-plugin](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/blob/master/plugin/plugins/git/git.go)
+plugin](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blob/master/plugin/plugins/git/git.go)
 that allows ipfs to natively address git objects and an [ethereum
 plugin](https://github.com/ipfs/go-ipld-eth) that lets ipfs ingest and operate
 on all ethereum blockchain data. Soon to come are plugins for the bitcoin and
@@ -680,48 +680,48 @@ you.
 
 
 - Features
-  - Add `--pin` option to `ipfs dag put` ([ipfs/go-ipfs#4004](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4004))
-  - Add `--pin` option to `ipfs object put` ([ipfs/go-ipfs#4095](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4095))
-  - Implement `--profile` option on `ipfs init` ([ipfs/go-ipfs#4001](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4001))
-  - Add CID Codecs to `ipfs block put` ([ipfs/go-ipfs#4022](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4022))
-  - Bitswap sessions ([ipfs/go-ipfs#3867](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3867))
-  - Create plugin API and loader, add ipld-git plugin ([ipfs/go-ipfs#4033](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4033))
-  - Make announced swarm addresses configurable ([ipfs/go-ipfs#3948](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3948))
-  - Reprovider strategies ([ipfs/go-ipfs#4113](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4113))
-  - Circuit Relay integration ([ipfs/go-ipfs#4091](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4091))
-  - More configurable datastore configs ([ipfs/go-ipfs#3575](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3575))
-  - Add experimental support for badger datastore ([ipfs/go-ipfs#4007](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4007))
+  - Add `--pin` option to `ipfs dag put` ([ipfs/go-ipfs#4004](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4004))
+  - Add `--pin` option to `ipfs object put` ([ipfs/go-ipfs#4095](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4095))
+  - Implement `--profile` option on `ipfs init` ([ipfs/go-ipfs#4001](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4001))
+  - Add CID Codecs to `ipfs block put` ([ipfs/go-ipfs#4022](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4022))
+  - Bitswap sessions ([ipfs/go-ipfs#3867](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3867))
+  - Create plugin API and loader, add ipld-git plugin ([ipfs/go-ipfs#4033](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4033))
+  - Make announced swarm addresses configurable ([ipfs/go-ipfs#3948](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3948))
+  - Reprovider strategies ([ipfs/go-ipfs#4113](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4113))
+  - Circuit Relay integration ([ipfs/go-ipfs#4091](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4091))
+  - More configurable datastore configs ([ipfs/go-ipfs#3575](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3575))
+  - Add experimental support for badger datastore ([ipfs/go-ipfs#4007](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4007))
 - Improvements
-  - Add better support for Raw Nodes in MFS and elsewhere ([ipfs/go-ipfs#3996](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3996))
-  - Added file size to response of `ipfs add` command ([ipfs/go-ipfs#4082](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4082))
-  - Add /dnsaddr bootstrap nodes ([ipfs/go-ipfs#4127](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4127))
-  - Do not publish public keys extractable from ID ([ipfs/go-ipfs#4020](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4020))
+  - Add better support for Raw Nodes in MFS and elsewhere ([ipfs/go-ipfs#3996](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3996))
+  - Added file size to response of `ipfs add` command ([ipfs/go-ipfs#4082](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4082))
+  - Add /dnsaddr bootstrap nodes ([ipfs/go-ipfs#4127](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4127))
+  - Do not publish public keys extractable from ID ([ipfs/go-ipfs#4020](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4020))
 - Documentation
-  - Adding documentation that PubSub Sub can be encoded. ([ipfs/go-ipfs#3909](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3909))
-  - Add Comms items from js-ipfs, including blog ([ipfs/go-ipfs#3936](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3936))
-  - Add Developer Certificate of Origin ([ipfs/go-ipfs#4006](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4006))
-  - Add `transports.md` document ([ipfs/go-ipfs#4034](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4034))
-  - Add `experimental-features.md` document ([ipfs/go-ipfs#4036](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4036))
-  - Update release docs ([ipfs/go-ipfs#4165](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4165))
-  - Add documentation for datastore configs ([ipfs/go-ipfs#4223](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4223))
-  - General update and clean-up of docs ([ipfs/go-ipfs#4222](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4222))
+  - Adding documentation that PubSub Sub can be encoded. ([ipfs/go-ipfs#3909](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3909))
+  - Add Comms items from js-ipfs, including blog ([ipfs/go-ipfs#3936](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3936))
+  - Add Developer Certificate of Origin ([ipfs/go-ipfs#4006](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4006))
+  - Add `transports.md` document ([ipfs/go-ipfs#4034](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4034))
+  - Add `experimental-features.md` document ([ipfs/go-ipfs#4036](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4036))
+  - Update release docs ([ipfs/go-ipfs#4165](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4165))
+  - Add documentation for datastore configs ([ipfs/go-ipfs#4223](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4223))
+  - General update and clean-up of docs ([ipfs/go-ipfs#4222](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4222))
 - Bugfixes
-  - Fix shutdown check in t0023 ([ipfs/go-ipfs#3969](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3969))
-  - Fix pinning of unixfs sharded directories ([ipfs/go-ipfs#3975](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3975))
-  - Show escaped url in gateway 404 message ([ipfs/go-ipfs#4005](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4005))
-  - Fix early opening of bitswap message sender ([ipfs/go-ipfs#4069](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4069))
-  - Fix determination of 'root' node in dag put ([ipfs/go-ipfs#4072](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4072))
-  - Fix bad multipart message panic in gateway ([ipfs/go-ipfs#4053](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4053))
-  - Add blocks to the blockstore before returning them from blockservice sessions ([ipfs/go-ipfs#4169](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4169))
-  - Various fixes for /ipfs fuse code ([ipfs/go-ipfs#4194](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4194))
-  - Fix memory leak in dht stream tracking ([ipfs/go-ipfs#4251](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4251))
+  - Fix shutdown check in t0023 ([ipfs/go-ipfs#3969](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3969))
+  - Fix pinning of unixfs sharded directories ([ipfs/go-ipfs#3975](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3975))
+  - Show escaped url in gateway 404 message ([ipfs/go-ipfs#4005](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4005))
+  - Fix early opening of bitswap message sender ([ipfs/go-ipfs#4069](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4069))
+  - Fix determination of 'root' node in dag put ([ipfs/go-ipfs#4072](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4072))
+  - Fix bad multipart message panic in gateway ([ipfs/go-ipfs#4053](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4053))
+  - Add blocks to the blockstore before returning them from blockservice sessions ([ipfs/go-ipfs#4169](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4169))
+  - Various fixes for /ipfs fuse code ([ipfs/go-ipfs#4194](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4194))
+  - Fix memory leak in dht stream tracking ([ipfs/go-ipfs#4251](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4251))
 - General Changes and Refactorings
-  - Require go 1.8 ([ipfs/go-ipfs#4044](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4044))
-  - Change IPFS to use the new pluggable Block to IPLD decoding framework. ([ipfs/go-ipfs#4060](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4060))
-  - Remove tour command from ipfs ([ipfs/go-ipfs#4123](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4123))
-  - Add support for Go 1.9 ([ipfs/go-ipfs#4156](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4156))
-  - Remove some dead code ([ipfs/go-ipfs#4204](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4204))
-  - Switch docker image from musl to glibc ([ipfs/go-ipfs#4219](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/4219))
+  - Require go 1.8 ([ipfs/go-ipfs#4044](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4044))
+  - Change IPFS to use the new pluggable Block to IPLD decoding framework. ([ipfs/go-ipfs#4060](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4060))
+  - Remove tour command from ipfs ([ipfs/go-ipfs#4123](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4123))
+  - Add support for Go 1.9 ([ipfs/go-ipfs#4156](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4156))
+  - Remove some dead code ([ipfs/go-ipfs#4204](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4204))
+  - Switch docker image from musl to glibc ([ipfs/go-ipfs#4219](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/4219))
 
 ### 0.4.10 - 2017-06-27
 
@@ -761,41 +761,41 @@ other ipfs peers through libp2p. The interfaces are a little bit clunky right
 now, but shouldn't get in the way of anyone wanting to try building a fully
 peer to peer application on top of ipfs and libp2p. For more info on this
 command, to ask questions, or to provide feedback, head over to the [feedback
-issue](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues/3994) for the command.
+issue](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/issues/3994) for the command.
 
 A few other subcommands and flags were added around the API, as well as many
 other requested improvements. See below for the full list of changes.
 
 
 - Features
-  - Add support for specifying the hash function in `ipfs add` ([ipfs/go-ipfs#3919](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3919))
-  - Implement `ipfs key {rm, rename}` ([ipfs/go-ipfs#3892](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3892))
-  - Implement `ipfs shutdown` command ([ipfs/go-ipfs#3884](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3884))
-  - Implement `ipfs pin update` ([ipfs/go-ipfs#3846](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3846))
-  - Implement `ipfs pin verify` ([ipfs/go-ipfs#3843](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3843))
-  - Implemented experimental p2p commands ([ipfs/go-ipfs#3943](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3943))
+  - Add support for specifying the hash function in `ipfs add` ([ipfs/go-ipfs#3919](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3919))
+  - Implement `ipfs key {rm, rename}` ([ipfs/go-ipfs#3892](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3892))
+  - Implement `ipfs shutdown` command ([ipfs/go-ipfs#3884](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3884))
+  - Implement `ipfs pin update` ([ipfs/go-ipfs#3846](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3846))
+  - Implement `ipfs pin verify` ([ipfs/go-ipfs#3843](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3843))
+  - Implemented experimental p2p commands ([ipfs/go-ipfs#3943](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3943))
 - Improvements
-  - Add MaxStorage field to output of "repo stat" ([ipfs/go-ipfs#3915](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3915))
-  - Add Suborigin header to gateway responses ([ipfs/go-ipfs#3914](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3914))
-  - Add "--file-order" option to "filestore ls" and "verify" ([ipfs/go-ipfs#3938](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3938))
-  - Allow selecting ipns keys by Peer ID ([ipfs/go-ipfs#3882](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3882))
-  - Don't redirect to trailing slash in gateway for `go get` ([ipfs/go-ipfs#3963](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3963))
-  - Add 'ipfs dht findprovs --num-providers' to allow choosing number of providers to find ([ipfs/go-ipfs#3966](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3966))
-  - Make sure all keystore keys get republished ([ipfs/go-ipfs#3951](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3951))
+  - Add MaxStorage field to output of "repo stat" ([ipfs/go-ipfs#3915](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3915))
+  - Add Suborigin header to gateway responses ([ipfs/go-ipfs#3914](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3914))
+  - Add "--file-order" option to "filestore ls" and "verify" ([ipfs/go-ipfs#3938](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3938))
+  - Allow selecting ipns keys by Peer ID ([ipfs/go-ipfs#3882](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3882))
+  - Don't redirect to trailing slash in gateway for `go get` ([ipfs/go-ipfs#3963](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3963))
+  - Add 'ipfs dht findprovs --num-providers' to allow choosing number of providers to find ([ipfs/go-ipfs#3966](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3966))
+  - Make sure all keystore keys get republished ([ipfs/go-ipfs#3951](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3951))
 - Documentation
-  - Adding documentation on PubSub encodings ([ipfs/go-ipfs#3909](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3909))
-  - Change 'neccessary' to 'necessary' ([ipfs/go-ipfs#3941](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3941))
-  - README.md: add Nix to the linux package managers ([ipfs/go-ipfs#3939](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3939))
-  - More verbose errors in filestore ([ipfs/go-ipfs#3964](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3964))
+  - Adding documentation on PubSub encodings ([ipfs/go-ipfs#3909](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3909))
+  - Change 'neccessary' to 'necessary' ([ipfs/go-ipfs#3941](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3941))
+  - README.md: add Nix to the linux package managers ([ipfs/go-ipfs#3939](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3939))
+  - More verbose errors in filestore ([ipfs/go-ipfs#3964](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3964))
 - Bugfixes
-  - Fix typo in message when file size check fails ([ipfs/go-ipfs#3895](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3895))
-  - Clean up bitswap ledgers when disconnecting ([ipfs/go-ipfs#3437](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3437))
-  - Make odds of 'process added after close' panic less likely ([ipfs/go-ipfs#3940](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3940))
+  - Fix typo in message when file size check fails ([ipfs/go-ipfs#3895](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3895))
+  - Clean up bitswap ledgers when disconnecting ([ipfs/go-ipfs#3437](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3437))
+  - Make odds of 'process added after close' panic less likely ([ipfs/go-ipfs#3940](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3940))
 - General Changes and Refactorings
-  - Remove 'ipfs diag net' from codebase ([ipfs/go-ipfs#3916](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3916))
-  - Update to dht code with provide announce option ([ipfs/go-ipfs#3928](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3928))
-  - Apply the megacheck code vetting tool ([ipfs/go-ipfs#3949](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3949))
-  - Expose port 8081 in docker container for /ws listener ([ipfs/go-ipfs#3954](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3954))
+  - Remove 'ipfs diag net' from codebase ([ipfs/go-ipfs#3916](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3916))
+  - Update to dht code with provide announce option ([ipfs/go-ipfs#3928](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3928))
+  - Apply the megacheck code vetting tool ([ipfs/go-ipfs#3949](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3949))
+  - Expose port 8081 in docker container for /ws listener ([ipfs/go-ipfs#3954](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3954))
 
 ### 0.4.9 - 2017-04-30
 
@@ -825,30 +825,30 @@ such as git, bitcoin, zcash and ethereum -- a few systems we've already started 
 Aside from the CID flag, there were many other changes as noted below:
 
 - Features
-  - Add support for using CidV1 in 'ipfs add' ([ipfs/go-ipfs#3743](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3743))
+  - Add support for using CidV1 in 'ipfs add' ([ipfs/go-ipfs#3743](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3743))
 - Improvements
-  - Use CID as an ETag strong validator ([ipfs/go-ipfs#3869](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3869))
-  - Update go-multihash with keccak and bitcoin hashes ([ipfs/go-ipfs#3833](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3833))
-  - Update go-is-domain to contain new gTLD ([ipfs/go-ipfs#3873](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3873))
-  - Periodically flush cached directories during ipfs add ([ipfs/go-ipfs#3888](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3888))
-  - improved gateway directory listing for sharded nodes ([ipfs/go-ipfs#3897](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3897))
+  - Use CID as an ETag strong validator ([ipfs/go-ipfs#3869](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3869))
+  - Update go-multihash with keccak and bitcoin hashes ([ipfs/go-ipfs#3833](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3833))
+  - Update go-is-domain to contain new gTLD ([ipfs/go-ipfs#3873](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3873))
+  - Periodically flush cached directories during ipfs add ([ipfs/go-ipfs#3888](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3888))
+  - improved gateway directory listing for sharded nodes ([ipfs/go-ipfs#3897](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3897))
 - Documentation
-  - Change issue template to use Severity instead of Priority ([ipfs/go-ipfs#3834](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3834))
-  - Fix link to commit hook script in contribute.md ([ipfs/go-ipfs#3863](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3863))
-  - Fix install_unsupported for openbsd, add docs ([ipfs/go-ipfs#3880](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3880))
+  - Change issue template to use Severity instead of Priority ([ipfs/go-ipfs#3834](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3834))
+  - Fix link to commit hook script in contribute.md ([ipfs/go-ipfs#3863](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3863))
+  - Fix install_unsupported for openbsd, add docs ([ipfs/go-ipfs#3880](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3880))
 - Bugfixes
-  - Fix wanlist typo in prometheus metric name ([ipfs/go-ipfs#3841](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3841))
-  - Fix `make install` not using ldflags for git hash ([ipfs/go-ipfs#3838](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3838))
-  - Fix `make install` not installing dependencies ([ipfs/go-ipfs#3848](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3848))
-  - Fix erroneous Cache-Control: immutable on dir listings ([ipfs/go-ipfs#3870](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3870))
-  - Fix bitswap accounting of 'BytesSent' in ledger ([ipfs/go-ipfs#3876](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3876))
-  - Fix gateway handling of sharded directories ([ipfs/go-ipfs#3889](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3889))
-  - Fix sharding memory growth, and fix resolver for unixfs paths ([ipfs/go-ipfs#3890](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3890))
+  - Fix wanlist typo in prometheus metric name ([ipfs/go-ipfs#3841](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3841))
+  - Fix `make install` not using ldflags for git hash ([ipfs/go-ipfs#3838](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3838))
+  - Fix `make install` not installing dependencies ([ipfs/go-ipfs#3848](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3848))
+  - Fix erroneous Cache-Control: immutable on dir listings ([ipfs/go-ipfs#3870](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3870))
+  - Fix bitswap accounting of 'BytesSent' in ledger ([ipfs/go-ipfs#3876](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3876))
+  - Fix gateway handling of sharded directories ([ipfs/go-ipfs#3889](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3889))
+  - Fix sharding memory growth, and fix resolver for unixfs paths ([ipfs/go-ipfs#3890](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3890))
 - General Changes and Refactorings
-  - Use ctx var consistently in daemon.go ([ipfs/go-ipfs#3864](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3864))
-  - Handle 404 correctly in dist_get tool ([ipfs/go-ipfs#3879](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3879))
+  - Use ctx var consistently in daemon.go ([ipfs/go-ipfs#3864](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3864))
+  - Handle 404 correctly in dist_get tool ([ipfs/go-ipfs#3879](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3879))
 - Testing
-  - Fix go fuse tests ([ipfs/go-ipfs#3840](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3840))
+  - Fix go fuse tests ([ipfs/go-ipfs#3840](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3840))
 
 ### 0.4.8 - 2017-03-29
 
@@ -874,32 +874,32 @@ That said, please do give it a try, let us know how it goes, and then take a
 look at all the other cool things added in 0.4.8 below.
 
 - Features
-	- Implement unixfs directory sharding ([ipfs/go-ipfs#3042](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3042))
-	- Add DisableNatPortMap option ([ipfs/go-ipfs#3798](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3798))
-	- Basic Filestore utilty commands ([ipfs/go-ipfs#3653](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3653))
+	- Implement unixfs directory sharding ([ipfs/go-ipfs#3042](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3042))
+	- Add DisableNatPortMap option ([ipfs/go-ipfs#3798](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3798))
+	- Basic Filestore utilty commands ([ipfs/go-ipfs#3653](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3653))
 - Improvements
-	- More Robust GC ([ipfs/go-ipfs#3712](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3712))
-	- Automatically fix permissions for docker volumes ([ipfs/go-ipfs#3744](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3744))
-	- Core API refinements and efficiency improvements ([ipfs/go-ipfs#3493](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3493))
-	- Improve IsPinned() lookups for indirect pins ([ipfs/go-ipfs#3809](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3809))
+	- More Robust GC ([ipfs/go-ipfs#3712](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3712))
+	- Automatically fix permissions for docker volumes ([ipfs/go-ipfs#3744](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3744))
+	- Core API refinements and efficiency improvements ([ipfs/go-ipfs#3493](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3493))
+	- Improve IsPinned() lookups for indirect pins ([ipfs/go-ipfs#3809](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3809))
 - Documentation
-	- Improve 'name' and 'key' helptexts ([ipfs/go-ipfs#3806](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3806))
-	- Update link to paper in dev.md ([ipfs/go-ipfs#3812](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3812))
-	- Add test to enforce helptext on commands ([ipfs/go-ipfs#2648](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2648))
+	- Improve 'name' and 'key' helptexts ([ipfs/go-ipfs#3806](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3806))
+	- Update link to paper in dev.md ([ipfs/go-ipfs#3812](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3812))
+	- Add test to enforce helptext on commands ([ipfs/go-ipfs#2648](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2648))
 - Bugfixes
-	- Remove bloom filter check on Put call in blockstore ([ipfs/go-ipfs#3782](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3782))
-	- Re-add the GOPATH checking functionality ([ipfs/go-ipfs#3787](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3787))
-	- Use fsrepo.IsInitialized to test for initialization ([ipfs/go-ipfs#3805](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3805))
-	- Return 404 Not Found for failed path resolutions ([ipfs/go-ipfs#3777](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3777))
-	- Fix 'dist\_get' failing without failing ([ipfs/go-ipfs#3818](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3818))
-	- Update iptb with fix for t0130 hanging issue ([ipfs/go-ipfs#3823](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3823))
-	- fix hidden file detection on windows ([ipfs/go-ipfs#3829](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3829))
+	- Remove bloom filter check on Put call in blockstore ([ipfs/go-ipfs#3782](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3782))
+	- Re-add the GOPATH checking functionality ([ipfs/go-ipfs#3787](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3787))
+	- Use fsrepo.IsInitialized to test for initialization ([ipfs/go-ipfs#3805](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3805))
+	- Return 404 Not Found for failed path resolutions ([ipfs/go-ipfs#3777](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3777))
+	- Fix 'dist\_get' failing without failing ([ipfs/go-ipfs#3818](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3818))
+	- Update iptb with fix for t0130 hanging issue ([ipfs/go-ipfs#3823](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3823))
+	- fix hidden file detection on windows ([ipfs/go-ipfs#3829](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3829))
 - General Changes and Refactorings
-	- Fix multiple govet warnings ([ipfs/go-ipfs#3824](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3824))
-	- Make Golint happy in the blocks submodule ([ipfs/go-ipfs#3827](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3827))
+	- Fix multiple govet warnings ([ipfs/go-ipfs#3824](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3824))
+	- Make Golint happy in the blocks submodule ([ipfs/go-ipfs#3827](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3827))
 - Testing
-	- Enable codeclimate for automated linting and vetting ([ipfs/go-ipfs#3821](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3821))
-	- Fix EOF test failure with Multipart.Read ([ipfs/go-ipfs#3804](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3804))
+	- Enable codeclimate for automated linting and vetting ([ipfs/go-ipfs#3821](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3821))
+	- Fix EOF test failure with Multipart.Read ([ipfs/go-ipfs#3804](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3804))
 
 ### 0.4.7 - 2017-03-15
 
@@ -912,14 +912,14 @@ enabled in your config with:
 ```
 ipfs config --json Experimental.FilestoreEnabled true
 ```
-before it can be used. Please see [this issue](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues/3397#issuecomment-284337564) for more details.
+before it can be used. Please see [this issue](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/issues/3397#issuecomment-284337564) for more details.
 
 Next up, We have merged initial support for ipfs 'Private Networks'. This
 feature allows users to run ipfs in a mode that will only connect to other
 peers in the private network. This feature, like the filestore is being
 released experimentally, but if you're interested please try it out.
 Instructions for setting it up can be found
-[here](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues/3397#issuecomment-284341649).
+[here](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/issues/3397#issuecomment-284341649).
 
 This release also enables support for the 'mplex' stream muxer by default. This
 stream multiplexing protocol was available previously via the
@@ -930,38 +930,38 @@ Aside from those, we have a good number of bugfixes, perf improvements and new
 tests. Heres a list of highlights:
 
 - Features
-	- Implement basic filestore 'no-copy' functionality ([ipfs/go-ipfs#3629](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3629))
-	- Add support for private ipfs networks ([ipfs/go-ipfs#3697](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3697))
-	- Enable 'mplex' stream muxer by default ([ipfs/go-ipfs#3725](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3725))
-	- Add `--quieter` option to `ipfs add` ([ipfs/go-ipfs#3770](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3770))
-	- Report progress during `pin add` via `--progress` ([ipfs/go-ipfs#3671](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3671))
+	- Implement basic filestore 'no-copy' functionality ([ipfs/go-ipfs#3629](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3629))
+	- Add support for private ipfs networks ([ipfs/go-ipfs#3697](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3697))
+	- Enable 'mplex' stream muxer by default ([ipfs/go-ipfs#3725](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3725))
+	- Add `--quieter` option to `ipfs add` ([ipfs/go-ipfs#3770](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3770))
+	- Report progress during `pin add` via `--progress` ([ipfs/go-ipfs#3671](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3671))
 - Improvements
-	- Allow `ipfs get` to handle content added with raw leaves option ([ipfs/go-ipfs#3757](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3757))
-	- Fix accuracy of progress bar on `ipfs get` ([ipfs/go-ipfs#3758](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3758))
-	- Limit number of objects in batches to prevent too many fds issue ([ipfs/go-ipfs#3756](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3756))
-	- Add more info to bitswap stat ([ipfs/go-ipfs#3635](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3635))
-	- Add multiple performance metrics ([ipfs/go-ipfs#3615](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3615))
-	- Make `dist_get` fall back to other downloaders if one fails ([ipfs/go-ipfs#3692](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3692))
+	- Allow `ipfs get` to handle content added with raw leaves option ([ipfs/go-ipfs#3757](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3757))
+	- Fix accuracy of progress bar on `ipfs get` ([ipfs/go-ipfs#3758](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3758))
+	- Limit number of objects in batches to prevent too many fds issue ([ipfs/go-ipfs#3756](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3756))
+	- Add more info to bitswap stat ([ipfs/go-ipfs#3635](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3635))
+	- Add multiple performance metrics ([ipfs/go-ipfs#3615](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3615))
+	- Make `dist_get` fall back to other downloaders if one fails ([ipfs/go-ipfs#3692](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3692))
 - Documentation
-	- Add Arch Linux install instructions to readme ([ipfs/go-ipfs#3742](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3742))
-	- Improve release checklist document ([ipfs/go-ipfs#3717](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3717))
+	- Add Arch Linux install instructions to readme ([ipfs/go-ipfs#3742](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3742))
+	- Improve release checklist document ([ipfs/go-ipfs#3717](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3717))
 - Bugfixes
-	- Fix drive root parsing on windows ([ipfs/go-ipfs#3328](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3328))
-	- Fix panic in ipfs get when passing no parameters to API ([ipfs/go-ipfs#3768](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3768))
-	- Fix breakage of `ipfs pin add` api output ([ipfs/go-ipfs#3760](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3760))
-	- Fix issue in DHT queries that was causing poor record replication ([ipfs/go-ipfs#3748](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3748))
-	- Fix `ipfs mount` crashing if no name was published before ([ipfs/go-ipfs#3728](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3728))
-	- Add `self` key to the `ipfs key list` listing ([ipfs/go-ipfs#3734](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3734))
-	- Fix panic when shutting down `ipfs daemon` pre gateway setup ([ipfs/go-ipfs#3723](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3723))
+	- Fix drive root parsing on windows ([ipfs/go-ipfs#3328](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3328))
+	- Fix panic in ipfs get when passing no parameters to API ([ipfs/go-ipfs#3768](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3768))
+	- Fix breakage of `ipfs pin add` api output ([ipfs/go-ipfs#3760](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3760))
+	- Fix issue in DHT queries that was causing poor record replication ([ipfs/go-ipfs#3748](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3748))
+	- Fix `ipfs mount` crashing if no name was published before ([ipfs/go-ipfs#3728](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3728))
+	- Add `self` key to the `ipfs key list` listing ([ipfs/go-ipfs#3734](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3734))
+	- Fix panic when shutting down `ipfs daemon` pre gateway setup ([ipfs/go-ipfs#3723](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3723))
 - General Changes and Refactorings
-	- Refactor `EnumerateChildren` to avoid need for bestEffort parameter ([ipfs/go-ipfs#3700](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3700))
-	- Update fuse dependency, fixing several issues ([ipfs/go-ipfs#3727](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3727))
-	- Add `install_unsupported` makefile target for 'exotic' systems ([ipfs/go-ipfs#3719](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3719))
-	- Deprecate implicit daemon argument in Dockerfile ([ipfs/go-ipfs#3685](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3685))
+	- Refactor `EnumerateChildren` to avoid need for bestEffort parameter ([ipfs/go-ipfs#3700](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3700))
+	- Update fuse dependency, fixing several issues ([ipfs/go-ipfs#3727](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3727))
+	- Add `install_unsupported` makefile target for 'exotic' systems ([ipfs/go-ipfs#3719](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3719))
+	- Deprecate implicit daemon argument in Dockerfile ([ipfs/go-ipfs#3685](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3685))
 - Testing
-	- Add test to ensure helptext is under 80 columns wide ([ipfs/go-ipfs#3774](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3774))
-	- Add unit tests for auto migration code ([ipfs/go-ipfs#3618](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3618))
-	- Fix iptb stop issue in sharness tests  ([ipfs/go-ipfs#3714](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3714))
+	- Add test to ensure helptext is under 80 columns wide ([ipfs/go-ipfs#3774](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3774))
+	- Add unit tests for auto migration code ([ipfs/go-ipfs#3618](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3618))
+	- Fix iptb stop issue in sharness tests  ([ipfs/go-ipfs#3714](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3714))
 
 
 ### 0.4.6 - 2017-02-21
@@ -974,191 +974,191 @@ few other improvements to other parts of the codebase. Notably:
 - Pinning thousands of files no longer causes superlinear usage of storage space.
 
 - Improvements
-	- Make pinset sharding deterministic ([ipfs/go-ipfs#3640](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3640))
-	- Update to go-multihash with blake2 ([ipfs/go-ipfs#3649](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3649))
-	- Pass cids instead of nodes around in EnumerateChildrenAsync ([ipfs/go-ipfs#3598](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3598))
-	- Add /ip6 bootstrap nodes ([ipfs/go-ipfs#3523](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3523))
-	- Add sub-object support to `dag get` command ([ipfs/go-ipfs#3687](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3687))
-	- Add half-closed streams support to multiplex experiment ([ipfs/go-ipfs#3695](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3695))
+	- Make pinset sharding deterministic ([ipfs/go-ipfs#3640](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3640))
+	- Update to go-multihash with blake2 ([ipfs/go-ipfs#3649](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3649))
+	- Pass cids instead of nodes around in EnumerateChildrenAsync ([ipfs/go-ipfs#3598](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3598))
+	- Add /ip6 bootstrap nodes ([ipfs/go-ipfs#3523](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3523))
+	- Add sub-object support to `dag get` command ([ipfs/go-ipfs#3687](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3687))
+	- Add half-closed streams support to multiplex experiment ([ipfs/go-ipfs#3695](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3695))
 - Documentation
-	- Add the snap installation instructions ([ipfs/go-ipfs#3663](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3663))
-	- Add closed PRs, Issues throughput ([ipfs/go-ipfs#3602](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3602))
+	- Add the snap installation instructions ([ipfs/go-ipfs#3663](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3663))
+	- Add closed PRs, Issues throughput ([ipfs/go-ipfs#3602](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3602))
 - Bugfixes
-	- Fix auto-migration on docker nodes ([ipfs/go-ipfs#3698](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3698))
-	- Update flatfs to v1.1.2, fixing directory fd issue ([ipfs/go-ipfs#3711](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3711))
+	- Fix auto-migration on docker nodes ([ipfs/go-ipfs#3698](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3698))
+	- Update flatfs to v1.1.2, fixing directory fd issue ([ipfs/go-ipfs#3711](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3711))
 - General Changes and Refactorings
-	- Remove `FindProviders` from routing mocks ([ipfs/go-ipfs#3617](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3617))
-	- Use Marshalers instead of PostRun to process `block rm` output ([ipfs/go-ipfs#3708](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3708))
+	- Remove `FindProviders` from routing mocks ([ipfs/go-ipfs#3617](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3617))
+	- Use Marshalers instead of PostRun to process `block rm` output ([ipfs/go-ipfs#3708](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3708))
 - Testing
-	- Makefile rework and sharness test coverage ([ipfs/go-ipfs#3504](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3504))
-	- Print out all daemon stderr files when iptb stop fails ([ipfs/go-ipfs#3701](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3701))
-	- Add tests for recursively pinning a dag ([ipfs/go-ipfs#3691](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3691))
-	- Fix lack of commit hash during build ([ipfs/go-ipfs#3705](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3705))
+	- Makefile rework and sharness test coverage ([ipfs/go-ipfs#3504](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3504))
+	- Print out all daemon stderr files when iptb stop fails ([ipfs/go-ipfs#3701](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3701))
+	- Add tests for recursively pinning a dag ([ipfs/go-ipfs#3691](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3691))
+	- Fix lack of commit hash during build ([ipfs/go-ipfs#3705](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3705))
 
 ### 0.4.5 - 2017-02-11
 
 #### Changes from rc3 to rc4
-- Update to fixed webui. ([ipfs/go-ipfs#3669](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3669))
+- Update to fixed webui. ([ipfs/go-ipfs#3669](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3669))
 
 #### Changes from rc2 to rc3
-- Fix handling of null arrays in cbor ipld objects.  ([ipfs/go-ipfs#3666](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3666))
-- Add env var to enable yamux debug logging.  ([ipfs/go-ipfs#3668](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3668))
-- Fix libc check during auto-migrations.  ([ipfs/go-ipfs#3665](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3665))
+- Fix handling of null arrays in cbor ipld objects.  ([ipfs/go-ipfs#3666](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3666))
+- Add env var to enable yamux debug logging.  ([ipfs/go-ipfs#3668](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3668))
+- Fix libc check during auto-migrations.  ([ipfs/go-ipfs#3665](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3665))
 
 #### Changes from rc1 to rc2
-- Fixed json output of ipld objects in `ipfs dag get` ([ipfs/go-ipfs#3655](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3655))
+- Fixed json output of ipld objects in `ipfs dag get` ([ipfs/go-ipfs#3655](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3655))
 
 #### Changes since 0.4.4
 
 - Notable changes
 	- IPLD and CIDs
-	  - Rework go-ipfs to use Content IDs  ([ipfs/go-ipfs#3187](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3187))  ([ipfs/go-ipfs#3290](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3290))
-	  - Turn merkledag.Node into an interface ([ipfs/go-ipfs#3301](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3301))
-	  - Implement cbor ipld nodes  ([ipfs/go-ipfs#3325](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3325))
-	  - Allow cid format selection in block put command  ([ipfs/go-ipfs#3324](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3324))  ([ipfs/go-ipfs#3483](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3483))
-	  - Bitswap protocol extension to handle cids  ([ipfs/go-ipfs#3297](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3297))
-	  - Add dag get to read-only api  ([ipfs/go-ipfs#3499](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3499))
+	  - Rework go-ipfs to use Content IDs  ([ipfs/go-ipfs#3187](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3187))  ([ipfs/go-ipfs#3290](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3290))
+	  - Turn merkledag.Node into an interface ([ipfs/go-ipfs#3301](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3301))
+	  - Implement cbor ipld nodes  ([ipfs/go-ipfs#3325](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3325))
+	  - Allow cid format selection in block put command  ([ipfs/go-ipfs#3324](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3324))  ([ipfs/go-ipfs#3483](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3483))
+	  - Bitswap protocol extension to handle cids  ([ipfs/go-ipfs#3297](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3297))
+	  - Add dag get to read-only api  ([ipfs/go-ipfs#3499](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3499))
 	- Raw Nodes
-	  - Implement 'Raw Node' node type for addressing raw data  ([ipfs/go-ipfs#3307](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3307))
-	  - Optimize DagService GetLinks for Raw Nodes.  ([ipfs/go-ipfs#3351](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3351))
+	  - Implement 'Raw Node' node type for addressing raw data  ([ipfs/go-ipfs#3307](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3307))
+	  - Optimize DagService GetLinks for Raw Nodes.  ([ipfs/go-ipfs#3351](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3351))
 	- Experimental PubSub
-	  - Added a very basic pubsub implementation  ([ipfs/go-ipfs#3202](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3202))
+	  - Added a very basic pubsub implementation  ([ipfs/go-ipfs#3202](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3202))
 	- Core API
-	  - gateway: use core api for serving GET/HEAD/POST  ([ipfs/go-ipfs#3244](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3244))
+	  - gateway: use core api for serving GET/HEAD/POST  ([ipfs/go-ipfs#3244](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3244))
 
 - Improvements
-	- Disable auto-gc check in 'ipfs cat'  ([ipfs/go-ipfs#3100](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3100))
-	- Add `bitswap ledger` command  ([ipfs/go-ipfs#2852](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2852))
-	- Add `ipfs block rm` command.  ([ipfs/go-ipfs#2962](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2962))
-	- Add config option to disable bandwidth metrics   ([ipfs/go-ipfs#3381](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3381))
-	- Add experimental dht 'client mode' flag  ([ipfs/go-ipfs#3269](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3269))
-	- Add config option to set reprovider interval  ([ipfs/go-ipfs#3101](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3101))
-	- Add `ipfs dht provide` command  ([ipfs/go-ipfs#3106](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3106))
-	- Add stream info to `ipfs swarm peers -v`  ([ipfs/go-ipfs#3352](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3352))
-	- Add option to enable go-multiplex experiment  ([ipfs/go-ipfs#3447](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3447))
-	- Basic Keystore implementation  ([ipfs/go-ipfs#3472](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3472))
-	- Make `ipfs add --local` not send providers messages  ([ipfs/go-ipfs#3102](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3102))
-	- Fix bug in `ipfs tar add` that buffered input in memory  ([ipfs/go-ipfs#3334](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3334))
-	- Make blockstore retry operations on temporary errors  ([ipfs/go-ipfs#3091](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3091))
-	- Don't hold the PinLock in adder when not pinning.  ([ipfs/go-ipfs#3222](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3222))
-	- Validate repo/api file and improve error message  ([ipfs/go-ipfs#3219](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3219))
-	- no longer hard code gomaxprocs  ([ipfs/go-ipfs#3357](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3357))
-	- Updated Bash complete script  ([ipfs/go-ipfs#3377](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3377))
-	- Remove expensive debug statement in blockstore AllKeysChan  ([ipfs/go-ipfs#3384](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3384))
-	- Remove GC timeout, fix GC tests  ([ipfs/go-ipfs#3494](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3494))
-	- Fix `ipfs pin add` resource consumption  ([ipfs/go-ipfs#3495](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3495))  ([ipfs/go-ipfs#3571](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3571))
-	- Add IPNS entry to DHT cache after publish  ([ipfs/go-ipfs#3501](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3501))
-	- Add in `--routing=none` daemon option  ([ipfs/go-ipfs#3605](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3605))
+	- Disable auto-gc check in 'ipfs cat'  ([ipfs/go-ipfs#3100](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3100))
+	- Add `bitswap ledger` command  ([ipfs/go-ipfs#2852](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2852))
+	- Add `ipfs block rm` command.  ([ipfs/go-ipfs#2962](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2962))
+	- Add config option to disable bandwidth metrics   ([ipfs/go-ipfs#3381](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3381))
+	- Add experimental dht 'client mode' flag  ([ipfs/go-ipfs#3269](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3269))
+	- Add config option to set reprovider interval  ([ipfs/go-ipfs#3101](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3101))
+	- Add `ipfs dht provide` command  ([ipfs/go-ipfs#3106](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3106))
+	- Add stream info to `ipfs swarm peers -v`  ([ipfs/go-ipfs#3352](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3352))
+	- Add option to enable go-multiplex experiment  ([ipfs/go-ipfs#3447](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3447))
+	- Basic Keystore implementation  ([ipfs/go-ipfs#3472](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3472))
+	- Make `ipfs add --local` not send providers messages  ([ipfs/go-ipfs#3102](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3102))
+	- Fix bug in `ipfs tar add` that buffered input in memory  ([ipfs/go-ipfs#3334](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3334))
+	- Make blockstore retry operations on temporary errors  ([ipfs/go-ipfs#3091](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3091))
+	- Don't hold the PinLock in adder when not pinning.  ([ipfs/go-ipfs#3222](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3222))
+	- Validate repo/api file and improve error message  ([ipfs/go-ipfs#3219](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3219))
+	- no longer hard code gomaxprocs  ([ipfs/go-ipfs#3357](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3357))
+	- Updated Bash complete script  ([ipfs/go-ipfs#3377](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3377))
+	- Remove expensive debug statement in blockstore AllKeysChan  ([ipfs/go-ipfs#3384](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3384))
+	- Remove GC timeout, fix GC tests  ([ipfs/go-ipfs#3494](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3494))
+	- Fix `ipfs pin add` resource consumption  ([ipfs/go-ipfs#3495](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3495))  ([ipfs/go-ipfs#3571](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3571))
+	- Add IPNS entry to DHT cache after publish  ([ipfs/go-ipfs#3501](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3501))
+	- Add in `--routing=none` daemon option  ([ipfs/go-ipfs#3605](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3605))
 
 - Bitswap
-	- Don't re-provide blocks we've provided very recently  ([ipfs/go-ipfs#3105](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3105))
-	- Add a deadline to sendmsg calls ([ipfs/go-ipfs#3445](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3445))
-	- cleanup bitswap and handle message send failure slightly better  ([ipfs/go-ipfs#3408](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3408))
-	- Increase wantlist resend delay to one minute  ([ipfs/go-ipfs#3448](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3448))
-	- Fix issue where wantlist fullness wasn't included in messages  ([ipfs/go-ipfs#3461](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3461))
-	- Only pass keys down newBlocks chan in bitswap   ([ipfs/go-ipfs#3271](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3271))
+	- Don't re-provide blocks we've provided very recently  ([ipfs/go-ipfs#3105](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3105))
+	- Add a deadline to sendmsg calls ([ipfs/go-ipfs#3445](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3445))
+	- cleanup bitswap and handle message send failure slightly better  ([ipfs/go-ipfs#3408](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3408))
+	- Increase wantlist resend delay to one minute  ([ipfs/go-ipfs#3448](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3448))
+	- Fix issue where wantlist fullness wasn't included in messages  ([ipfs/go-ipfs#3461](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3461))
+	- Only pass keys down newBlocks chan in bitswap   ([ipfs/go-ipfs#3271](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3271))
 
 - Bugfixes
-	- gateway: fix --writable flag  ([ipfs/go-ipfs#3206](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3206))
-	- Fix relative seek in unixfs not expanding file properly   ([ipfs/go-ipfs#3095](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3095))
-	- Update multicodec service names for ipfs services  ([ipfs/go-ipfs#3132](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3132))
-	- dht: add missing protocol ID to newStream call  ([ipfs/go-ipfs#3203](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3203))
-	- Return immediately on namesys error  ([ipfs/go-ipfs#3345](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3345))
-	- Improve osxfuse handling  ([ipfs/go-ipfs#3098](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3098))  ([ipfs/go-ipfs#3413](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3413))
-	- commands: fix opt.Description panic when desc was empty  ([ipfs/go-ipfs#3521](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3521))
-	- Fixes #3133: Properly handle release candidates in version comparison  ([ipfs/go-ipfs#3136](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3136))
-	- Don't drop error in readStreamedJson.  ([ipfs/go-ipfs#3276](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3276))
-	- Error out on invalid `--routing` option  ([ipfs/go-ipfs#3482](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3482))
-	- Respect contexts when returning diagnostics responses  ([ipfs/go-ipfs#3353](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3353))
-	- Fix json marshalling of pbnode  ([ipfs/go-ipfs#3507](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3507))
+	- gateway: fix --writable flag  ([ipfs/go-ipfs#3206](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3206))
+	- Fix relative seek in unixfs not expanding file properly   ([ipfs/go-ipfs#3095](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3095))
+	- Update multicodec service names for ipfs services  ([ipfs/go-ipfs#3132](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3132))
+	- dht: add missing protocol ID to newStream call  ([ipfs/go-ipfs#3203](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3203))
+	- Return immediately on namesys error  ([ipfs/go-ipfs#3345](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3345))
+	- Improve osxfuse handling  ([ipfs/go-ipfs#3098](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3098))  ([ipfs/go-ipfs#3413](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3413))
+	- commands: fix opt.Description panic when desc was empty  ([ipfs/go-ipfs#3521](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3521))
+	- Fixes #3133: Properly handle release candidates in version comparison  ([ipfs/go-ipfs#3136](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3136))
+	- Don't drop error in readStreamedJson.  ([ipfs/go-ipfs#3276](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3276))
+	- Error out on invalid `--routing` option  ([ipfs/go-ipfs#3482](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3482))
+	- Respect contexts when returning diagnostics responses  ([ipfs/go-ipfs#3353](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3353))
+	- Fix json marshalling of pbnode  ([ipfs/go-ipfs#3507](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3507))
 
 - General changes and refactorings
-	- Disable Suborigins the spec changed and our impl conflicts  ([ipfs/go-ipfs#3519](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3519))
-	- Avoid sending provide messages for pinsets  ([ipfs/go-ipfs#3103](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3103))
-	- Refactor cli handling to expose argument parsing functionality  ([ipfs/go-ipfs#3308](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3308))
-	- Create a FilestoreNode object to carry PosInfo  ([ipfs/go-ipfs#3314](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3314))
-	- Print 'n/a' instead of zero latency in `ipfs swarm peers`  ([ipfs/go-ipfs#3491](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3491))
-	- Add DAGService.GetLinks() method to optimize traversals.  ([ipfs/go-ipfs#3255](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3255))
-	- Make path resolver no longer require whole IpfsNode for construction  ([ipfs/go-ipfs#3321](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3321))
-	- Distinguish between Offline and Local Modes of daemon operation.  ([ipfs/go-ipfs#3259](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3259))
-	- Separate out the GC Locking from the Blockstore interface.  ([ipfs/go-ipfs#3348](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3348))
-	- Avoid unnecessary allocs in datastore key handling  ([ipfs/go-ipfs#3407](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3407))
-	- Use NextSync method for datastore queries ([ipfs/go-ipfs#3386](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3386))
-	- Switch unixfs.Metadata.MimeType to optional ([ipfs/go-ipfs#3458](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3458))
-	- Fix path parsing in `ipfs name publish`   ([ipfs/go-ipfs#3592](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3592))
-	- Fix inconsistent `ipfs stats bw` formatting  ([ipfs/go-ipfs#3554](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3554))
-	- Set the libp2p agent version based on version string  ([ipfs/go-ipfs#3569](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3569))
+	- Disable Suborigins the spec changed and our impl conflicts  ([ipfs/go-ipfs#3519](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3519))
+	- Avoid sending provide messages for pinsets  ([ipfs/go-ipfs#3103](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3103))
+	- Refactor cli handling to expose argument parsing functionality  ([ipfs/go-ipfs#3308](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3308))
+	- Create a FilestoreNode object to carry PosInfo  ([ipfs/go-ipfs#3314](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3314))
+	- Print 'n/a' instead of zero latency in `ipfs swarm peers`  ([ipfs/go-ipfs#3491](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3491))
+	- Add DAGService.GetLinks() method to optimize traversals.  ([ipfs/go-ipfs#3255](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3255))
+	- Make path resolver no longer require whole IpfsNode for construction  ([ipfs/go-ipfs#3321](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3321))
+	- Distinguish between Offline and Local Modes of daemon operation.  ([ipfs/go-ipfs#3259](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3259))
+	- Separate out the GC Locking from the Blockstore interface.  ([ipfs/go-ipfs#3348](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3348))
+	- Avoid unnecessary allocs in datastore key handling  ([ipfs/go-ipfs#3407](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3407))
+	- Use NextSync method for datastore queries ([ipfs/go-ipfs#3386](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3386))
+	- Switch unixfs.Metadata.MimeType to optional ([ipfs/go-ipfs#3458](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3458))
+	- Fix path parsing in `ipfs name publish`   ([ipfs/go-ipfs#3592](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3592))
+	- Fix inconsistent `ipfs stats bw` formatting  ([ipfs/go-ipfs#3554](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3554))
+	- Set the libp2p agent version based on version string  ([ipfs/go-ipfs#3569](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3569))
 
 - Cross Platform Changes
-	- Fix 'dist_get' script on BSDs.  ([ipfs/go-ipfs#3264](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3264))
-	- ulimit: Tune resource limits on BSDs  ([ipfs/go-ipfs#3374](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3374))
+	- Fix 'dist_get' script on BSDs.  ([ipfs/go-ipfs#3264](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3264))
+	- ulimit: Tune resource limits on BSDs  ([ipfs/go-ipfs#3374](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3374))
 
 - Metrics
-	- Introduce go-metrics-interface  ([ipfs/go-ipfs#3189](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3189))
-	- Fix metrics injection  ([ipfs/go-ipfs#3315](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3315))
+	- Introduce go-metrics-interface  ([ipfs/go-ipfs#3189](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3189))
+	- Fix metrics injection  ([ipfs/go-ipfs#3315](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3315))
 
 - Misc
-	- Bump Go requirement to 1.7  ([ipfs/go-ipfs#3111](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3111))
-	- Merge 0.4.3 release candidate changes back into master  ([ipfs/go-ipfs#3248](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3248))
-	- Add security@ipfs.io GPG key to assets  ([ipfs/go-ipfs#2997](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2997))
-	- Improve makefiles  ([ipfs/go-ipfs#2999](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2999))  ([ipfs/go-ipfs#3265](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3265))
-	- Refactor install.sh script  ([ipfs/go-ipfs#3194](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3194))
-	- Add test check for go code formatting  ([ipfs/go-ipfs#3421](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3421))
-	- bin: dist_get script: prevents get_go_vars() returns same values twice  ([ipfs/go-ipfs#3079](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3079))
+	- Bump Go requirement to 1.7  ([ipfs/go-ipfs#3111](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3111))
+	- Merge 0.4.3 release candidate changes back into master  ([ipfs/go-ipfs#3248](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3248))
+	- Add security@ipfs.io GPG key to assets  ([ipfs/go-ipfs#2997](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2997))
+	- Improve makefiles  ([ipfs/go-ipfs#2999](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2999))  ([ipfs/go-ipfs#3265](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3265))
+	- Refactor install.sh script  ([ipfs/go-ipfs#3194](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3194))
+	- Add test check for go code formatting  ([ipfs/go-ipfs#3421](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3421))
+	- bin: dist_get script: prevents get_go_vars() returns same values twice  ([ipfs/go-ipfs#3079](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3079))
 
 - Dependencies
-	- Update libp2p to have fixed spdystream dep  ([ipfs/go-ipfs#3210](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3210))
-	- Update libp2p and dht packages  ([ipfs/go-ipfs#3263](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3263))
-	- Update to libp2p 4.0.1 and propogate other changes  ([ipfs/go-ipfs#3284](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3284))
-	- Update to libp2p 4.0.4  ([ipfs/go-ipfs#3361](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3361))
-	- Update go-libp2p across codebase  ([ipfs/go-ipfs#3406](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3406))
-	- Update to go-libp2p 4.1.0  ([ipfs/go-ipfs#3373](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3373))
-	- Update deps for libp2p 3.4.0  ([ipfs/go-ipfs#3110](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3110))
-	- Update go-libp2p-swarm with deadlock fixes  ([ipfs/go-ipfs#3339](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3339))
-	- Update to new cid and ipld node packages  ([ipfs/go-ipfs#3326](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3326))
-	- Update to newer ipld node interface with Copy and better Tree  ([ipfs/go-ipfs#3391](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3391))
-	- Update experimental go-multiplex to 0.2.6  ([ipfs/go-ipfs#3475](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3475))
-	- Rework routing interfaces to make separation easier  ([ipfs/go-ipfs#3107](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3107))
-	- Update to dht code with fixed GetClosestPeers  ([ipfs/go-ipfs#3346](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3346))
-	- Move go-is-domain to gx  ([ipfs/go-ipfs#3077](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3077))
-	- Extract thirdparty/loggables and thirdparty/peerset  ([ipfs/go-ipfs#3204](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3204))
-	- Completely remove go-key dep  ([ipfs/go-ipfs#3439](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3439))
-	- Remove randbo dep, its no longer needed  ([ipfs/go-ipfs#3118](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3118))
-	- Update libp2p for identify configuration updates  ([ipfs/go-ipfs#3539](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3539))
-	- Use newer flatfs sharding scheme  ([ipfs/go-ipfs#3608](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3608))
+	- Update libp2p to have fixed spdystream dep  ([ipfs/go-ipfs#3210](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3210))
+	- Update libp2p and dht packages  ([ipfs/go-ipfs#3263](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3263))
+	- Update to libp2p 4.0.1 and propogate other changes  ([ipfs/go-ipfs#3284](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3284))
+	- Update to libp2p 4.0.4  ([ipfs/go-ipfs#3361](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3361))
+	- Update go-libp2p across codebase  ([ipfs/go-ipfs#3406](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3406))
+	- Update to go-libp2p 4.1.0  ([ipfs/go-ipfs#3373](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3373))
+	- Update deps for libp2p 3.4.0  ([ipfs/go-ipfs#3110](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3110))
+	- Update go-libp2p-swarm with deadlock fixes  ([ipfs/go-ipfs#3339](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3339))
+	- Update to new cid and ipld node packages  ([ipfs/go-ipfs#3326](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3326))
+	- Update to newer ipld node interface with Copy and better Tree  ([ipfs/go-ipfs#3391](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3391))
+	- Update experimental go-multiplex to 0.2.6  ([ipfs/go-ipfs#3475](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3475))
+	- Rework routing interfaces to make separation easier  ([ipfs/go-ipfs#3107](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3107))
+	- Update to dht code with fixed GetClosestPeers  ([ipfs/go-ipfs#3346](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3346))
+	- Move go-is-domain to gx  ([ipfs/go-ipfs#3077](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3077))
+	- Extract thirdparty/loggables and thirdparty/peerset  ([ipfs/go-ipfs#3204](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3204))
+	- Completely remove go-key dep  ([ipfs/go-ipfs#3439](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3439))
+	- Remove randbo dep, its no longer needed  ([ipfs/go-ipfs#3118](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3118))
+	- Update libp2p for identify configuration updates  ([ipfs/go-ipfs#3539](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3539))
+	- Use newer flatfs sharding scheme  ([ipfs/go-ipfs#3608](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3608))
 
 - Testing
-	- fix test_fsh arg quoting in ipfs-test-lib  ([ipfs/go-ipfs#3085](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3085))
-	- 100% coverage for blocks/blocksutil  ([ipfs/go-ipfs#3090](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3090))
-	- 100% coverage on blocks/set  ([ipfs/go-ipfs#3084](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3084))
-	- 81% coverage on blockstore  ([ipfs/go-ipfs#3074](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3074))
-	- 80% coverage of unixfs/mod  ([ipfs/go-ipfs#3096](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3096))
-	- 82% coverage on blocks  ([ipfs/go-ipfs#3086](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3086))
-	- 87% coverage on unixfs   ([ipfs/go-ipfs#3492](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3492))
-	- Improve coverage on routing/offline  ([ipfs/go-ipfs#3516](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3516))
-	- Add test for flags package   ([ipfs/go-ipfs#3449](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3449))
-	- improve test coverage on merkledag package  ([ipfs/go-ipfs#3113](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3113))
-	- 80% coverage of unixfs/io ([ipfs/go-ipfs#3097](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3097))
-	- Accept more than one digit in repo version tests  ([ipfs/go-ipfs#3130](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3130))
-	- Fix typo in hash in t0050  ([ipfs/go-ipfs#3170](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3170))
-	- fix bug in pinsets and add a stress test for the scenario  ([ipfs/go-ipfs#3273](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3273))  ([ipfs/go-ipfs#3302](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3302))
-	- Report coverage to codecov  ([ipfs/go-ipfs#3473](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3473))
-	- Add test for 'ipfs config replace'  ([ipfs/go-ipfs#3073](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3073))
-	- Fix netcat on macOS not closing socket when the stdin sends EOF  ([ipfs/go-ipfs#3515](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3515))
+	- fix test_fsh arg quoting in ipfs-test-lib  ([ipfs/go-ipfs#3085](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3085))
+	- 100% coverage for blocks/blocksutil  ([ipfs/go-ipfs#3090](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3090))
+	- 100% coverage on blocks/set  ([ipfs/go-ipfs#3084](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3084))
+	- 81% coverage on blockstore  ([ipfs/go-ipfs#3074](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3074))
+	- 80% coverage of unixfs/mod  ([ipfs/go-ipfs#3096](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3096))
+	- 82% coverage on blocks  ([ipfs/go-ipfs#3086](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3086))
+	- 87% coverage on unixfs   ([ipfs/go-ipfs#3492](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3492))
+	- Improve coverage on routing/offline  ([ipfs/go-ipfs#3516](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3516))
+	- Add test for flags package   ([ipfs/go-ipfs#3449](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3449))
+	- improve test coverage on merkledag package  ([ipfs/go-ipfs#3113](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3113))
+	- 80% coverage of unixfs/io ([ipfs/go-ipfs#3097](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3097))
+	- Accept more than one digit in repo version tests  ([ipfs/go-ipfs#3130](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3130))
+	- Fix typo in hash in t0050  ([ipfs/go-ipfs#3170](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3170))
+	- fix bug in pinsets and add a stress test for the scenario  ([ipfs/go-ipfs#3273](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3273))  ([ipfs/go-ipfs#3302](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3302))
+	- Report coverage to codecov  ([ipfs/go-ipfs#3473](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3473))
+	- Add test for 'ipfs config replace'  ([ipfs/go-ipfs#3073](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3073))
+	- Fix netcat on macOS not closing socket when the stdin sends EOF  ([ipfs/go-ipfs#3515](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3515))
 
 - Documentation
-	- Update dns help with a correct domain name  ([ipfs/go-ipfs#3087](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3087))
-	- Add period to `ipfs pin rm`  ([ipfs/go-ipfs#3088](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3088))
-	- Make all Taglines use imperative mood  ([ipfs/go-ipfs#3041](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3041))
-	- Document listing commands better  ([ipfs/go-ipfs#3083](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3083))
-	- Add notes to readme on building for uncommon systems  ([ipfs/go-ipfs#3051](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3051))
-	- Add branch naming conventions doc  ([ipfs/go-ipfs#3035](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3035))
-	- Replace <default> keyword with <<default>>  ([ipfs/go-ipfs#3129](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3129))
-	- Fix Add() docs regarding pinning  ([ipfs/go-ipfs#3513](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3513))
-	- Add sudo to install commands.  ([ipfs/go-ipfs#3201](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3201))
-	- Add docs for `"commands".Command.Run`  ([ipfs/go-ipfs#3382](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3382))
-	- Put config keys in proper case  ([ipfs/go-ipfs#3365](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3365))
-	- Fix link in `ipfs stats bw` help message  ([ipfs/go-ipfs#3620](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3620))
+	- Update dns help with a correct domain name  ([ipfs/go-ipfs#3087](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3087))
+	- Add period to `ipfs pin rm`  ([ipfs/go-ipfs#3088](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3088))
+	- Make all Taglines use imperative mood  ([ipfs/go-ipfs#3041](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3041))
+	- Document listing commands better  ([ipfs/go-ipfs#3083](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3083))
+	- Add notes to readme on building for uncommon systems  ([ipfs/go-ipfs#3051](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3051))
+	- Add branch naming conventions doc  ([ipfs/go-ipfs#3035](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3035))
+	- Replace <default> keyword with <<default>>  ([ipfs/go-ipfs#3129](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3129))
+	- Fix Add() docs regarding pinning  ([ipfs/go-ipfs#3513](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3513))
+	- Add sudo to install commands.  ([ipfs/go-ipfs#3201](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3201))
+	- Add docs for `"commands".Command.Run`  ([ipfs/go-ipfs#3382](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3382))
+	- Put config keys in proper case  ([ipfs/go-ipfs#3365](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3365))
+	- Fix link in `ipfs stats bw` help message  ([ipfs/go-ipfs#3620](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3620))
 
 
 ### 0.4.4 - 2016-10-11
@@ -1167,7 +1167,7 @@ This release contains an important hotfix for a bug we discovered in how pinning
 If you had a large number of pins, new pins would overwrite existing pins.
 Apart from the hotfix, this release is equal to the previous release 0.4.3.
 
-- Fix bug in pinsets fanout, and add stress test. (@whyrusleeping, [ipfs/go-ipfs#3273](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3273))
+- Fix bug in pinsets fanout, and add stress test. (@whyrusleeping, [ipfs/go-ipfs#3273](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3273))
 
 We published a [detailed account of the bug and fix in a blog post](https://ipfs.io/blog/21-go-ipfs-0-4-4-released/).
 
@@ -1182,27 +1182,27 @@ We plan for this to be the last release candidate before the release of go-ipfs 
 
 With this release candidate, we're also moving go-ipfs to Go 1.7, which we expect will yield improvements in runtime performance, memory usage, build time and size of the release binaries.
 
-- Require Go 1.7. (@whyrusleeping, @Kubuxu, @lgierth, [ipfs/go-ipfs#3163](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3163))
+- Require Go 1.7. (@whyrusleeping, @Kubuxu, @lgierth, [ipfs/go-ipfs#3163](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3163))
   - For this purpose, switch Docker image from Alpine 3.4 to Alpine Edge.
-- Fix cancellation of Bitswap `wantlist` entries. (@whyrusleeping, [ipfs/go-ipfs#3182](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3182))
-- Fix clearing of `active` state of Bitswap provider queries. (@whyrusleeping, [ipfs/go-ipfs#3169](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3169))
-- Fix a panic in the DHT code. (@Kubuxu, [ipfs/go-ipfs#3200](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3200))
-- Improve handling of `Identity` field in `ipfs config` command. (@Kubuxu, @whyrusleeping, [ipfs/go-ipfs#3141](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3141))
-- Fix explicit adding of symlinked files and directories. (@kevina, [ipfs/go-ipfs#3135](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3135))
-- Fix bash auto-completion of `ipfs daemon --unrestricted-api` option. (@lgierth, [ipfs/go-ipfs#3159](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3159))
-- Introduce a new timeout tool for tests to avoid licensing issues. (@Kubuxu, [ipfs/go-ipfs#3152](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3152))
-- Improve output for migrations of fs-repo. (@lgierth, [ipfs/go-ipfs#3158](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3158))
-- Fix info notice of commands taking input from stdin. (@Kubuxu, [ipfs/go-ipfs#3134](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3134))
-- Bring back a few tests for stdin handling of `ipfs cat` and `ipfs add`. (@Kubuxu, [ipfs/go-ipfs#3144](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3144))
-- Improve sharness tests for `ipfs repo verify` command. (@whyrusleeping, [ipfs/go-ipfs#3148](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3148))
-- Improve sharness tests for CORS headers on the gateway. (@Kubuxu, [ipfs/go-ipfs#3142](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3142))
-- Improve tests for pinning within `ipfs files`. (@kevina, [ipfs/go-ipfs#3151](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3151))
-- Improve tests for the automatic raising of file descriptor limits. (@whyrusleeping, [ipfs/go-ipfs#3149](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3149))
+- Fix cancellation of Bitswap `wantlist` entries. (@whyrusleeping, [ipfs/go-ipfs#3182](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3182))
+- Fix clearing of `active` state of Bitswap provider queries. (@whyrusleeping, [ipfs/go-ipfs#3169](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3169))
+- Fix a panic in the DHT code. (@Kubuxu, [ipfs/go-ipfs#3200](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3200))
+- Improve handling of `Identity` field in `ipfs config` command. (@Kubuxu, @whyrusleeping, [ipfs/go-ipfs#3141](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3141))
+- Fix explicit adding of symlinked files and directories. (@kevina, [ipfs/go-ipfs#3135](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3135))
+- Fix bash auto-completion of `ipfs daemon --unrestricted-api` option. (@lgierth, [ipfs/go-ipfs#3159](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3159))
+- Introduce a new timeout tool for tests to avoid licensing issues. (@Kubuxu, [ipfs/go-ipfs#3152](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3152))
+- Improve output for migrations of fs-repo. (@lgierth, [ipfs/go-ipfs#3158](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3158))
+- Fix info notice of commands taking input from stdin. (@Kubuxu, [ipfs/go-ipfs#3134](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3134))
+- Bring back a few tests for stdin handling of `ipfs cat` and `ipfs add`. (@Kubuxu, [ipfs/go-ipfs#3144](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3144))
+- Improve sharness tests for `ipfs repo verify` command. (@whyrusleeping, [ipfs/go-ipfs#3148](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3148))
+- Improve sharness tests for CORS headers on the gateway. (@Kubuxu, [ipfs/go-ipfs#3142](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3142))
+- Improve tests for pinning within `ipfs files`. (@kevina, [ipfs/go-ipfs#3151](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3151))
+- Improve tests for the automatic raising of file descriptor limits. (@whyrusleeping, [ipfs/go-ipfs#3149](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3149))
 
 ### 0.4.3-rc3 - 2016-08-11
 
 This release candidate fixes a panic that occurs when input from stdin was
-expected, but none was given: [ipfs/go-ipfs#3050](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3050)
+expected, but none was given: [ipfs/go-ipfs#3050](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3050)
 
 ### 0.4.3-rc2 - 2016-08-04
 
@@ -1211,19 +1211,19 @@ between 0.4.2 and 0.4.3-rc1.
 
 - Regressions
   - Fix daemon panic when there is no multipart input provided over the HTTP API.
-  (@whyrusleeping, [ipfs/go-ipfs#2989](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2989))
+  (@whyrusleeping, [ipfs/go-ipfs#2989](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2989))
   - Fix `ipfs refs --edges` not printing edges.
-  (@Kubuxu, [ipfs/go-ipfs#3007](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3007))
+  (@Kubuxu, [ipfs/go-ipfs#3007](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3007))
   - Fix progress option for `ipfs add` defaulting to true on the HTTP API.
-  (@whyrusleeping, [ipfs/go-ipfs#3025](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3025))
+  (@whyrusleeping, [ipfs/go-ipfs#3025](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3025))
   - Fix erroneous printing of stdin reading message.
-  (@whyrusleeping, [ipfs/go-ipfs#3033](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3033))
+  (@whyrusleeping, [ipfs/go-ipfs#3033](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3033))
   - Fix panic caused by passing `--mount` and `--offline` flags to `ipfs daemon`.
-  (@Kubuxu, [ipfs/go-ipfs#3022](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3022))
+  (@Kubuxu, [ipfs/go-ipfs#3022](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3022))
   - Fix symlink path resolution on windows.
-  (@Kubuxu, [ipfs/go-ipfs#3023](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3023))
+  (@Kubuxu, [ipfs/go-ipfs#3023](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3023))
   - Add in code to prevent issue 3032 from crashing the daemon.
-  (@whyrusleeping, [ipfs/go-ipfs#3037](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/3037))
+  (@whyrusleeping, [ipfs/go-ipfs#3037](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/3037))
 
 
 ### 0.4.3-rc1 - 2016-07-23
@@ -1234,111 +1234,111 @@ This is the first Release Candidate. Unless there are vulnerabilities or regress
 
 - Security Vulnerability
 
-  - The `master` branch if go-ipfs suffered from a vulnerability for about 3 weeks. It allowed an attacker to use an iframe to request malicious HTML and JS from the API of a local go-ipfs node. The attacker could then gain unrestricted access to the node's API, and e.g. extract the private key. We fixed this issue by reintroducing restrictions on which particular objects can be loaded through the API (@lgierth, [ipfs/go-ipfs#2949](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2949)), and by completely excluding the private key from the API (@Kubuxu, [ipfs/go-ipfs#2957](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2957)). We will also work on more hardening of the API in the next release.
-  - **The previous release 0.4.2 is not vulnerable. That means if you're using official binaries from [dist.ipfs.io](https://dist.ipfs.io) you're not affected.** If you're running go-ipfs built from the `master` branch between June 17th ([ipfs/go-ipfs@1afebc21](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/commit/1afebc21f324982141ca8a29710da0d6f83ca804)) and July 7th ([ipfs/go-ipfs@39bef0d5](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/commit/39bef0d5b01f70abf679fca2c4d078a2d55620e2)), please update to v0.4.3-rc1 immediately.
+  - The `master` branch if go-ipfs suffered from a vulnerability for about 3 weeks. It allowed an attacker to use an iframe to request malicious HTML and JS from the API of a local go-ipfs node. The attacker could then gain unrestricted access to the node's API, and e.g. extract the private key. We fixed this issue by reintroducing restrictions on which particular objects can be loaded through the API (@lgierth, [ipfs/go-ipfs#2949](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2949)), and by completely excluding the private key from the API (@Kubuxu, [ipfs/go-ipfs#2957](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2957)). We will also work on more hardening of the API in the next release.
+  - **The previous release 0.4.2 is not vulnerable. That means if you're using official binaries from [dist.ipfs.io](https://dist.ipfs.io) you're not affected.** If you're running go-ipfs built from the `master` branch between June 17th ([ipfs/go-ipfs@1afebc21](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commit/1afebc21f324982141ca8a29710da0d6f83ca804)) and July 7th ([ipfs/go-ipfs@39bef0d5](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commit/39bef0d5b01f70abf679fca2c4d078a2d55620e2)), please update to v0.4.3-rc1 immediately.
   - We are grateful to the group of independent researchers who made us aware of this vulnerability. We wanna use this opportunity to reiterate that we're very happy about any additional review of pull requests and releases. You can contact us any time at security@ipfs.io (GPG [4B9665FB 92636D17 7C7A86D3 50AAE8A9 59B13AF3](https://pgp.mit.edu/pks/lookup?op=get&search=0x50AAE8A959B13AF3)).
 
 - Notable changes
 
-  - Improve Bitswap performance. (@whyrusleeping, [ipfs/go-ipfs#2727](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2727), [ipfs/go-ipfs#2798](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2798))
-  - Improve Content Routing and Peer Routing performance. (@whyrusleeping, [ipfs/go-ipfs#2817](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2817), [ipfs/go-ipfs#2841](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2841))
-  - Improve datastore, blockstore, and dagstore performance. (@kevina, @Kubuxu, @whyrusleeping [ipfs/go-datastore#43](https://github.com/ipfs/go-datastore/pull/43), [ipfs/go-ipfs#2885](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2885), [ipfs/go-ipfs#2961](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2961), [ipfs/go-ipfs#2953](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2953), [ipfs/go-ipfs#2960](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2960))
-  - Content Providers are now stored on disk to gain savings on process memory. (@whyrusleeping, [ipfs/go-ipfs#2804](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2804), [ipfs/go-ipfs#2860](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2860))
-  - Migrations of the fs-repo (usually stored at `~/.ipfs`) now run automatically. If there's a TTY available, you'll get prompted when running `ipfs daemon`, and in addition you can use the `--migrate=true` or `--migrate=false` options to avoid the prompt. (@whyrusleeping, @lgierth, [ipfs/go-ipfs#2939](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2939))
-  - The internal naming of blocks in the blockstore has changed, which requires a migration of the fs-repo, from version 3 to 4. (@whyrusleeping, [ipfs/go-ipfs#2903](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2903))
-  - We now automatically raise the file descriptor limit to 1024 if neccessary. (@whyrusleeping, [ipfs/go-ipfs#2884](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2884), [ipfs/go-ipfs#2891](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2891))
-  - After a long struggle with deadlocks and hanging connections, we've decided to disable the uTP transport by default for now. (@whyrusleeping, [ipfs/go-ipfs#2840](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2840), [ipfs/go-libp2p-transport@88244000](https://github.com/ipfs/go-libp2p-transport/commit/88244000f0ce8851ffcfbac746ebc0794b71d2a4))
-  - There is now documentation for the configuration options in `docs/config.md`. (@whyrusleeping, [ipfs/go-ipfs#2974](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2974))
-  - All commands now sanely handle the combination of stdin and optional flags in certain edge cases. (@lgierth, [ipfs/go-ipfs#2952](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2952))
+  - Improve Bitswap performance. (@whyrusleeping, [ipfs/go-ipfs#2727](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2727), [ipfs/go-ipfs#2798](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2798))
+  - Improve Content Routing and Peer Routing performance. (@whyrusleeping, [ipfs/go-ipfs#2817](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2817), [ipfs/go-ipfs#2841](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2841))
+  - Improve datastore, blockstore, and dagstore performance. (@kevina, @Kubuxu, @whyrusleeping [ipfs/go-datastore#43](https://github.com/ipfs/go-datastore/pull/43), [ipfs/go-ipfs#2885](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2885), [ipfs/go-ipfs#2961](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2961), [ipfs/go-ipfs#2953](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2953), [ipfs/go-ipfs#2960](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2960))
+  - Content Providers are now stored on disk to gain savings on process memory. (@whyrusleeping, [ipfs/go-ipfs#2804](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2804), [ipfs/go-ipfs#2860](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2860))
+  - Migrations of the fs-repo (usually stored at `~/.ipfs`) now run automatically. If there's a TTY available, you'll get prompted when running `ipfs daemon`, and in addition you can use the `--migrate=true` or `--migrate=false` options to avoid the prompt. (@whyrusleeping, @lgierth, [ipfs/go-ipfs#2939](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2939))
+  - The internal naming of blocks in the blockstore has changed, which requires a migration of the fs-repo, from version 3 to 4. (@whyrusleeping, [ipfs/go-ipfs#2903](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2903))
+  - We now automatically raise the file descriptor limit to 1024 if neccessary. (@whyrusleeping, [ipfs/go-ipfs#2884](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2884), [ipfs/go-ipfs#2891](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2891))
+  - After a long struggle with deadlocks and hanging connections, we've decided to disable the uTP transport by default for now. (@whyrusleeping, [ipfs/go-ipfs#2840](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2840), [ipfs/go-libp2p-transport@88244000](https://github.com/ipfs/go-libp2p-transport/commit/88244000f0ce8851ffcfbac746ebc0794b71d2a4))
+  - There is now documentation for the configuration options in `docs/config.md`. (@whyrusleeping, [ipfs/go-ipfs#2974](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2974))
+  - All commands now sanely handle the combination of stdin and optional flags in certain edge cases. (@lgierth, [ipfs/go-ipfs#2952](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2952))
 
 - New Features
 
-  - Add `--offline` option to `ipfs daemon` command, which disables all swarm networking. (@Kubuxu, [ipfs/go-ipfs#2696](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2696), [ipfs/go-ipfs#2867](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2867))
-  - Add `Datastore.HashOnRead` option for verifying block hashes on read access. (@Kubuxu, [ipfs/go-ipfs#2904](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2904))
-  - Add `Datastore.BloomFilterSize` option for tuning the blockstore's new lookup bloom filter. (@Kubuxu, [ipfs/go-ipfs#2973](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2973))
+  - Add `--offline` option to `ipfs daemon` command, which disables all swarm networking. (@Kubuxu, [ipfs/go-ipfs#2696](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2696), [ipfs/go-ipfs#2867](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2867))
+  - Add `Datastore.HashOnRead` option for verifying block hashes on read access. (@Kubuxu, [ipfs/go-ipfs#2904](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2904))
+  - Add `Datastore.BloomFilterSize` option for tuning the blockstore's new lookup bloom filter. (@Kubuxu, [ipfs/go-ipfs#2973](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2973))
 
 - Bugfixes
 
-  - Fix publishing of local IPNS entries, and more. (@whyrusleeping, [ipfs/go-ipfs#2943](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2943))
-  - Fix progress bars in `ipfs add` and `ipfs get`. (@whyrusleeping, [ipfs/go-ipfs#2893](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2893), [ipfs/go-ipfs#2948](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2948))
-  - Make sure files added through `ipfs files` are pinned and don't get GC'd. (@kevina, [ipfs/go-ipfs#2872](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2872))
-  - Fix copying into directory using `ipfs files cp`. (@whyrusleeping, [ipfs/go-ipfs#2977](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2977))
-  - Fix `ipfs version --commit` with Docker containers. (@lgierth, [ipfs/go-ipfs#2734](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2734))
-  - Run `ipfs diag` commands in the daemon instead of the CLI. (@Kubuxu, [ipfs/go-ipfs#2761](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2761))
-  - Fix protobuf encoding on the API and in commands. (@stebalien, [ipfs/go-ipfs#2516](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2516))
+  - Fix publishing of local IPNS entries, and more. (@whyrusleeping, [ipfs/go-ipfs#2943](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2943))
+  - Fix progress bars in `ipfs add` and `ipfs get`. (@whyrusleeping, [ipfs/go-ipfs#2893](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2893), [ipfs/go-ipfs#2948](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2948))
+  - Make sure files added through `ipfs files` are pinned and don't get GC'd. (@kevina, [ipfs/go-ipfs#2872](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2872))
+  - Fix copying into directory using `ipfs files cp`. (@whyrusleeping, [ipfs/go-ipfs#2977](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2977))
+  - Fix `ipfs version --commit` with Docker containers. (@lgierth, [ipfs/go-ipfs#2734](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2734))
+  - Run `ipfs diag` commands in the daemon instead of the CLI. (@Kubuxu, [ipfs/go-ipfs#2761](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2761))
+  - Fix protobuf encoding on the API and in commands. (@stebalien, [ipfs/go-ipfs#2516](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2516))
   - Fix goroutine leak in `/ipfs/ping` protocol handler. (@whyrusleeping, [ipfs/go-libp2p#58](https://github.com/ipfs/go-libp2p/pull/58))
-  - Fix `--flags` option on `ipfs commands`. (@Kubuxu, [ipfs/go-ipfs#2773](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2773))
-  - Fix the error channels in `namesys`. (@whyrusleeping, [ipfs/go-ipfs#2788](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2788))
-  - Fix consumptions of observed swarm addresses. (@whyrusleeping, [ipfs/go-libp2p#63](https://github.com/ipfs/go-libp2p/pull/63), [ipfs/go-ipfs#2771](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues/2771))
-  - Fix a rare DHT panic. (@whyrusleeping, [ipfs/go-ipfs#2856](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2856))
+  - Fix `--flags` option on `ipfs commands`. (@Kubuxu, [ipfs/go-ipfs#2773](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2773))
+  - Fix the error channels in `namesys`. (@whyrusleeping, [ipfs/go-ipfs#2788](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2788))
+  - Fix consumptions of observed swarm addresses. (@whyrusleeping, [ipfs/go-libp2p#63](https://github.com/ipfs/go-libp2p/pull/63), [ipfs/go-ipfs#2771](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/issues/2771))
+  - Fix a rare DHT panic. (@whyrusleeping, [ipfs/go-ipfs#2856](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2856))
   - Fix go-ipfs/js-ipfs interoperability issues in SPDY. (@whyrusleeping, [whyrusleeping/go-smux-spdystream@fae17783](https://github.com/whyrusleeping/go-smux-spdystream/commit/fae1778302a9e029bb308cf71cf33f857f2d89e8))
   - Fix a logging race condition during shutdown. (@Kubuxu, [ipfs/go-log#3](https://github.com/ipfs/go-log/pull/3))
-  - Prevent DHT connection hangs. (@whyrusleeping, [ipfs/go-ipfs#2826](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2826), [ipfs/go-ipfs#2863](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2863))
-  - Fix NDJSON output of `ipfs refs local`. (@Kubuxu, [ipfs/go-ipfs#2812](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2812))
+  - Prevent DHT connection hangs. (@whyrusleeping, [ipfs/go-ipfs#2826](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2826), [ipfs/go-ipfs#2863](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2863))
+  - Fix NDJSON output of `ipfs refs local`. (@Kubuxu, [ipfs/go-ipfs#2812](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2812))
   - Fix race condition in NAT detection. (@whyrusleeping, [ipfs/go-libp2p#69](https://github.com/ipfs/go-libp2p/pull/69))
-  - Fix error messages. (@whyrusleeping, @Kubuxu, [ipfs/go-ipfs#2905](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2905), [ipfs/go-ipfs#2928](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2928))
+  - Fix error messages. (@whyrusleeping, @Kubuxu, [ipfs/go-ipfs#2905](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2905), [ipfs/go-ipfs#2928](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2928))
 
 - Enhancements
 
-  - Increase maximum object size on `ipfs put` from 1 MiB to 2 MiB. The maximum object size on the wire including all framing is 4 MiB. (@kpcyrd, [ipfs/go-ipfs#2980](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2980))
-  - Add CORS headers to the Gateway's default config. (@Kubuxu, [ipfs/go-ipfs#2778](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2778))
-  - Clear the dial backoff for a peer when using `ipfs swarm connect`. (@whyrusleeping, [ipfs/go-ipfs#2941](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2941))
-  - Allow passing options to daemon in Docker container. (@lgierth, [ipfs/go-ipfs#2955](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2955))
-  - Add `-v/--verbose` to `ìpfs swarm peers` command. (@csasarak, [ipfs/go-ipfs#2713](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2713))
-  - Add `--format`, `--hash`, and `--size` options to `ipfs files stat` command. (@Kubuxu, [ipfs/go-ipfs#2706](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2706))
-  - Add `--all` option to `ipfs version` command. (@Kubuxu, [ipfs/go-ipfs#2790](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2790))
-  - Add `ipfs repo version` command. (@pfista, [ipfs/go-ipfs#2598](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2598))
-  - Add `ipfs repo verify` command. (@whyrusleeping, [ipfs/go-ipfs#2924](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2924), [ipfs/go-ipfs#2951](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2951))
-  - Add `ipfs stats repo` and `ipfs stats bitswap` command aliases. (@pfista, [ipfs/go-ipfs#2810](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2810))
-  - Add success indication to responses of `ipfs ping` command. (@Kubuxu, [ipfs/go-ipfs#2813](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2813))
-  - Save changes made via `ipfs swarm filter` to the config file. (@yuvallanger, [ipfs/go-ipfs#2880](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2880))
-  - Expand `ipfs_p2p_peers` metric to include libp2p transport. (@lgierth, [ipfs/go-ipfs#2728](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2728))
-  - Rework `ipfs files add` internals to avoid caching and prevent memory leaks. (@whyrusleeping, [ipfs/go-ipfs#2795](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2795))
-  - Support `GOPATH` with multiple path components. (@karalabe, @lgierth, @djdv, [ipfs/go-ipfs#2808](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2808), [ipfs/go-ipfs#2862](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2862), [ipfs/go-ipfs#2975](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2975))
+  - Increase maximum object size on `ipfs put` from 1 MiB to 2 MiB. The maximum object size on the wire including all framing is 4 MiB. (@kpcyrd, [ipfs/go-ipfs#2980](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2980))
+  - Add CORS headers to the Gateway's default config. (@Kubuxu, [ipfs/go-ipfs#2778](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2778))
+  - Clear the dial backoff for a peer when using `ipfs swarm connect`. (@whyrusleeping, [ipfs/go-ipfs#2941](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2941))
+  - Allow passing options to daemon in Docker container. (@lgierth, [ipfs/go-ipfs#2955](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2955))
+  - Add `-v/--verbose` to `ìpfs swarm peers` command. (@csasarak, [ipfs/go-ipfs#2713](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2713))
+  - Add `--format`, `--hash`, and `--size` options to `ipfs files stat` command. (@Kubuxu, [ipfs/go-ipfs#2706](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2706))
+  - Add `--all` option to `ipfs version` command. (@Kubuxu, [ipfs/go-ipfs#2790](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2790))
+  - Add `ipfs repo version` command. (@pfista, [ipfs/go-ipfs#2598](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2598))
+  - Add `ipfs repo verify` command. (@whyrusleeping, [ipfs/go-ipfs#2924](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2924), [ipfs/go-ipfs#2951](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2951))
+  - Add `ipfs stats repo` and `ipfs stats bitswap` command aliases. (@pfista, [ipfs/go-ipfs#2810](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2810))
+  - Add success indication to responses of `ipfs ping` command. (@Kubuxu, [ipfs/go-ipfs#2813](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2813))
+  - Save changes made via `ipfs swarm filter` to the config file. (@yuvallanger, [ipfs/go-ipfs#2880](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2880))
+  - Expand `ipfs_p2p_peers` metric to include libp2p transport. (@lgierth, [ipfs/go-ipfs#2728](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2728))
+  - Rework `ipfs files add` internals to avoid caching and prevent memory leaks. (@whyrusleeping, [ipfs/go-ipfs#2795](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2795))
+  - Support `GOPATH` with multiple path components. (@karalabe, @lgierth, @djdv, [ipfs/go-ipfs#2808](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2808), [ipfs/go-ipfs#2862](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2862), [ipfs/go-ipfs#2975](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2975))
 
 - General Codebase
 
-  - Take steps towards the `filestore` datastore. (@kevina, [ipfs/go-ipfs#2792](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2792), [ipfs/go-ipfs#2634](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2634))
-  - Update recommended Golang version to 1.6.2 (@Kubuxu, [ipfs/go-ipfs#2724](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2724))
-  - Update to Gx 0.8.0 and Gx-Go 1.2.1, which is faster and less noisy. (@whyrusleeping, [ipfs/go-ipfs#2979](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2979))
-  - Use `go4.org/lock` instead of `camlistore/lock` for locking. (@whyrusleeping, [ipfs/go-ipfs#2887](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2887))
-  - Manage `go.uuid`, `hamming`, `backoff`, `proquint`, `pb`, `go-context`, `cors`, `go-datastore` packages with Gx. (@Kubuxu, [ipfs/go-ipfs#2733](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2733), [ipfs/go-ipfs#2736](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2736), [ipfs/go-ipfs#2757](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2757), [ipfs/go-ipfs#2825](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2825), [ipfs/go-ipfs#2838](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2838))
-  - Clean up the gateway's surface. (@lgierth, [ipfs/go-ipfs#2874](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2874))
-  - Simplify the API gateway's access restrictions. (@lgierth, [ipfs/go-ipfs#2949](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2949), [ipfs/go-ipfs#2956](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2956))
-  - Update docker image to Alpine Linux 3.4 and remove Go version constraint. (@lgierth, [ipfs/go-ipfs#2901](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2901), [ipfs/go-ipfs#2929](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2929))
-  - Clarify `Dockerfile` and `Dockerfile.fast`. (@lgierth, [ipfs/go-ipfs#2796](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2796))
-  - Simplify resolution of Git commit refs in Dockerfiles. (@lgierth, [ipfs/go-ipfs#2754](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2754))
-  - Consolidate `--verbose` description across commands. (@Kubuxu, [ipfs/go-ipfs#2746](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2746))
-  - Allow setting position of default values in command option descriptions. (@Kubuxu, [ipfs/go-ipfs#2744](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2744))
-  - Set explicit default values for boolean command options. (@RichardLitt, [ipfs/go-ipfs#2657](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2657))
-  - Autogenerate command synopsises. (@Kubuxu, [ipfs/go-ipfs#2785](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2785))
-  - Fix and improve lots of documentation. (@RichardLitt, [ipfs/go-ipfs#2741](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2741), [ipfs/go-ipfs#2781](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2781))
-  - Improve command descriptions to fit a width of 78 characters. (@RichardLitt, [ipfs/go-ipfs#2779](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2779), [ipfs/go-ipfs#2780](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2780), [ipfs/go-ipfs#2782](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2782))
-  - Fix filename conflict in the debugging guide. (@Kubuxu, [ipfs/go-ipfs#2752](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2752))
-  - Decapitalize log messages, according to Golang style guides. (@RichardLitt, [ipfs/go-ipfs#2853](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2853))
-  - Add Github Issues HowTo guide. (@RichardLitt, @chriscool, [ipfs/go-ipfs#2889](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2889), [ipfs/go-ipfs#2895](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2895))
-  - Add Github Issue template. (@chriscool, [ipfs/go-ipfs#2786](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2786))
-  - Apply standard-readme to the README file. (@RichardLitt, [ipfs/go-ipfs#2883](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2883))
-  - Fix issues pointed out by `govet`. (@Kubuxu, [ipfs/go-ipfs#2854](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2854))
-  - Clarify `ipfs get` error message. (@whyrusleeping, [ipfs/go-ipfs#2886](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2886))
-  - Remove dead code. (@whyrusleeping, [ipfs/go-ipfs#2819](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2819))
-  - Add changelog for v0.4.3. (@lgierth, [ipfs/go-ipfs#2984](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2984))
+  - Take steps towards the `filestore` datastore. (@kevina, [ipfs/go-ipfs#2792](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2792), [ipfs/go-ipfs#2634](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2634))
+  - Update recommended Golang version to 1.6.2 (@Kubuxu, [ipfs/go-ipfs#2724](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2724))
+  - Update to Gx 0.8.0 and Gx-Go 1.2.1, which is faster and less noisy. (@whyrusleeping, [ipfs/go-ipfs#2979](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2979))
+  - Use `go4.org/lock` instead of `camlistore/lock` for locking. (@whyrusleeping, [ipfs/go-ipfs#2887](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2887))
+  - Manage `go.uuid`, `hamming`, `backoff`, `proquint`, `pb`, `go-context`, `cors`, `go-datastore` packages with Gx. (@Kubuxu, [ipfs/go-ipfs#2733](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2733), [ipfs/go-ipfs#2736](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2736), [ipfs/go-ipfs#2757](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2757), [ipfs/go-ipfs#2825](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2825), [ipfs/go-ipfs#2838](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2838))
+  - Clean up the gateway's surface. (@lgierth, [ipfs/go-ipfs#2874](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2874))
+  - Simplify the API gateway's access restrictions. (@lgierth, [ipfs/go-ipfs#2949](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2949), [ipfs/go-ipfs#2956](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2956))
+  - Update docker image to Alpine Linux 3.4 and remove Go version constraint. (@lgierth, [ipfs/go-ipfs#2901](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2901), [ipfs/go-ipfs#2929](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2929))
+  - Clarify `Dockerfile` and `Dockerfile.fast`. (@lgierth, [ipfs/go-ipfs#2796](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2796))
+  - Simplify resolution of Git commit refs in Dockerfiles. (@lgierth, [ipfs/go-ipfs#2754](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2754))
+  - Consolidate `--verbose` description across commands. (@Kubuxu, [ipfs/go-ipfs#2746](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2746))
+  - Allow setting position of default values in command option descriptions. (@Kubuxu, [ipfs/go-ipfs#2744](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2744))
+  - Set explicit default values for boolean command options. (@RichardLitt, [ipfs/go-ipfs#2657](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2657))
+  - Autogenerate command synopsises. (@Kubuxu, [ipfs/go-ipfs#2785](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2785))
+  - Fix and improve lots of documentation. (@RichardLitt, [ipfs/go-ipfs#2741](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2741), [ipfs/go-ipfs#2781](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2781))
+  - Improve command descriptions to fit a width of 78 characters. (@RichardLitt, [ipfs/go-ipfs#2779](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2779), [ipfs/go-ipfs#2780](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2780), [ipfs/go-ipfs#2782](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2782))
+  - Fix filename conflict in the debugging guide. (@Kubuxu, [ipfs/go-ipfs#2752](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2752))
+  - Decapitalize log messages, according to Golang style guides. (@RichardLitt, [ipfs/go-ipfs#2853](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2853))
+  - Add Github Issues HowTo guide. (@RichardLitt, @chriscool, [ipfs/go-ipfs#2889](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2889), [ipfs/go-ipfs#2895](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2895))
+  - Add Github Issue template. (@chriscool, [ipfs/go-ipfs#2786](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2786))
+  - Apply standard-readme to the README file. (@RichardLitt, [ipfs/go-ipfs#2883](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2883))
+  - Fix issues pointed out by `govet`. (@Kubuxu, [ipfs/go-ipfs#2854](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2854))
+  - Clarify `ipfs get` error message. (@whyrusleeping, [ipfs/go-ipfs#2886](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2886))
+  - Remove dead code. (@whyrusleeping, [ipfs/go-ipfs#2819](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2819))
+  - Add changelog for v0.4.3. (@lgierth, [ipfs/go-ipfs#2984](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2984))
 
 - Tests & CI
 
-  - Fix flaky `ipfs mount` sharness test by using the `iptb` tool. (@noffle, [ipfs/go-ipfs#2707](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2707))
-  - Fix flaky IP port selection in tests. (@Kubuxu, [ipfs/go-ipfs#2855](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2855))
-  - Fix CLI tests on OSX by resolving /tmp symlink. (@Kubuxu, [ipfs/go-ipfs#2926](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2926))
-  - Fix flaky GC test by running the daemon in offline mode. (@Kubuxu, [ipfs/go-ipfs#2908](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2908))
-  - Add tests for `ipfs add` with hidden files. (@Kubuxu, [ipfs/go-ipfs#2756](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2756))
-  - Add test to make sure the body of HEAD responses is empty. (@Kubuxu, [ipfs/go-ipfs#2775](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2775))
-  - Add test to catch misdials. (@Kubuxu, [ipfs/go-ipfs#2831](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2831))
-  - Mark flaky tests for `ipfs dht query` as known failure. (@noffle, [ipfs/go-ipfs#2720](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2720))
-  - Remove failing blockstore-without-context test. (@Kubuxu, [ipfs/go-ipfs#2857](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2857))
-  - Fix `--version` tests for versions with a suffix like `-dev` or `-rc1`. (@lgierth, [ipfs/go-ipfs#2937](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2937))
-  - Make sharness tests work in cases where go-ipfs is symlinked into GOPATH. (@lgierth, [ipfs/go-ipfs#2937](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2937))
-  - Add variable delays to blockstore mocks. (@rikonor, [ipfs/go-ipfs#2871](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2871))
-  - Disable Travis CI email notifications. (@Kubuxu, [ipfs/go-ipfs#2896](https://github.com/Harold-the-Axeman/dacc-iam-filesystem/pull/2896))
+  - Fix flaky `ipfs mount` sharness test by using the `iptb` tool. (@noffle, [ipfs/go-ipfs#2707](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2707))
+  - Fix flaky IP port selection in tests. (@Kubuxu, [ipfs/go-ipfs#2855](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2855))
+  - Fix CLI tests on OSX by resolving /tmp symlink. (@Kubuxu, [ipfs/go-ipfs#2926](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2926))
+  - Fix flaky GC test by running the daemon in offline mode. (@Kubuxu, [ipfs/go-ipfs#2908](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2908))
+  - Add tests for `ipfs add` with hidden files. (@Kubuxu, [ipfs/go-ipfs#2756](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2756))
+  - Add test to make sure the body of HEAD responses is empty. (@Kubuxu, [ipfs/go-ipfs#2775](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2775))
+  - Add test to catch misdials. (@Kubuxu, [ipfs/go-ipfs#2831](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2831))
+  - Mark flaky tests for `ipfs dht query` as known failure. (@noffle, [ipfs/go-ipfs#2720](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2720))
+  - Remove failing blockstore-without-context test. (@Kubuxu, [ipfs/go-ipfs#2857](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2857))
+  - Fix `--version` tests for versions with a suffix like `-dev` or `-rc1`. (@lgierth, [ipfs/go-ipfs#2937](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2937))
+  - Make sharness tests work in cases where go-ipfs is symlinked into GOPATH. (@lgierth, [ipfs/go-ipfs#2937](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2937))
+  - Add variable delays to blockstore mocks. (@rikonor, [ipfs/go-ipfs#2871](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2871))
+  - Disable Travis CI email notifications. (@Kubuxu, [ipfs/go-ipfs#2896](https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pull/2896))
 
 
 ### 0.4.2 - 2016-05-17

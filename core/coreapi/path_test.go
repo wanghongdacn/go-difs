@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	coreiface "github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface"
-	"github.com/Harold-the-Axeman/dacc-iam-filesystem/core/coreapi/interface/options"
+	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
+	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
 )
 
 func TestMutablePath(t *testing.T) {

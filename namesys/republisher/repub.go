@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	keystore "github.com/Harold-the-Axeman/dacc-iam-filesystem/keystore"
-	namesys "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys"
+	keystore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/keystore"
+	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 
 	pb "gx/ipfs/QmNqBhXpBKa5jcjoUZHfxDgAFxtqK3rDA5jtW811GBvVob/go-ipns/pb"

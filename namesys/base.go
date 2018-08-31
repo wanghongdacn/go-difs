@@ -6,7 +6,7 @@ import (
 
 	context "context"
 
-	opts "github.com/Harold-the-Axeman/dacc-iam-filesystem/namesys/opts"
+	opts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/opts"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 )
 

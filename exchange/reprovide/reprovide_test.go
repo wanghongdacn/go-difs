@@ -12,7 +12,7 @@ import (
 	mock "gx/ipfs/Qmd45r5jHr1PKMNQqifnbZy1ZQwHdtXUDJFamUEvUJE544/go-ipfs-routing/mock"
 	pstore "gx/ipfs/QmeKD8YT7887Xu6Z86iZmpYNxrLogJexqxEugSmaf14k64/go-libp2p-peerstore"
 
-	. "github.com/Harold-the-Axeman/dacc-iam-filesystem/exchange/reprovide"
+	. "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/exchange/reprovide"
 )
 
 func TestReprovide(t *testing.T) {

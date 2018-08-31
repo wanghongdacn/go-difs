@@ -561,7 +561,7 @@ test_files_api() {
     verify_dir_contents /
   '
 
-  # test for https://github.com/Harold-the-Axeman/dacc-iam-filesystem/issues/2654
+  # test for https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/issues/2654
   test_expect_success "create and remove dir $EXTRA" '
     ipfs files mkdir $ARGS /test_dir &&
     ipfs files rm -r "/test_dir"
