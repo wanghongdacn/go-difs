@@ -82,7 +82,8 @@ var IamCSRCreateCmd = &cmds.Command{
 	},
 	Type: IamSignMessageOutput{},
 	Encoders: cmds.EncoderMap{
-		cmds.Text: cmds.MakeEncoder(jsonEncoder),
+		cmds.Text: cmds.Encoders[cmds.JSON],
+		cmds.JSON: cmds.MakeEncoder(jsonEncoder),
 	},
 }
 
@@ -193,7 +194,8 @@ var IamCOTCreateCmd = &cmds.Command{
 	},
 	Type: IamSignMessageOutput{},
 	Encoders: cmds.EncoderMap{
-		cmds.Text: cmds.MakeEncoder(jsonEncoder),
+		cmds.Text: cmds.Encoders[cmds.JSON],
+		cmds.JSON: cmds.MakeEncoder(jsonEncoder),
 	},
 }
 
@@ -317,7 +319,8 @@ var IamCRTCreateCmd = &cmds.Command{
 	},
 	Type: IamSignMessageOutput{},
 	Encoders: cmds.EncoderMap{
-		cmds.Text: cmds.MakeEncoder(jsonEncoder),
+		cmds.Text: cmds.Encoders[cmds.JSON],
+		cmds.JSON: cmds.MakeEncoder(jsonEncoder),
 	},
 }
 
@@ -427,7 +430,8 @@ var IamCATCreateCmd = &cmds.Command{
 	},
 	Type: IamSignMessageOutput{},
 	Encoders: cmds.EncoderMap{
-		cmds.Text: cmds.MakeEncoder(jsonEncoder),
+		cmds.Text: cmds.Encoders[cmds.JSON],
+		cmds.JSON: cmds.MakeEncoder(jsonEncoder),
 	},
 }
 
