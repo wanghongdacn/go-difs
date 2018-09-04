@@ -1,4 +1,4 @@
-syntax = "proto3";
+syntax = "proto2";
 package iam.pb;
 
 // MessageType ...
@@ -10,46 +10,47 @@ enum MessageType {
 
 // Request CSR , owner send to storage  
 message MessageCSR {
-	bytes o_id = 1;	// owner id
-	bytes cid = 2;        // cid
+	required bytes o_id = 1;	// owner id
+	required bytes cid = 2;        // cid
 }
 
 // CSR Response COT , storage response to owner and signed by storage  
 message MessageCOT {
-    bytes s_id = 1 ;
-    bytes o_id = 2 ;
-    bytes cid = 3 ;
+    required bytes s_id = 1 ;
+    required bytes o_id = 2 ;
+    required bytes cid = 3 ;
 }
 
 // CRT Request Token , request send request to owner ask authorization  
 message MessageCRT {
-    bytes r_id = 1 ;
-    bytes o_id = 2 ;
-    bytes cid = 3 ;
+    required bytes r_id = 1 ;
+    required bytes o_id = 2 ;
+    required bytes cid = 3 ;
 
 }
 
 // CRT Response CAT , owner response to requester   
 message MessageCAT {
-    bytes o_id =1 ;
-    bytes r_id =2 ;
-    bytes cid =3 ;
-    bytes cot =4;
+    required bytes o_id =1 ;
+    required bytes r_id =2 ;
+    required bytes cid =3 ;
+    required bytes cot =4;
 }
 
 // 
 message MessageRT {
-    bytes r_id =1 ;
-    bytes cid =2 ;
-    bytes cat =3;
+    required bytes r_id =1 ;
+    required bytes cid =2 ;
+    required bytes cat =3;
 }
 
 
 // SignedMessage ... 
 message SignedMessage {
-	bytes peer_id = 1;
-	bytes message = 2;
-    bytes signature = 3 ;
-    bytes public_key = 4 ;
+    required string id = 1 ;
+	required bytes peer_id = 2;
+	required bytes message = 3;
+    required bytes signature = 4 ;
+    required bytes public_key = 5 ;
 }
 
