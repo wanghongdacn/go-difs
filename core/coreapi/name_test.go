@@ -9,8 +9,8 @@ import (
 
 	ipath "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	opt "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
+	opt "github.com/daccproject/go-difs/core/coreapi/interface/options"
 )
 
 var rnd = rand.New(rand.NewSource(0x62796532303137))

@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"testing"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	core "github.com/daccproject/go-difs/core"
 	ft "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs"
 	importer "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/importer"
 	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"

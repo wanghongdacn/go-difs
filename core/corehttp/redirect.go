@@ -4,7 +4,7 @@ import (
 	"net"
 	"net/http"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	core "github.com/daccproject/go-difs/core"
 )
 
 func RedirectOption(path string, redirect string) ServeOption {

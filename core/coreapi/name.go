@@ -7,12 +7,12 @@ import (
 	"strings"
 	"time"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	caopts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
-	keystore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/keystore"
-	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
-	nsopts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/opts"
+	core "github.com/daccproject/go-difs/core"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
+	caopts "github.com/daccproject/go-difs/core/coreapi/interface/options"
+	keystore "github.com/daccproject/go-difs/keystore"
+	namesys "github.com/daccproject/go-difs/namesys"
+	nsopts "github.com/daccproject/go-difs/namesys/opts"
 	ipath "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 
 	crypto "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"

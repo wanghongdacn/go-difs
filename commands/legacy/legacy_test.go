@@ -6,7 +6,7 @@ import (
 	"io"
 	"testing"
 
-	oldcmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
+	oldcmds "github.com/daccproject/go-difs/commands"
 	cmds "gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	cmdkit "gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 )

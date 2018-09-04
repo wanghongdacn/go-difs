@@ -4,8 +4,8 @@ import (
 	"errors"
 	"io"
 
-	filestore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/filestore"
-	keystore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/keystore"
+	filestore "github.com/daccproject/go-difs/filestore"
+	keystore "github.com/daccproject/go-difs/keystore"
 
 	config "gx/ipfs/QmTyiSs9VgdVb4pnzdjtKhcfdTkHFEaNn6xnCbZq4DTFRt/go-ipfs-config"
 	ds "gx/ipfs/QmVG5gxteQNEMhrS8prJSmU2C9rebtFuTd3SYZ5kE3YZ5k/go-datastore"

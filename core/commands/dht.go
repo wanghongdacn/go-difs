@@ -8,8 +8,8 @@ import (
 	"io"
 	"time"
 
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
+	cmds "github.com/daccproject/go-difs/commands"
+	e "github.com/daccproject/go-difs/core/commands/e"
 	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 

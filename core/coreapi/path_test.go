@@ -5,8 +5,8 @@ import (
 	"strings"
 	"testing"
 
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
+	"github.com/daccproject/go-difs/core/coreapi/interface/options"
 )
 
 func TestMutablePath(t *testing.T) {

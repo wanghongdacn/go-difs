@@ -5,7 +5,7 @@ Packages underneath core/ provide a (relatively) stable, low-level API
 to carry out most IPFS-related tasks.  For more details on the other
 interfaces and how core/... fits into the bigger IPFS picture, see:
 
-  $ godoc github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem
+  $ godoc github.com/daccproject/go-difs
 */
 package core
 
@@ -20,16 +20,16 @@ import (
 	"strings"
 	"time"
 
-	version "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem"
-	rp "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/exchange/reprovide"
-	filestore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/filestore"
-	mount "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/fuse/mount"
-	iam "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/iam"
-	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
-	ipnsrp "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/republisher"
-	p2p "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/p2p"
-	pin "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pin"
-	repo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo"
+	version "github.com/daccproject/go-difs"
+	rp "github.com/daccproject/go-difs/exchange/reprovide"
+	filestore "github.com/daccproject/go-difs/filestore"
+	mount "github.com/daccproject/go-difs/fuse/mount"
+	iam "github.com/daccproject/go-difs/iam"
+	namesys "github.com/daccproject/go-difs/namesys"
+	ipnsrp "github.com/daccproject/go-difs/namesys/republisher"
+	p2p "github.com/daccproject/go-difs/p2p"
+	pin "github.com/daccproject/go-difs/pin"
+	repo "github.com/daccproject/go-difs/repo"
 
 	u "gx/ipfs/QmPdKqUcHGFdeSpvjVoaTRPPstGif9GBZb5Q56RVw9o69A/go-ipfs-util"
 	psrouter "gx/ipfs/QmPksYjuFjt2M63ufuDYEFdwVAmFcDGJgoED8T8dwfcwED/go-libp2p-pubsub-router"

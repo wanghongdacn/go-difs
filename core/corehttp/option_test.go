@@ -7,7 +7,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	version "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem"
+	version "github.com/daccproject/go-difs"
 )
 
 type testcasecheckversion struct {

@@ -1,5 +1,5 @@
 {
-	"ImportPath": "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem",
+	"ImportPath": "github.com/daccproject/go-difs",
 	"GoVersion": "go1.5.2",
 	"Packages": [
 		"./..."

@@ -3,7 +3,7 @@ package commands
 import (
 	"testing"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
+	"github.com/daccproject/go-difs/namesys"
 
 	ipns "gx/ipfs/QmNqBhXpBKa5jcjoUZHfxDgAFxtqK3rDA5jtW811GBvVob/go-ipns"
 	tu "gx/ipfs/QmRNhSdqzMcuRxX9A1egBeQ3BhDTguDV5HPwi8wRykkPU8/go-testutil"

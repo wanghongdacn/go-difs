@@ -3,7 +3,7 @@ package iface
 import (
 	"context"
 
-	options "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
+	options "github.com/daccproject/go-difs/core/coreapi/interface/options"
 )
 
 // Pin holds information about pinned resource

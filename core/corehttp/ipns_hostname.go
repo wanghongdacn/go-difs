@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"strings"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
-	nsopts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/opts"
+	core "github.com/daccproject/go-difs/core"
+	namesys "github.com/daccproject/go-difs/namesys"
+	nsopts "github.com/daccproject/go-difs/namesys/opts"
 
 	isd "gx/ipfs/QmZmmuAXgX73UQmX1jRKjTGmjzq24Jinqkq8vzkBtno4uX/go-is-domain"
 )

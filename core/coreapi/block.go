@@ -8,9 +8,9 @@ import (
 	"io"
 	"io/ioutil"
 
-	util "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/blocks/blockstoreutil"
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	caopts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
+	util "github.com/daccproject/go-difs/blocks/blockstoreutil"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
+	caopts "github.com/daccproject/go-difs/core/coreapi/interface/options"
 
 	mh "gx/ipfs/QmPnFwZ2JXKnXgMw8CdBPxn7FWh6LLdjUjxV1fKHuJnkr8/go-multihash"
 	blocks "gx/ipfs/QmWAzSEoqZ6xU6pu8yL8e5WaMb7wtbfbhhN4p1DknUPtr3/go-block-format"

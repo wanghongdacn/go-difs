@@ -6,10 +6,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	mock "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/mock"
-	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
-	. "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/republisher"
+	"github.com/daccproject/go-difs/core"
+	mock "github.com/daccproject/go-difs/core/mock"
+	namesys "github.com/daccproject/go-difs/namesys"
+	. "github.com/daccproject/go-difs/namesys/republisher"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 
 	mocknet "gx/ipfs/QmQiaskfWpdRJ4x2spEQjPFTUkEB87KDYu91qnNYBqvvcX/go-libp2p/p2p/net/mock"

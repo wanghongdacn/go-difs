@@ -6,8 +6,8 @@ import (
 	"strings"
 	"testing"
 
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	opt "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
+	opt "github.com/daccproject/go-difs/core/coreapi/interface/options"
 
 	mh "gx/ipfs/QmPnFwZ2JXKnXgMw8CdBPxn7FWh6LLdjUjxV1fKHuJnkr8/go-multihash"
 )

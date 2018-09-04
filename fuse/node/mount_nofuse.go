@@ -5,7 +5,7 @@ package node
 import (
 	"errors"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	core "github.com/daccproject/go-difs/core"
 )
 
 func Mount(node *core.IpfsNode, fsdir, nsdir string) error {

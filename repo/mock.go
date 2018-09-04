@@ -3,8 +3,8 @@ package repo
 import (
 	"errors"
 
-	filestore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/filestore"
-	keystore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/keystore"
+	filestore "github.com/daccproject/go-difs/filestore"
+	keystore "github.com/daccproject/go-difs/keystore"
 
 	config "gx/ipfs/QmTyiSs9VgdVb4pnzdjtKhcfdTkHFEaNn6xnCbZq4DTFRt/go-ipfs-config"
 	ma "gx/ipfs/QmYmsdtJ3HsodkePE3eU3TsCaP2YvPZJ4LoXnNkDE5Tpt7/go-multiaddr"

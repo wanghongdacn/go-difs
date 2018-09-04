@@ -5,7 +5,7 @@ import (
 	"net"
 	"net/http"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	core "github.com/daccproject/go-difs/core"
 	lwriter "gx/ipfs/QmRREK2CAZ5Re2Bd9zZFG6FeYDppUWt5cMgsoUEp3ktgSr/go-log/writer"
 )
 

@@ -6,8 +6,8 @@ import (
 	"io"
 	"math"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coredag"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/plugin"
+	"github.com/daccproject/go-difs/core/coredag"
+	"github.com/daccproject/go-difs/plugin"
 
 	mh "gx/ipfs/QmPnFwZ2JXKnXgMw8CdBPxn7FWh6LLdjUjxV1fKHuJnkr8/go-multihash"
 	git "gx/ipfs/QmTH9uimkEFHc7HcrFSG2pMskWLSfnRb8HKUngiP7r4iDN/go-ipld-git"

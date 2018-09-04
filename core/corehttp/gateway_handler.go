@@ -13,9 +13,9 @@ import (
 	"strings"
 	"time"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/dagutils"
+	core "github.com/daccproject/go-difs/core"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
+	"github.com/daccproject/go-difs/dagutils"
 	ft "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs"
 	"gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/importer"
 	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"
@@ -325,7 +325,7 @@ func (i *gatewayHandler) getOrHeadHandler(ctx context.Context, w http.ResponseWr
 	})
 
 	// construct the correct back link
-	// https://github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/issues/1365
+	// https://github.com/daccproject/go-difs/issues/1365
 	var backLink string = prefix + urlPath
 
 	// don't go further up than /ipfs/$hash/

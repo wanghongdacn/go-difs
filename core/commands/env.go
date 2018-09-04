@@ -3,9 +3,9 @@ package commands
 import (
 	"fmt"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
+	"github.com/daccproject/go-difs/commands"
+	"github.com/daccproject/go-difs/core"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
 
 	cmds "gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	config "gx/ipfs/QmTyiSs9VgdVb4pnzdjtKhcfdTkHFEaNn6xnCbZq4DTFRt/go-ipfs-config"

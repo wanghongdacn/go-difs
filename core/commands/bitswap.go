@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"io"
 
-	oldcmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	lgc "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands/legacy"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
+	oldcmds "github.com/daccproject/go-difs/commands"
+	lgc "github.com/daccproject/go-difs/commands/legacy"
+	e "github.com/daccproject/go-difs/core/commands/e"
 	bitswap "gx/ipfs/QmTtmrK4iiM3MxWNA3pvbM9ekQiGZAiFyo57GP8B9FFgtz/go-bitswap"
 	decision "gx/ipfs/QmTtmrK4iiM3MxWNA3pvbM9ekQiGZAiFyo57GP8B9FFgtz/go-bitswap/decision"
 

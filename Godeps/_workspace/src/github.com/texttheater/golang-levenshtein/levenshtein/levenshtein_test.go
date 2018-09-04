@@ -1,7 +1,7 @@
 package levenshtein_test
 
 import (
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/Godeps/_workspace/src/github.com/texttheater/golang-levenshtein/levenshtein"
+	"github.com/daccproject/go-difs/Godeps/_workspace/src/github.com/texttheater/golang-levenshtein/levenshtein"
 	"testing"
 )
 

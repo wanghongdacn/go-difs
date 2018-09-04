@@ -7,10 +7,10 @@ import (
 	"math"
 	"strings"
 
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
-	coredag "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coredag"
-	pin "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pin"
+	cmds "github.com/daccproject/go-difs/commands"
+	e "github.com/daccproject/go-difs/core/commands/e"
+	coredag "github.com/daccproject/go-difs/core/coredag"
+	pin "github.com/daccproject/go-difs/pin"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 
 	mh "gx/ipfs/QmPnFwZ2JXKnXgMw8CdBPxn7FWh6LLdjUjxV1fKHuJnkr8/go-multihash"

@@ -8,10 +8,10 @@ import (
 	"strings"
 	"time"
 
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
-	keystore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/keystore"
+	cmds "github.com/daccproject/go-difs/commands"
+	core "github.com/daccproject/go-difs/core"
+	e "github.com/daccproject/go-difs/core/commands/e"
+	keystore "github.com/daccproject/go-difs/keystore"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 
 	crypto "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"

@@ -8,7 +8,7 @@ import (
 	"os/exec"
 	"strings"
 
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
+	cmds "github.com/daccproject/go-difs/commands"
 
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 )

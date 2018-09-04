@@ -8,8 +8,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	opt "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
+	"github.com/daccproject/go-difs/core/coreapi/interface"
+	opt "github.com/daccproject/go-difs/core/coreapi/interface/options"
 )
 
 func TestNew(t *testing.T) {

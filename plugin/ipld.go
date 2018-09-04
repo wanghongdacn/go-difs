@@ -1,7 +1,7 @@
 package plugin
 
 import (
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coredag"
+	"github.com/daccproject/go-difs/core/coredag"
 
 	ipld "gx/ipfs/QmX5CsuHyVZeTLxgRSYkgLSDQKb9UjE8xnhQzCEJWWWFsC/go-ipld-format"
 )

@@ -3,9 +3,9 @@ package coremock
 import (
 	"context"
 
-	commands "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo"
+	commands "github.com/daccproject/go-difs/commands"
+	core "github.com/daccproject/go-difs/core"
+	"github.com/daccproject/go-difs/repo"
 
 	libp2p "gx/ipfs/QmQiaskfWpdRJ4x2spEQjPFTUkEB87KDYu91qnNYBqvvcX/go-libp2p"
 	mocknet "gx/ipfs/QmQiaskfWpdRJ4x2spEQjPFTUkEB87KDYu91qnNYBqvvcX/go-libp2p/p2p/net/mock"

@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"io"
 
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/dagutils"
+	cmds "github.com/daccproject/go-difs/commands"
+	e "github.com/daccproject/go-difs/core/commands/e"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
+	"github.com/daccproject/go-difs/dagutils"
 
 	cmdkit "gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 )

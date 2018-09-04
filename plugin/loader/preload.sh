@@ -10,7 +10,7 @@ cat <<EOL
 package loader
 
 import (
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/plugin"
+	"github.com/daccproject/go-difs/plugin"
 EOL
 
 to_preload | while read -r name path num; do

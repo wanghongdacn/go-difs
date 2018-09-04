@@ -6,7 +6,7 @@ import (
 	"path"
 	"strings"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/assets"
+	"github.com/daccproject/go-difs/assets"
 )
 
 // structs for directory listing

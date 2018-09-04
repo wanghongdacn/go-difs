@@ -6,8 +6,8 @@ import (
 
 	context "context"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	fsrepo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo/fsrepo"
+	"github.com/daccproject/go-difs/core"
+	fsrepo "github.com/daccproject/go-difs/repo/fsrepo"
 
 	humanize "gx/ipfs/QmPSBJL4momYnE7DcUyk2DVhD6rH488ZmHBGLbxNdhU44K/go-humanize"
 )

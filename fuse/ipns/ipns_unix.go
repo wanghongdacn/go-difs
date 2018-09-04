@@ -11,8 +11,8 @@ import (
 	"io"
 	"os"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
+	core "github.com/daccproject/go-difs/core"
+	namesys "github.com/daccproject/go-difs/namesys"
 	ft "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs"
 	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"

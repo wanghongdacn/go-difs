@@ -9,8 +9,8 @@ import (
 	"path"
 	"testing"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/Godeps/_workspace/src/github.com/jbenet/go-random"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/thirdparty/unit"
+	"github.com/daccproject/go-difs/Godeps/_workspace/src/github.com/jbenet/go-random"
+	"github.com/daccproject/go-difs/thirdparty/unit"
 
 	config "gx/ipfs/QmTyiSs9VgdVb4pnzdjtKhcfdTkHFEaNn6xnCbZq4DTFRt/go-ipfs-config"
 )

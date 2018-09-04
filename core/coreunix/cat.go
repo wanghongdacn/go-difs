@@ -3,7 +3,7 @@ package coreunix
 import (
 	"context"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
+	core "github.com/daccproject/go-difs/core"
 	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 	resolver "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path/resolver"

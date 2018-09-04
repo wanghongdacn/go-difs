@@ -6,11 +6,11 @@ import (
 	"strings"
 	"time"
 
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
-	ns "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
-	nsopts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/opts"
+	cmds "github.com/daccproject/go-difs/commands"
+	"github.com/daccproject/go-difs/core"
+	e "github.com/daccproject/go-difs/core/commands/e"
+	ns "github.com/daccproject/go-difs/namesys"
+	nsopts "github.com/daccproject/go-difs/namesys/opts"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"

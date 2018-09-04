@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	commands "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands"
+	commands "github.com/daccproject/go-difs/core/commands"
 
 	cmds "gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 )

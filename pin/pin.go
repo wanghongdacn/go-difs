@@ -9,7 +9,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/dagutils"
+	"github.com/daccproject/go-difs/dagutils"
 	mdag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
 
 	logging "gx/ipfs/QmRREK2CAZ5Re2Bd9zZFG6FeYDppUWt5cMgsoUEp3ktgSr/go-log"

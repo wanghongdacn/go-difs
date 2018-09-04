@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	opt "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
+	opt "github.com/daccproject/go-difs/core/coreapi/interface/options"
 )
 
 func TestPinAdd(t *testing.T) {

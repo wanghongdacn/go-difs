@@ -1,7 +1,7 @@
 package iam
 
 import (
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/iam/pb"
+	"github.com/daccproject/go-difs/iam/pb"
 
 	"fmt"
 	"github.com/gogo/protobuf/proto"

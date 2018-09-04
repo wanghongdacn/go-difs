@@ -8,10 +8,10 @@ import (
 	"math"
 	"testing"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	coreunix "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreunix"
-	mock "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/mock"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/thirdparty/unit"
+	"github.com/daccproject/go-difs/core"
+	coreunix "github.com/daccproject/go-difs/core/coreunix"
+	mock "github.com/daccproject/go-difs/core/mock"
+	"github.com/daccproject/go-difs/thirdparty/unit"
 
 	mocknet "gx/ipfs/QmQiaskfWpdRJ4x2spEQjPFTUkEB87KDYu91qnNYBqvvcX/go-libp2p/p2p/net/mock"
 	testutil "gx/ipfs/QmRNhSdqzMcuRxX9A1egBeQ3BhDTguDV5HPwi8wRykkPU8/go-testutil"

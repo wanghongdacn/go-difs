@@ -6,10 +6,10 @@ import (
 	"runtime"
 	"strings"
 
-	version "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem"
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
-	fsrepo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo/fsrepo"
+	version "github.com/daccproject/go-difs"
+	cmds "github.com/daccproject/go-difs/commands"
+	e "github.com/daccproject/go-difs/core/commands/e"
+	fsrepo "github.com/daccproject/go-difs/repo/fsrepo"
 
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 )

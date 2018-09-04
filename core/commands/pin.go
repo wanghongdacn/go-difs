@@ -7,11 +7,11 @@ import (
 	"io"
 	"time"
 
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
-	corerepo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/corerepo"
-	pin "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pin"
+	cmds "github.com/daccproject/go-difs/commands"
+	core "github.com/daccproject/go-difs/core"
+	e "github.com/daccproject/go-difs/core/commands/e"
+	corerepo "github.com/daccproject/go-difs/core/corerepo"
+	pin "github.com/daccproject/go-difs/pin"
 	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"
 
 	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"

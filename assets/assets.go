@@ -9,8 +9,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreunix"
+	"github.com/daccproject/go-difs/core"
+	"github.com/daccproject/go-difs/core/coreunix"
 	uio "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/io"
 	cid "gx/ipfs/QmZFbDTY9jfSBms2MchvYM9oYRbAF19K7Pby47yDBfpPrb/go-cid"
 

@@ -15,11 +15,11 @@ import (
 	bserv "gx/ipfs/QmbSB9Uh3wVgmiCb1fAb8zuC3qAE6un4kd1jvatUurfAmB/go-blockservice"
 	resolver "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path/resolver"
 
-	filestore "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/filestore"
-	pin "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pin"
-	repo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo"
-	cidv0v1 "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/thirdparty/cidv0v1"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/thirdparty/verifbs"
+	filestore "github.com/daccproject/go-difs/filestore"
+	pin "github.com/daccproject/go-difs/pin"
+	repo "github.com/daccproject/go-difs/repo"
+	cidv0v1 "github.com/daccproject/go-difs/thirdparty/cidv0v1"
+	"github.com/daccproject/go-difs/thirdparty/verifbs"
 
 	ipns "gx/ipfs/QmNqBhXpBKa5jcjoUZHfxDgAFxtqK3rDA5jtW811GBvVob/go-ipns"
 	ci "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"

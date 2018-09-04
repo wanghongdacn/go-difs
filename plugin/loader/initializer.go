@@ -1,8 +1,8 @@
 package loader
 
 import (
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coredag"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/plugin"
+	"github.com/daccproject/go-difs/core/coredag"
+	"github.com/daccproject/go-difs/plugin"
 	"gx/ipfs/QmWLWmRVSiagqP15jczsGME1qpob6HDbtbHAY2he9W5iUo/opentracing-go"
 
 	ipld "gx/ipfs/QmX5CsuHyVZeTLxgRSYkgLSDQKb9UjE8xnhQzCEJWWWFsC/go-ipld-format"

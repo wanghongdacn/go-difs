@@ -9,11 +9,11 @@ import (
 	"strings"
 	"text/tabwriter"
 
-	oldcmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	lgc "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands/legacy"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
-	corerepo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/corerepo"
-	fsrepo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo/fsrepo"
+	oldcmds "github.com/daccproject/go-difs/commands"
+	lgc "github.com/daccproject/go-difs/commands/legacy"
+	e "github.com/daccproject/go-difs/core/commands/e"
+	corerepo "github.com/daccproject/go-difs/core/corerepo"
+	fsrepo "github.com/daccproject/go-difs/repo/fsrepo"
 
 	cmds "gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	cmdkit "gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"

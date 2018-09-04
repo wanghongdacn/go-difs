@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 	"strings"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
+	core "github.com/daccproject/go-difs/core"
+	e "github.com/daccproject/go-difs/core/commands/e"
 	uarchive "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/archive"
 	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"

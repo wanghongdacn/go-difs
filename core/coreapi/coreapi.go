@@ -14,8 +14,8 @@ Interfaces here aren't yet completely stable.
 package coreapi
 
 import (
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
+	core "github.com/daccproject/go-difs/core"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
 )
 
 type CoreAPI struct {

@@ -6,8 +6,8 @@ import (
 	"io"
 	"os"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	coreunix "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreunix"
+	core "github.com/daccproject/go-difs/core"
+	coreunix "github.com/daccproject/go-difs/core/coreunix"
 
 	cmds "gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"

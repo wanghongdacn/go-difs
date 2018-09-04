@@ -6,9 +6,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	coreapi "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi"
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
+	"github.com/daccproject/go-difs/core"
+	coreapi "github.com/daccproject/go-difs/core/coreapi"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
 
 	"gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"

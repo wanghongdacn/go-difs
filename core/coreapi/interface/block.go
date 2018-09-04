@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 
-	options "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
+	options "github.com/daccproject/go-difs/core/coreapi/interface/options"
 )
 
 // BlockStat contains information about a block

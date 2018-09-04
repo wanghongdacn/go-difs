@@ -3,7 +3,7 @@ package integrationtest
 import (
 	"testing"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/thirdparty/unit"
+	"github.com/daccproject/go-difs/thirdparty/unit"
 	testutil "gx/ipfs/QmRNhSdqzMcuRxX9A1egBeQ3BhDTguDV5HPwi8wRykkPU8/go-testutil"
 )
 

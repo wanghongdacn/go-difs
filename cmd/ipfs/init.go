@@ -10,11 +10,11 @@ import (
 	"path"
 	"strings"
 
-	assets "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/assets"
-	oldcmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
-	fsrepo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo/fsrepo"
+	assets "github.com/daccproject/go-difs/assets"
+	oldcmds "github.com/daccproject/go-difs/commands"
+	core "github.com/daccproject/go-difs/core"
+	namesys "github.com/daccproject/go-difs/namesys"
+	fsrepo "github.com/daccproject/go-difs/repo/fsrepo"
 
 	"gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"

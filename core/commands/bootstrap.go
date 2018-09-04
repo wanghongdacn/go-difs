@@ -6,10 +6,10 @@ import (
 	"io"
 	"sort"
 
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	e "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/commands/e"
-	repo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo/fsrepo"
+	cmds "github.com/daccproject/go-difs/commands"
+	e "github.com/daccproject/go-difs/core/commands/e"
+	repo "github.com/daccproject/go-difs/repo"
+	"github.com/daccproject/go-difs/repo/fsrepo"
 
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 	config "gx/ipfs/QmTyiSs9VgdVb4pnzdjtKhcfdTkHFEaNn6xnCbZq4DTFRt/go-ipfs-config"

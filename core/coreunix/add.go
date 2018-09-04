@@ -10,8 +10,8 @@ import (
 	"path/filepath"
 	"strconv"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pin"
+	core "github.com/daccproject/go-difs/core"
+	"github.com/daccproject/go-difs/pin"
 	unixfs "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs"
 	balanced "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/importer/balanced"
 	ihelper "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs/importer/helpers"

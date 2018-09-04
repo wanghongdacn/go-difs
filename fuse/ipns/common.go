@@ -3,8 +3,8 @@ package ipns
 import (
 	"context"
 
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	nsys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
+	"github.com/daccproject/go-difs/core"
+	nsys "github.com/daccproject/go-difs/namesys"
 	ci "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"
 	ft "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"

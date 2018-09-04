@@ -5,7 +5,7 @@ machine:
     TEST_NO_DOCKER: 1
     TRAVIS: 1
     CIRCLE: 1
-    IMPORT_PATH: "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem"
+    IMPORT_PATH: "github.com/daccproject/go-difs"
     GOPATH: "$HOME/.go_workspace"
     GOBIN: "$GOPATH/bin"
     SERVICE: "circle-ci"

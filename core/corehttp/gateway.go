@@ -5,9 +5,9 @@ import (
 	"net"
 	"net/http"
 
-	version "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem"
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	coreapi "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi"
+	version "github.com/daccproject/go-difs"
+	core "github.com/daccproject/go-difs/core"
+	coreapi "github.com/daccproject/go-difs/core/coreapi"
 
 	id "gx/ipfs/QmQiaskfWpdRJ4x2spEQjPFTUkEB87KDYu91qnNYBqvvcX/go-libp2p/p2p/protocol/identify"
 )

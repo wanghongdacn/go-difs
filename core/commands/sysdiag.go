@@ -5,8 +5,8 @@ import (
 	"path"
 	"runtime"
 
-	version "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem"
-	cmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
+	version "github.com/daccproject/go-difs"
+	cmds "github.com/daccproject/go-difs/commands"
 
 	"gx/ipfs/QmSP88ryZkHSRn1fnngAaV2Vcn63WUJzAavnRM9CVdU1Ky/go-ipfs-cmdkit"
 	manet "gx/ipfs/QmV6FjemM1K8oXjrvuq3wuVWWoU2TLDPmNnKrxHzY3v6Ai/go-multiaddr-net"

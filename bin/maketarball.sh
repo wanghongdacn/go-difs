@@ -9,7 +9,7 @@ IFS=$'\n\t'
 OUTPUT=$(realpath ${1:-go-ipfs-source.tar.gz})
 
 TMPDIR="$(mktemp -d)"
-NEWIPFS="$TMPDIR/github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem"
+NEWIPFS="$TMPDIR/github.com/daccproject/go-difs"
 mkdir -p "$NEWIPFS"
 cp -r . "$NEWIPFS"
 ( cd "$NEWIPFS" &&

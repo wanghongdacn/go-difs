@@ -16,10 +16,10 @@ TEST_GO :=
 TEST_GO_BUILD :=
 CHECK_GO :=
 
-go-pkg-name=$(shell $(GOCC) list $(go-tags) github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/$(1))
+go-pkg-name=$(shell $(GOCC) list $(go-tags) github.com/daccproject/go-difs/$(1))
 go-main-name=$(notdir $(call go-pkg-name,$(1)))$(?exe)
 go-curr-pkg-tgt=$(d)/$(call go-main-name,$(d))
-go-pkgs-novendor=$(shell $(GOCC) list github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/... | grep -v /Godeps/)
+go-pkgs-novendor=$(shell $(GOCC) list github.com/daccproject/go-difs/... | grep -v /Godeps/)
 
 go-tags=$(if $(GOTAGS), -tags="$(call join-with,$(space),$(GOTAGS))")
 go-flags-with-tags=$(GOFLAGS)$(go-tags)
@@ -66,7 +66,7 @@ check_go_version:
 DEPS_GO += check_go_version
 
 check_go_path:
-	GOPATH="$(GOPATH)" bin/check_go_path github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem
+	GOPATH="$(GOPATH)" bin/check_go_path github.com/daccproject/go-difs
 .PHONY: check_go_path
 DEPS_GO += check_go_path
 

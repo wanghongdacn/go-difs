@@ -35,7 +35,7 @@ import (
 
 	context "context"
 
-	opts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/opts"
+	opts "github.com/daccproject/go-difs/namesys/opts"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 
 	ci "gx/ipfs/QmPvyPwuCgJ7pDmrKDxRtsScJgBaM5h4EpRL2qQJsmXf4n/go-libp2p-crypto"

@@ -9,7 +9,7 @@ import (
 	"path/filepath"
 	"plugin"
 
-	iplugin "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/plugin"
+	iplugin "github.com/daccproject/go-difs/plugin"
 )
 
 func init() {

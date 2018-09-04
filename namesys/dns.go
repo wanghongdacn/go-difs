@@ -7,7 +7,7 @@ import (
 	"strings"
 	"time"
 
-	opts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys/opts"
+	opts "github.com/daccproject/go-difs/namesys/opts"
 	isd "gx/ipfs/QmZmmuAXgX73UQmX1jRKjTGmjzq24Jinqkq8vzkBtno4uX/go-is-domain"
 	path "gx/ipfs/QmdMPBephdLYNESkruDX2hcDTgFYhoCt4LimWhgnomSdV2/go-path"
 )

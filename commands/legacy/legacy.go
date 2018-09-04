@@ -6,7 +6,7 @@ import (
 
 	"gx/ipfs/QmPTfgFTo9PFr1PvPKyKoeMgBvYPh6cX3aDP7DHKVbnCbi/go-ipfs-cmds"
 
-	oldcmds "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
+	oldcmds "github.com/daccproject/go-difs/commands"
 )
 
 // MarshalerEncoder implements Encoder from a Marshaler

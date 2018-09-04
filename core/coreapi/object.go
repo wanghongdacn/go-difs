@@ -11,10 +11,10 @@ import (
 	"io"
 	"io/ioutil"
 
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	caopts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/dagutils"
-	"github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pin"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
+	caopts "github.com/daccproject/go-difs/core/coreapi/interface/options"
+	"github.com/daccproject/go-difs/dagutils"
+	"github.com/daccproject/go-difs/pin"
 
 	ft "gx/ipfs/QmQjEpRiwVvtowhq69dAtB4jhioPVFXiCcWZm9Sfgn7eqc/go-unixfs"
 	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"

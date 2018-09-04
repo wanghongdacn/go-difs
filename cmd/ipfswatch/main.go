@@ -9,14 +9,14 @@ import (
 	"path/filepath"
 	"syscall"
 
-	commands "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/commands"
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	corehttp "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/corehttp"
-	coreunix "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreunix"
-	fsrepo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/repo/fsrepo"
+	commands "github.com/daccproject/go-difs/commands"
+	core "github.com/daccproject/go-difs/core"
+	corehttp "github.com/daccproject/go-difs/core/corehttp"
+	coreunix "github.com/daccproject/go-difs/core/coreunix"
+	fsrepo "github.com/daccproject/go-difs/repo/fsrepo"
 	config "gx/ipfs/QmTyiSs9VgdVb4pnzdjtKhcfdTkHFEaNn6xnCbZq4DTFRt/go-ipfs-config"
 
-	homedir "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/Godeps/_workspace/src/github.com/mitchellh/go-homedir"
+	homedir "github.com/daccproject/go-difs/Godeps/_workspace/src/github.com/mitchellh/go-homedir"
 
 	process "gx/ipfs/QmSF8fPo3jgVBAy8fpdjjYqgG87dkJgUprRBHRd2tmfgpP/goprocess"
 	fsnotify "gx/ipfs/QmfNjggF4Pt6erqg3NDafD3MdvDHk1qqCVr8pL5hnPucS8/fsnotify"

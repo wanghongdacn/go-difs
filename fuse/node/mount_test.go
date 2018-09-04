@@ -11,10 +11,10 @@ import (
 
 	"context"
 
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	ipns "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/fuse/ipns"
-	mount "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/fuse/mount"
-	namesys "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/namesys"
+	core "github.com/daccproject/go-difs/core"
+	ipns "github.com/daccproject/go-difs/fuse/ipns"
+	mount "github.com/daccproject/go-difs/fuse/mount"
+	namesys "github.com/daccproject/go-difs/namesys"
 
 	ci "gx/ipfs/QmRNhSdqzMcuRxX9A1egBeQ3BhDTguDV5HPwi8wRykkPU8/go-testutil/ci"
 	offroute "gx/ipfs/Qmd45r5jHr1PKMNQqifnbZy1ZQwHdtXUDJFamUEvUJE544/go-ipfs-routing/offline"

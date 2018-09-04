@@ -7,7 +7,7 @@ import (
 	"fmt"
 	"strings"
 
-	pin "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/pin"
+	pin "github.com/daccproject/go-difs/pin"
 	dag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
 	bserv "gx/ipfs/QmbSB9Uh3wVgmiCb1fAb8zuC3qAE6un4kd1jvatUurfAmB/go-blockservice"
 

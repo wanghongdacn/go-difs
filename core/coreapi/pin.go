@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	coreiface "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface"
-	caopts "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/coreapi/interface/options"
-	corerepo "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core/corerepo"
+	coreiface "github.com/daccproject/go-difs/core/coreapi/interface"
+	caopts "github.com/daccproject/go-difs/core/coreapi/interface/options"
+	corerepo "github.com/daccproject/go-difs/core/corerepo"
 	merkledag "gx/ipfs/QmRiQCJZ91B7VNmLvA6sxzDuBJGSojS3uXHHVuNr3iueNZ/go-merkledag"
 	bserv "gx/ipfs/QmbSB9Uh3wVgmiCb1fAb8zuC3qAE6un4kd1jvatUurfAmB/go-blockservice"
 

@@ -4,8 +4,8 @@
 package ipns
 
 import (
-	core "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/core"
-	mount "github.com/DecentralizedAccessibleContentChain/dacc-iam-filesystem/fuse/mount"
+	core "github.com/daccproject/go-difs/core"
+	mount "github.com/daccproject/go-difs/fuse/mount"
 )
 
 // Mount mounts ipns at a given location, and returns a mount.Mount instance.
